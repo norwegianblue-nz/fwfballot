@@ -1,0 +1,19 @@
+uuid: 4aa29ae9-ca54-4dc5-a25f-756b1ad3f829
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_team_name
+    - rng.registration_type.ballot
+id: registration.ballot.field_team_name
+field_name: field_team_name
+entity_type: registration
+bundle: ballot
+label: 'Team Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

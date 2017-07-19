@@ -1,0 +1,24 @@
+uuid: ce83333a-c67b-4ff7-a042-e82113067223
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ballot_payment
+    - commerce_product.commerce_product_variation_type.ballotpayment
+    - field.storage.commerce_product.variations
+id: commerce_product.ballot_payment.variations
+field_name: variations
+entity_type: commerce_product
+bundle: ballot_payment
+label: Variations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_product_variation'
+  handler_settings:
+    target_bundles:
+      - ballotpayment
+field_type: entity_reference

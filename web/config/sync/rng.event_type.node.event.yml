@@ -1,0 +1,26 @@
+uuid: 7c71e078-74f2-4303-9dee-395b3391e766
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event
+    - rng.registrant_type.registrant
+id: node.event
+entity_type: node
+bundle: event
+mirror_operation_to_event_manage: update
+custom_rules: true
+default_registrant: registrant
+people_types:
+  1:
+    entity_type: user
+    bundle: user
+    create: false
+    existing: true
+    entity_form_mode: default
+  2:
+    entity_type: rng_contact
+    bundle: hunting_team
+    create: true
+    existing: true
+    entity_form_mode: default

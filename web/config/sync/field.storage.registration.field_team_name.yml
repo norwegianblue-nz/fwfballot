@@ -1,0 +1,21 @@
+uuid: 721ecef9-fe6d-4d48-9ada-76356e083f43
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.field_team_name
+field_name: field_team_name
+entity_type: registration
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

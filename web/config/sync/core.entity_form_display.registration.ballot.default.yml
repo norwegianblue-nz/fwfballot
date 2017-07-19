@@ -1,0 +1,21 @@
+uuid: 9d2044c4-6a26-446e-9a4b-cbe50edc6203
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.registration.ballot.field_team_name
+    - rng.registration_type.ballot
+id: registration.ballot.default
+targetEntityType: registration
+bundle: ballot
+mode: default
+content:
+  field_team_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

@@ -1,0 +1,25 @@
+uuid: 51fd0f23-f958-43d4-853d-e57481dc9186
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.ballot_payment
+    - field.storage.commerce_order_item.field_entry_id
+id: commerce_order_item.ballot_payment.field_entry_id
+field_name: field_entry_id
+entity_type: commerce_order_item
+bundle: ballot_payment
+label: 'Entry ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: registrations
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

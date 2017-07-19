@@ -1,0 +1,21 @@
+uuid: e87fac32-8e21-4505-b954-4d95c6709ca5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.rng_contact.hunting_team.field_email
+    - rng_contact.rng_contact_type.hunting_team
+id: rng_contact.hunting_team.default
+targetEntityType: rng_contact
+bundle: hunting_team
+mode: default
+content:
+  field_email:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+hidden: {  }

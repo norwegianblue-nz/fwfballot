@@ -1,0 +1,14 @@
+{
+  "name": "drupal/login_remain",
+  "type": "drupal-module",
+  "description": "Leave user at the page they were on when they login",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://norwegian.blue/project/login_remain",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/login_remain",
+    "source": "http://cgit.drupalcode.org/login_remain"
+  },
+  "require": { }
+}

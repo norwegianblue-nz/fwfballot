@@ -1,0 +1,36 @@
+uuid: 3c611200-ec02-4c27-a4ed-f4c89b0dda58
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ballot_payment
+    - field.field.commerce_product.ballot_payment.body
+    - field.field.commerce_product.ballot_payment.stores
+    - field.field.commerce_product.ballot_payment.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.ballot_payment.default
+targetEntityType: commerce_product
+bundle: ballot_payment
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 1
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true

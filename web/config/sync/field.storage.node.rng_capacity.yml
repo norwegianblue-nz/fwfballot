@@ -1,0 +1,20 @@
+uuid: 1fa8222f-79f9-48a4-a3c9-6aac239b877e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.rng_capacity
+field_name: rng_capacity
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

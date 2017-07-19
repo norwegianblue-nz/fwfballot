@@ -1,0 +1,18 @@
+uuid: bb68c387-687c-4115-a09e-d9196d518df7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.rng_reply_to
+field_name: rng_reply_to
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

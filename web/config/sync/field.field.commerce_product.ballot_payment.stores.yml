@@ -1,0 +1,21 @@
+uuid: f33ccf87-c2d7-424a-8f28-56afc176ea37
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ballot_payment
+    - field.storage.commerce_product.stores
+id: commerce_product.ballot_payment.stores
+field_name: stores
+entity_type: commerce_product
+bundle: ballot_payment
+label: Stores
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_store'
+  handler_settings: {  }
+field_type: entity_reference

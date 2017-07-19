@@ -1,0 +1,10 @@
+uuid: 7d1d958b-ae46-40cb-817d-9cbb3e36f2f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.rng_event
+label: 'Event Settings'
+targetEntityType: node
+cache: true

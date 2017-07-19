@@ -1,0 +1,9 @@
+uuid: ef4d985a-7d85-49e7-a8ec-070acb383802
+langcode: en
+status: true
+dependencies: {  }
+label: 'Ballot Payment'
+id: ballot_payment
+purchasableEntityType: commerce_product_variation
+orderType: default
+traits: {  }

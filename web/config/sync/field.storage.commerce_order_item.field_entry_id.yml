@@ -1,0 +1,20 @@
+uuid: ad676567-592d-44b3-b24e-2183afdb6b41
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - rng
+id: commerce_order_item.field_entry_id
+field_name: field_entry_id
+entity_type: commerce_order_item
+type: entity_reference
+settings:
+  target_type: registration
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

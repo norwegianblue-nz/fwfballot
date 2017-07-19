@@ -1,0 +1,9 @@
+uuid: cf8c4413-510f-4394-9f00-fa3ce2dd576b
+langcode: en
+status: true
+dependencies: {  }
+id: ballotpayment
+label: BallotPayment
+orderItemType: ballot_payment
+generateTitle: false
+traits: {  }

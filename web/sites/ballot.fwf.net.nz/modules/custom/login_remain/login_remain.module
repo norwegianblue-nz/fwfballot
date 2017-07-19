@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Contains login_remain.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function login_remain_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the login_remain module.
+    case 'help.page.login_remain':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Configurable login button to show avatar when logged in') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function login_remain_theme() {
+  return [
+    'login_remain' => [
+      'template' => 'login_remain',
+      'render element' => 'children',
+    ],
+  ];
+}
+/**
+ * When logout, user stays in same page if it's possible.
+ * @param $account
+ */
+function login_remain_user_login($account) {
+  $previousUrl= \Drupal::request()->server->get('HTTP_REFERER');
+  $response = new Symfony\Component\HttpFoundation\RedirectResponse($previousUrl);
+  $response->send();
+  return;
+}

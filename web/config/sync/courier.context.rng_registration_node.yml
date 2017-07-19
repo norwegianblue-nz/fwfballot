@@ -1,0 +1,9 @@
+uuid: bfe9ca6f-5a14-4245-83d6-4bd01d12f835
+langcode: en
+status: true
+dependencies: {  }
+id: rng_registration_node
+label: 'Event (Content): Registration'
+tokens:
+  - node
+  - registration

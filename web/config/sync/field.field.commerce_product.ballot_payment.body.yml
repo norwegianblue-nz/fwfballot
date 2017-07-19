@@ -1,0 +1,22 @@
+uuid: f1b7f9b6-1ba2-4733-af3b-184ca7a33798
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.ballot_payment
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.ballot_payment.body
+field_name: body
+entity_type: commerce_product
+bundle: ballot_payment
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+field_type: text_with_summary

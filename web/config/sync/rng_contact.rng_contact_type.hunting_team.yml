@@ -1,0 +1,10 @@
+uuid: a4d9e67d-e148-4fe1-a39c-c7492dd18979
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.rng_contact.hunting_team.field_email
+label: 'Hunting Team'
+id: hunting_team
+description: ''
+courier_email_field: field_email

@@ -1,0 +1,10 @@
+uuid: 427c3e11-2445-47e4-abaa-b7a515f74bd8
+langcode: en
+status: true
+dependencies: {  }
+id: ballot_payment
+label: 'Ballot Payment'
+description: ''
+variationType: ballotpayment
+injectVariationFields: true
+traits: {  }

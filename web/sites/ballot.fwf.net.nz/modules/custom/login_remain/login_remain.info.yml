@@ -1,0 +1,5 @@
+name: Login Remain
+type: module
+description: Leave user at the page they were on when they login. Works particularly well with Login Popup
+core: 8.x
+package: norwegian.blue
