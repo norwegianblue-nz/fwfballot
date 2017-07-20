@@ -21,9 +21,9 @@
 /web/sites/*/php_errors.log
 
 /web/sites/*/modules/contrib
-/web/sites/*/themes/custom/*/style/css/
-/web/sites/*/themes/custom/*/style/css_safe.tar.bz2
-/web/sites/*/themes/custom/*/style/.sass-cache/
+/web/sites/*/themes/custom/*/css/
+/web/sites/*/themes/custom/*/css_safe.tar.bz2
+/web/sites/*/themes/custom/*/.sass-cache/
 /web/sites/*/*~
 /web/sites/*/themes/custom/*/sass_this
 
