@@ -1,0 +1,102 @@
+
+
+@mixin fwfbsTransition($type: all, $speed: 0.25s, $transition: ease-in-out) {
+  transition: $type $speed $transition;
+   -moz-transition: $type $speed $transition;
+   -webkit-transition: $type $speed $transition;
+}
+
+@mixin fwfbsCorners($rad: 5px) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin fwfbsShadow() {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+}
+
+
+// For splitting div's within the same parent evenly across the available width
+// This is an adaptation of the way Omega5 does it for regions.
+// Usage: @include fwfbsCols(<cols_this_div>, <total_cols> , <margin>, '<grid_width>');
+//        The margin argument is reserved for future use.
+//        Usually at least three of these calls are required in media queries:
+//          1 at wide (grid width 1200)
+//          1 at normal (grid width 960)
+//          1 at mobile (fluid; grid 100%)
+@mixin parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '960'){
+    $wratio : $nocols / $thiscols;
+    $gridw : 960px;
+    $gutw : 20px;
+    @if $grid == '960' {
+        $gridw : 960px;
+        $gutw : 20px;
+    }
+    @if $grid == '1200' {
+        $gridw : 1200px;
+        $gutw : 20px;
+    }
+    @if $grid == '100' {
+        $gridw : 100%;
+        $gutw : 2%;
+    } 
+    $colw : ($gridw / $nocols) - $gutw;
+    $thisw : (($colw + $gutw) * $thiscols) - $gutw;
+    
+    width : $thisw !important;
+    margin-right : $gutw / 2 !important;
+    margin-left : $gutw / 2 !important;
+    &:first-of-type {margin-left : 0 !important;}
+    &:last-of-type {margin-right : 0 !important;}
+}
+
+// Newspaper style columns within a div. See std doumentation for css columns
+// This mixin simply reduces the typing! 
+@mixin fwfbsColumns($number, $min-width, $gap, $rule) {
+    -webkit-column-count: $number; /* Chrome, Safari, Opera */
+    -moz-column-count: $number; /* Firefox */
+    column-count: $number;
+
+    -webkit-column-width: $min-width; /* Chrome, Safari, Opera */
+    -moz-column-width: $min-width; /* Firefox */
+    column-width: $min-width;
+
+    -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+    -moz-column-gap: $gap; /* Firefox */
+    column-gap: $gap;
+
+    -webkit-column-rule: $rule; /* Chrome, Safari, Opera */
+    -moz-column-rule: $rule; /* Firefox */
+    column-rule: $rule;
+}
+// Baby Roo's Sandpit (for practicing small jumps)
+// End of Roo's Sandbox'
+
+//Tim's Sandbox ( messier and ulitimately another form of scribble )
+@mixin fwfbsBlockTitle($color) {
+    font-size: 3em;
+    text-transform: uppercase;
+    font-family: "exo_2light_condensed", sans-serif;
+    color:$color;
+}
+
+@mixin fwfbsColumns($number, $min-width, $gap, $rule) {
+    -webkit-column-count: $number; /* Chrome, Safari, Opera */
+    -moz-column-count: $number; /* Firefox */
+    column-count: $number;
+
+    -webkit-column-width: $min-width; /* Chrome, Safari, Opera */
+    -moz-column-width: $min-width; /* Firefox */
+    column-width: $min-width;
+
+    -webkit-column-gap: $gap; /* Chrome, Safari, Opera */
+    -moz-column-gap: $gap; /* Firefox */
+    column-gap: $gap;
+
+    -webkit-column-rule: $rule; /* Chrome, Safari, Opera */
+    -moz-column-rule: $rule; /* Firefox */
+    column-rule: $rule;
+}
