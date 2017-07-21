@@ -1,0 +1,68 @@
+@import "fwfbs1_mixins";
+  
+// Basic Color Variables 
+$primaryColor1: #000000;
+//$primaryColor2: #73ad51;
+$primaryColor2: #80cc28; //KilleenGreen
+//$primaryColor3: #0060c7;
+$primaryColor3: #66aad6; //KilleenBlue
+$primaryColor4: #FFFFFF;
+$primaryColor5: #0060c7;
+$mainMenuBgColor: #9A9A9A;
+$mainMenuFontColor: #1A1A1A;
+$mainMenuBorderColor: #1A1A1A;
+$buttonBgColor: #9A9A9A;
+$buttonFontColor: #1A1A1A;
+$buttonBorderColor: #1A1A1A;
+
+$siteTitleColor0: rgba($primaryColor4, 1) !default;
+$siteTitleHoverColor0: rgba($primaryColor4, 0.85) !default;
+$siteTitleColor1: rgba($primaryColor2, 1) !default;
+$siteTitleHoverColor1: rgba($primaryColor2, 0.85) !default;
+$siteSloganColor: #777 !default;
+$siteBgColor: rgba($primaryColor3, 0.9);
+$siteTextColor: $primaryColor1;
+$siteHeaderColor: rgba($primaryColor3, 1);
+$siteHeaderScrolledColor: rgba($primaryColor3, 0.6);
+
+
+// FWF Colours
+$fwfbs1_Teal: #00737B; /* rgb(0,115,123)*/
+$fwfbs1_TransTeal: rgba(0,115,123,0.8);
+$fwfbs1_DarkTeal: #004146; /* rgb(0,65,70)*/
+$fwfbs1_Blue: #00A3B6; /* rgb(0,163,182)*/
+$fwfbs1_Red: #E8474D; /* rgb(232,71,77)*/
+$fwfbs1_Olive: #9A9A23; /* rgb(154,154,35)*/
+$fwfbs1_DarkOlive: #727318; /* rgb(114,115,24)*/
+$fwfbs1_Orange: #DB4F14; /* rgb(219,79,20)*/
+$fwfbs1_DarkOrange: #872F07; /* rgb(135,47,7)*/
+$fwfbs1_Buff: #E2E0C9; /* rgb(226,224,201)*/
+
+
+
+// Basic Font Variables
+$defaultHeaderFont: comfortaaregular,Arial,sans-serif;
+$defaultBodyFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* Fonts */
+$light: "Helvetica Neue", Arial, Helvetica !default;
+$reg: "work_sanslight", "exo_2medium_condensed", sans-serif !default;
+$bold: "Helvetica Neue", Arial, Helvetica !default;
+
+$bodyFont: "Helvetica Neue", Arial, Helvetica !default;
+$header: Georgia, Times, serif;
+
+$siteTitleFont: handelgothic_regular;
+
+
+// FWF Font Sizes
+$generalTextSize: 1.4em;
+$mobileTextSize: 1em;
+$desktopH2: 2.2em;
+$mobileH2: 1.8em;
+
+// KAE Fonts
+$fwfbs1_WorkSans-Light: "work_sanslight", sans-serif;
+$fwfbs1_WorkSans-Hairline: "work_sanshairline", sans-serif;
+$fwfbs1_Exo2-LightCondensed:"exo_2light_condensed", sans-serif;
+$fwfbs1_Exo2-RegularCondensed:"exo_2regular_condensed", sans-serif;
+$fwfbs1_Exo2-MediumCondensed:"exo_2medium_condensed", sans-serif;
