@@ -29,6 +29,7 @@
         "drupal/contact_block": "^1.4",
         "drupal/core": "~8.0",
         "drupal/ds": "^3.1",
+        "drupal/entityreference_dragdrop": "^1.0",
         "drupal/honeypot": "^1.27",
         "drupal/image_effects": "^1.0",
         "drupal/imagemagick": "^2.0",
