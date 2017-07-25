@@ -68,10 +68,11 @@ p:last-child,
     margin-top: 0;
   }
 }
-//// SANDBOX FOR SMALL JUMPS
 body {
 	background: url('/sites/ballot.fwf.net.nz/themes/custom/fwfbs/images/fwf-wallpaper.svg') center bottom repeat-x;
 	padding-bottom: 10em;
 }
-
+.user-logged-in #block-ballotnotice {display:none;}
+//// SANDBOX FOR SMALL JUMPS
+#block-signoff p {font-size:13px;color:#777;}
 //// end SANDBOX - don't practice jumps past here!
