@@ -1,0 +1,21 @@
+uuid: 72e72822-d34b-4008-9ba3-0e34323b2fbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nok_phone
+  module:
+    - telephone
+    - user
+id: user.user.field_nok_phone
+field_name: field_nok_phone
+entity_type: user
+bundle: user
+label: Phone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

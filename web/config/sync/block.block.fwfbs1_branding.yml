@@ -1,0 +1,25 @@
+uuid: 1c3c4b52-4b45-45da-bf3a-260ba1d10bbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fwfbs1
+_core:
+  default_config_hash: Cy3vkpYrD1O5JG-BeEnokF0bByHYDEa8CBfWivB4_SQ
+id: fwfbs1_branding
+theme: fwfbs1
+region: navigation
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

@@ -16,6 +16,8 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'post comments'
+  - 'rng register role authenticated'
+  - 'rng register self'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'

@@ -1,0 +1,22 @@
+uuid: bfafda74-7964-40fe-97a6-d3d3ab2de83a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - fwfbs1
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: fwfbs1_help
+theme: fwfbs1
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

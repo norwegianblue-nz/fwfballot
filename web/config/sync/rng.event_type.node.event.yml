@@ -21,6 +21,6 @@ people_types:
   2:
     entity_type: rng_contact
     bundle: hunting_team
-    create: true
-    existing: true
+    create: false
+    existing: false
     entity_form_mode: default

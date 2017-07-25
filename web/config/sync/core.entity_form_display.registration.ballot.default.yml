@@ -3,13 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_team_name
     - rng.registration_type.ballot
+  module:
+    - entityreference_dragdrop
 id: registration.ballot.default
 targetEntityType: registration
 bundle: ballot
 mode: default
 content:
+  field_block_preference:
+    weight: 1
+    settings:
+      view_mode: taxonomy_term.dragdrop
+      available_entities_label: 'Available blocks'
+      selected_entities_label: 'Chosen block preference'
+      display_filter: 0
+    third_party_settings: {  }
+    type: entityreference_dragdrop
+    region: content
   field_team_name:
     weight: 0
     settings:

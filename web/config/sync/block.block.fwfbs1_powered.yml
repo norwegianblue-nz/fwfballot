@@ -1,0 +1,22 @@
+uuid: 2eef6884-298d-4a81-8f36-ae2eaf648dd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fwfbs1
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: fwfbs1_powered
+theme: fwfbs1
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

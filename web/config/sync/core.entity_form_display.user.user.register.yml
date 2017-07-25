@@ -1,0 +1,152 @@
+uuid: ba632942-f062-4ee6-902c-7360fbfb8fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_contact_phone
+    - field.field.user.user.field_dob
+    - field.field.user.user.field_fire_arms_licence_number
+    - field.field.user.user.field_next_of_kin
+    - field.field.user.user.field_nok_address
+    - field.field.user.user.field_nok_phone
+    - field.field.user.user.field_other_phone
+    - field.field.user.user.field_physical_address
+    - field.field.user.user.field_relationship
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - address
+    - datetime
+    - field_group
+    - image
+    - telephone
+    - user
+third_party_settings:
+  field_group:
+    group_acc:
+      children:
+        - account
+        - user_picture
+        - field_physical_address
+        - field_dob
+        - field_contact_phone
+        - field_other_phone
+        - field_fire_arms_licence_number
+      parent_name: ''
+      weight: 0
+      format_type: details
+      format_settings:
+        id: ACC_HOLDER
+        classes: acc_holder
+        open: true
+        required_fields: true
+      label: 'Account Holder'
+      region: content
+    group_emergency_contact:
+      children:
+        - field_next_of_kin
+        - field_nok_address
+        - field_nok_phone
+        - field_relationship
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        id: NOK
+        classes: user_nok
+        open: true
+        required_fields: true
+      label: 'Emergency Contact'
+      region: content
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_phone:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_dob:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_fire_arms_licence_number:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_next_of_kin:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: 'Emergency Contact Person'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nok_address:
+    weight: 10
+    settings:
+      default_country: NZ
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_nok_phone:
+    weight: 11
+    settings:
+      placeholder: 'Phone Number'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_other_phone:
+    weight: 6
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_physical_address:
+    weight: 3
+    settings:
+      default_country: NZ
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_relationship:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: 'Relationship to you'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  user_picture:
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  commerce_remote_id: true
+  contact: true
+  language: true
+  timezone: true

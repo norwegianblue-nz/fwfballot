@@ -1,0 +1,31 @@
+uuid: 8d48bffb-fd6c-477f-a881-efe5f4cda43b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.priority.field_priority
+    - taxonomy.vocabulary.priority
+  module:
+    - text
+id: taxonomy_term.priority.default
+targetEntityType: taxonomy_term
+bundle: priority
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_priority:
+    weight: 1
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

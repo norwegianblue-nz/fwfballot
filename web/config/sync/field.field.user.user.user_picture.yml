@@ -14,27 +14,27 @@ field_name: user_picture
 entity_type: user
 bundle: user
 label: Picture
-description: 'Your virtual face or picture.'
-required: false
+description: 'You must upload a passport style photograph of yourself for identification purposes'
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  file_extensions: 'png gif jpg jpeg'
   file_directory: 'pictures/[date:custom:Y]-[date:custom:m]'
-  max_filesize: '30 KB'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 200x200
+  min_resolution: 100x100
   alt_field: false
+  alt_field_required: false
   title_field: false
-  max_resolution: 85x85
-  min_resolution: ''
+  title_field_required: false
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null
     height: null
-  alt_field_required: false
-  title_field_required: false
   handler: 'default:file'
   handler_settings: {  }
 field_type: image
