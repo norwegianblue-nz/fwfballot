@@ -1,0 +1,32 @@
+uuid: 8ecaf832-064f-4a13-89da-ff0379fb1f21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.dragdrop
+    - field.field.taxonomy_term.priority.field_priority
+    - taxonomy.vocabulary.priority
+  module:
+    - text
+id: taxonomy_term.priority.dragdrop
+targetEntityType: taxonomy_term
+bundle: priority
+mode: dragdrop
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_priority:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden: {  }

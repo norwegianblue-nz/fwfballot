@@ -1,0 +1,20 @@
+uuid: ffc04f8e-0f00-44b4-9b73-c1a929e5768b
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+    - taxonomy
+id: registration.field_block_preference
+field_name: field_block_preference
+entity_type: registration
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 75
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

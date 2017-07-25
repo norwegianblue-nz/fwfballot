@@ -1,0 +1,28 @@
+uuid: 6bd71aea-63c5-439e-894b-fc42e35d3ac9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_block_preference
+    - rng.registration_type.ballot
+    - taxonomy.vocabulary.priority
+id: registration.ballot.field_block_preference
+field_name: field_block_preference
+entity_type: registration
+bundle: ballot
+label: 'Choose Desired Blocks'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      priority: priority
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
