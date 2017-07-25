@@ -9,6 +9,7 @@ dependencies:
     - field.field.commerce_order_item.ballot_payment.field_reference
   module:
     - commerce_order
+    - commerce_product
 id: commerce_order_item.ballot_payment.add_to_cart
 targetEntityType: commerce_order_item
 bundle: ballot_payment
@@ -31,9 +32,17 @@ content:
       size: 25
       placeholder: 'Team Name'
     third_party_settings: {  }
+  purchased_entity:
+    type: commerce_product_variation_title
+    weight: 3
+    region: content
+    settings:
+      label_display: true
+      label_text: 'Please select'
+    third_party_settings: {  }
   quantity:
     type: commerce_quantity
-    weight: 3
+    weight: 2
     region: content
     settings:
       step: '1'
@@ -41,5 +50,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  purchased_entity: true
   unit_price: true

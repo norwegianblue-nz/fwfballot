@@ -1,0 +1,18 @@
+uuid: 3126af6c-3155-45c9-b3da-95da4812c77b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_stripe
+id: stripe_norblu_dev
+label: 'Stripe - norblu Dev'
+weight: null
+plugin: stripe
+configuration:
+  publishable_key: pk_test_9fqKgaqsXBGSVZGCCz9RRLV9
+  secret_key: sk_test_sUHLAIFiPun4VennhvqLoiX1
+  display_label: Stripe
+  mode: test
+  payment_method_types:
+    - credit_card
+conditions: {  }

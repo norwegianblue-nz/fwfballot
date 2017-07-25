@@ -1,0 +1,38 @@
+uuid: 88de2b67-05ed-46f6-b8a8-831da12d6c3f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
+  module:
+    - block_content
+    - rng
+  theme:
+    - fwfbs1
+id: fwfbs1_tmdmainbuttons
+theme: fwfbs1
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
+settings:
+  id: 'block_content:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
+  label: 'tmd - Main buttons'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  rng_current_time:
+    id: rng_current_time
+    date: '1500598502'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1500598502'
+    negate: false
+    context_mapping: {  }

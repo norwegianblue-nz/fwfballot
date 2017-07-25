@@ -1,0 +1,21 @@
+uuid: 75c8d586-df89-478d-b9a0-70f62d57d1e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_relationship
+field_name: field_relationship
+entity_type: user
+type: string
+settings:
+  max_length: 64
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

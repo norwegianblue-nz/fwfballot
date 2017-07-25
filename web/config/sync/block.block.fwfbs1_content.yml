@@ -1,0 +1,22 @@
+uuid: 71571d9b-9619-401a-a5d8-7f95c11ee26c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - fwfbs1
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: fwfbs1_content
+theme: fwfbs1
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

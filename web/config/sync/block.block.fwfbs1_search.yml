@@ -1,0 +1,22 @@
+uuid: ed51c365-1012-49a0-a45d-21a9b07f213a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - fwfbs1
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: fwfbs1_search
+theme: fwfbs1
+region: sidebar_second
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

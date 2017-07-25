@@ -1,0 +1,19 @@
+uuid: e8585ead-5629-42a1-bb80-a43f4ce2ff19
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - user
+id: user.field_physical_address
+field_name: field_physical_address
+entity_type: user
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
