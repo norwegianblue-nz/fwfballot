@@ -1,0 +1,14 @@
+uuid: 1fc1f77b-504e-4ac9-9838-86eedfbd37e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.hunters
+  module:
+    - user
+id: user_remove_role_action.hunters
+label: 'Remove the Hunters role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: hunters

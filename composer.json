@@ -45,6 +45,7 @@
         "drupal/rng_contact": "^1.0@beta",
         "drupal/rng_date_scheduler": "1.x-dev",
         "drupal/rng_quick": "^1.0",
+        "drupal/rules": "3.x-dev",
         "drupal/token": "^1.0",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",

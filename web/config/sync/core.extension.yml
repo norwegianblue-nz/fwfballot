@@ -1,4 +1,5 @@
 module:
+  action: 0
   address: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
@@ -57,6 +58,7 @@ module:
   rng_conflict: 0
   rng_date_scheduler: 0
   rng_quick: 0
+  rules: 0
   search: 0
   shortcut: 0
   state_machine: 0
@@ -66,6 +68,7 @@ module:
   text: 0
   toolbar: 0
   tour: 0
+  typed_data: 0
   unlimited_number: 0
   user: 0
   views_ui: 0

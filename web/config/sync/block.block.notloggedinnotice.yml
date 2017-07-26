@@ -2,12 +2,10 @@ uuid: bf308a85-783e-48d3-838f-5e3f0df520d1
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:ba2d656d-ced5-4b0d-a4b7-ce4e12c419ec'
   module:
-    - block_content
     - rng
     - system
+    - user
   theme:
     - fwfbs1
 id: notloggedinnotice
@@ -19,7 +17,7 @@ plugin: 'block_content:ba2d656d-ced5-4b0d-a4b7-ce4e12c419ec'
 settings:
   id: 'block_content:ba2d656d-ced5-4b0d-a4b7-ce4e12c419ec'
   label: not-logged-in-notice
-  provider: block_content
+  provider: core
   label_display: '0'
   status: true
   info: ''
@@ -42,3 +40,10 @@ visibility:
     pages: /ballot-entry
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

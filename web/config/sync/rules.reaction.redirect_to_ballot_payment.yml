@@ -1,0 +1,37 @@
+uuid: 8beb0680-d5a8-412c-8c2f-b8890dd5b074
+langcode: en
+status: true
+dependencies: {  }
+id: redirect_to_ballot_payment
+label: 'Redirect to Ballot Payment'
+events:
+  -
+    event_name: 'rules_entity_insert:registration'
+description: ''
+tags:
+  - norwegian.blue
+  - ballot
+  - FWF
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 5c174867-d8be-4ea1-83c7-890281f69d58
+  conditions:
+    id: rules_and
+    uuid: 6e281bb9-741d-4fff-97c4-b8034e168c01
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: e7e4d547-3b9f-4c7c-98a2-7bfa8476ad30
+    actions:
+      -
+        id: rules_action
+        uuid: 61166c00-5346-4d2a-b621-2a825c6edca3
+        context_values:
+          url: /ballot-payment
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

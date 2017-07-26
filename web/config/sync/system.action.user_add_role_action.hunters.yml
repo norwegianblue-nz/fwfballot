@@ -1,0 +1,14 @@
+uuid: fb6440b8-61d1-4e7a-abd8-fb238dd35e02
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.hunters
+  module:
+    - user
+id: user_add_role_action.hunters
+label: 'Add the Hunters role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: hunters
