@@ -3,9 +3,9 @@ schemas:
   fwfbs1: 8000
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
+  path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/favicon.ico
   url: 'http://ballot.fwf.net.nz/sites/ballot.fwf.net.nz/themes/custom/fwfbs1/favicon.ico'
-  use_default: true
+  use_default: false
 cdn_jsdelivr_theme: cosmo
 table_responsive: '-1'
 table: ''
@@ -15,7 +15,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: ''
+  path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/FWF-logo.jpg
   url: ''
-  use_default: true
+  use_default: false
 breadcrumb: '2'
