@@ -1,9 +1,17 @@
 uuid: ed7b2189-f6f6-43ed-8db0-218c026d216c
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - rng
+third_party_settings:
+  rng:
+    condition_rng_role: false
 id: hunters
 label: Hunter
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access user contact forms'
+  - 'rng register role hunters'
+  - 'rng register self'

@@ -54,6 +54,7 @@ module:
   profile: 0
   quickedit: 0
   rdf: 0
+  registration_role: 0
   rng: 0
   rng_conflict: 0
   rng_date_scheduler: 0

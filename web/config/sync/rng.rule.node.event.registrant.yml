@@ -18,4 +18,5 @@ actions:
     configuration:
       operations:
         view: true
-        update: true
+        update: false
+        delete: false

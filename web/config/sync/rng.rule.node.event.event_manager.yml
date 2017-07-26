@@ -19,7 +19,6 @@ actions:
     id: registration_operations
     configuration:
       operations:
-        create: true
         view: true
         update: true
         delete: true

@@ -12,10 +12,15 @@ trigger: rng_event.register
 conditions:
   role:
     id: rng_user_role
-    roles: {  }
+    roles:
+      hunters: hunters
+    negate: false
 actions:
   registration_operations:
     id: registration_operations
     configuration:
       operations:
         create: true
+        view: false
+        update: false
+        delete: false

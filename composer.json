@@ -39,6 +39,7 @@
         "drupal/omega": "5.x-dev",
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0",
+        "drupal/registration_role": "1.x-dev",
         "drupal/responsive_menu": "^2.4",
         "drupal/rng": "^1.5",
         "drupal/rng_conflict": "^1.0@beta",
