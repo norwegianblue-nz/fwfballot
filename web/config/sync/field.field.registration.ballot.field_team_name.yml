@@ -9,7 +9,7 @@ id: registration.ballot.field_team_name
 field_name: field_team_name
 entity_type: registration
 bundle: ballot
-label: 'Team Name'
+label: 'Hunting Party Name'
 description: ''
 required: false
 translatable: false

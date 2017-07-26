@@ -7,7 +7,6 @@ dependencies:
     - field.field.user.user.field_contact_phone
     - field.field.user.user.field_dob
     - field.field.user.user.field_fire_arms_licence_number
-    - field.field.user.user.field_next_of_kin
     - field.field.user.user.field_nok_address
     - field.field.user.user.field_nok_phone
     - field.field.user.user.field_other_phone
@@ -89,14 +88,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_next_of_kin:
-    weight: 7
-    settings:
-      size: 60
-      placeholder: 'Emergency Contact Person'
     third_party_settings: {  }
     type: string_textfield
     region: content

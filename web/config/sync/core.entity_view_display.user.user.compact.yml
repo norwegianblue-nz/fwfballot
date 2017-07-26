@@ -8,7 +8,6 @@ dependencies:
     - field.field.user.user.field_contact_phone
     - field.field.user.user.field_dob
     - field.field.user.user.field_fire_arms_licence_number
-    - field.field.user.user.field_next_of_kin
     - field.field.user.user.field_nok_address
     - field.field.user.user.field_nok_phone
     - field.field.user.user.field_other_phone
@@ -40,7 +39,6 @@ hidden:
   field_contact_phone: true
   field_dob: true
   field_fire_arms_licence_number: true
-  field_next_of_kin: true
   field_nok_address: true
   field_nok_phone: true
   field_other_phone: true

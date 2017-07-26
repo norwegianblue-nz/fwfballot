@@ -11,7 +11,7 @@ field_name: field_block_preference
 entity_type: registration
 bundle: ballot
 label: 'Choose Desired Blocks'
-description: ''
+description: "Drag and Drop available blocks into the 'Chosen block preference' area in order of preference.<br />\r\nThis order will be used to allocate blocks should your party be lucky in the ballot."
 required: false
 translatable: false
 default_value: {  }

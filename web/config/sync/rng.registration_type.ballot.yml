@@ -2,6 +2,6 @@ uuid: ddd99c19-6205-4bee-bc5c-85b598c1bc91
 langcode: en
 status: true
 dependencies: {  }
-label: Ballot
+label: 'Hunting Party'
 id: ballot
 description: ''

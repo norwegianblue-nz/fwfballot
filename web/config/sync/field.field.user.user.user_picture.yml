@@ -15,7 +15,7 @@ entity_type: user
 bundle: user
 label: Picture
 description: 'You must upload a passport style photograph of yourself for identification purposes'
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
