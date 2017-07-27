@@ -25,7 +25,6 @@ third_party_settings:
   field_group:
     group_next_of_kin:
       children:
-        - field_next_of_kin
         - field_nok_address
         - field_nok_phone
         - field_relationship
@@ -73,7 +72,7 @@ content:
   field_contact_phone:
     weight: 4
     settings:
-      placeholder: ''
+      placeholder: 'Main contact phone number'
     third_party_settings: {  }
     type: telephone_default
     region: content
@@ -87,7 +86,7 @@ content:
     weight: 6
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Fire-arms licence number'
     third_party_settings: {  }
     type: string_textfield
     region: content
@@ -108,7 +107,7 @@ content:
   field_other_phone:
     weight: 5
     settings:
-      placeholder: ''
+      placeholder: 'Additional Contact Number'
     third_party_settings: {  }
     type: telephone_default
     region: content

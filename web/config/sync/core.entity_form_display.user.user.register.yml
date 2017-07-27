@@ -45,7 +45,6 @@ third_party_settings:
       region: content
     group_emergency_contact:
       children:
-        - field_next_of_kin
         - field_nok_address
         - field_nok_phone
         - field_relationship
@@ -74,21 +73,24 @@ content:
   field_contact_phone:
     weight: 5
     settings:
-      placeholder: ''
+      placeholder: 'Contact Number'
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_dob:
     weight: 4
-    settings: {  }
+    settings:
+      date_order: DMY
+      time_type: none
+      increment: 15
     third_party_settings: {  }
-    type: datetime_default
+    type: datetime_datelist
     region: content
   field_fire_arms_licence_number:
     weight: 7
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Fire-arms license number'
     third_party_settings: {  }
     type: string_textfield
     region: content
@@ -102,14 +104,14 @@ content:
   field_nok_phone:
     weight: 11
     settings:
-      placeholder: 'Phone Number'
+      placeholder: 'Emergency contact''s phone number'
     third_party_settings: {  }
     type: telephone_default
     region: content
   field_other_phone:
     weight: 6
     settings:
-      placeholder: ''
+      placeholder: 'Alternative contact number'
     third_party_settings: {  }
     type: telephone_default
     region: content

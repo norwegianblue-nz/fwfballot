@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b3d8bb96d1e3c9a4bccf6ee482b6786",
-    "content-hash": "e73386bb532d70d68e416bfdd7d087d5",
+    "hash": "3c08ca1fc3bd99e4707ff551ae6c6b5e",
+    "content-hash": "a51f2a178b61cdf8211d4fd65c91f2f6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -3874,6 +3874,65 @@
                 "source": "http://cgit.drupalcode.org/rules"
             },
             "time": "2017-05-25 20:23:56"
+        },
+        {
+            "name": "drupal/smtp",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/smtp",
+                "reference": "c9496a9d2b7d1eea35c3b3ef21b8cbe6482a9f44"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2+6-dev",
+                    "datestamp": "1498592643"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "José San Martin",
+                    "homepage": "https://www.drupal.org/user/72012"
+                },
+                {
+                    "name": "LukeLast",
+                    "homepage": "https://www.drupal.org/user/30151"
+                },
+                {
+                    "name": "japerry",
+                    "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "oadaeh",
+                    "homepage": "https://www.drupal.org/user/4649"
+                },
+                {
+                    "name": "wundo",
+                    "homepage": "https://www.drupal.org/user/25523"
+                },
+                {
+                    "name": "yettyn",
+                    "homepage": "https://www.drupal.org/user/93281"
+                }
+            ],
+            "description": "Allow for site emails to be sent through an SMTP server of your choice.",
+            "homepage": "https://www.drupal.org/project/smtp",
+            "support": {
+                "source": "http://cgit.drupalcode.org/smtp",
+                "issues": "https://www.drupal.org/project/issues/smtp"
+            },
+            "time": "2017-07-05 18:33:11"
         },
         {
             "name": "drupal/state_machine",
@@ -8798,6 +8857,7 @@
         "drupal/rng_contact": 10,
         "drupal/rng_date_scheduler": 20,
         "drupal/rules": 20,
+        "drupal/smtp": 20,
         "drupal/devel": 20
     },
     "prefer-stable": true,

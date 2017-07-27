@@ -1,0 +1,8 @@
+uuid: dd14c058-1e1b-4101-8ca8-01143e141dcd
+langcode: en
+status: true
+dependencies: {  }
+id: nz_date
+label: 'NZ Date'
+locked: false
+pattern: d/m/Y

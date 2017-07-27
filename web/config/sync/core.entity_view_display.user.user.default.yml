@@ -18,6 +18,7 @@ dependencies:
     - address
     - datetime
     - image
+    - telephone
     - user
 _core:
   default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
@@ -29,16 +30,17 @@ content:
   field_contact_phone:
     weight: 8
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_dob:
     weight: 7
     label: above
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: nz_date
     third_party_settings: {  }
     type: datetime_default
     region: content
@@ -60,16 +62,18 @@ content:
   field_nok_phone:
     weight: 14
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_other_phone:
     weight: 9
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
-    type: basic_string
+    type: telephone_link
     region: content
   field_physical_address:
     weight: 6
@@ -89,6 +93,8 @@ content:
   member_for:
     weight: 5
     region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image
     weight: 0
