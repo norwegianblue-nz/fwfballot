@@ -1,0 +1,10 @@
+uuid: 0c0bf4d6-12f7-48cc-9ac4-cc18484431ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.ballotprioritydisplay
+label: BallotPriorityDisplay
+targetEntityType: taxonomy_term
+cache: true
