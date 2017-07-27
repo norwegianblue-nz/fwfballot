@@ -46,7 +46,9 @@ module:
   layout_discovery: 0
   libraries: 0
   link: 0
+  mailsystem: 0
   menu_ui: 0
+  mimemail: 0
   node: 0
   options: 0
   page_cache: 0

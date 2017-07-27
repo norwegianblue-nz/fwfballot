@@ -1,0 +1,11 @@
+theme: fwfbs1
+defaults:
+  sender: SMTPMailSystem
+  formatter: mime_mail
+_core:
+  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
+modules:
+  system:
+    none:
+      formatter: mime_mail
+      sender: SMTPMailSystem

@@ -36,6 +36,8 @@
         "drupal/imagemagick": "^2.0",
         "drupal/inline_responsive_images": "^2.1",
         "drupal/libraries": "3.x-dev",
+        "drupal/mailsystem": "^4.1",
+        "drupal/mimemail": "1.x-dev",
         "drupal/omega": "5.x-dev",
         "drupal/paragraphs": "^1.1",
         "drupal/pathauto": "^1.0",
