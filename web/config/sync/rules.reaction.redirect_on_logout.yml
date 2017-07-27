@@ -1,0 +1,37 @@
+uuid: 2a3a6cc7-80ca-43b8-a033-59f10be77abc
+langcode: en
+status: true
+dependencies: {  }
+id: redirect_on_logout
+label: 'Redirect on logout'
+events:
+  -
+    event_name: rules_user_logout
+description: ''
+tags:
+  - norwegian.blue
+  - ballot
+  - FWF
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: e3516027-c431-4ba4-81c5-d4fae94b640c
+  conditions:
+    id: rules_and
+    uuid: 2ab0dbcd-86e3-4685-b884-05ff7f0801c6
+    conditions: {  }
+  actions:
+    id: rules_action_set
+    uuid: e5a4ea1d-11b6-44f4-a44a-6a86c469126d
+    actions:
+      -
+        id: rules_action
+        uuid: a457ee40-db8b-4c82-813a-40b6e69e593e
+        context_values:
+          url: /user/login
+        context_mapping: {  }
+        context_processors:
+          url:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_page_redirect

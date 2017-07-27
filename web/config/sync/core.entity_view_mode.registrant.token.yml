@@ -1,0 +1,10 @@
+uuid: 5464b987-ab01-4899-9405-36b052e2a169
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registrant.token
+label: Token
+targetEntityType: registrant
+cache: true

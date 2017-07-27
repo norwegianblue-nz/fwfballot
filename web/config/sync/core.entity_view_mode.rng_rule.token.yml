@@ -1,0 +1,10 @@
+uuid: aff1f3e7-5389-4e5f-a5e6-6ef27611f0e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: rng_rule.token
+label: Token
+targetEntityType: rng_rule
+cache: true

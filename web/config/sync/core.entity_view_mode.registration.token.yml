@@ -1,0 +1,10 @@
+uuid: ece1002c-c13f-4d3f-b9f8-dbc0f225ef00
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.token
+label: Token
+targetEntityType: registration
+cache: true

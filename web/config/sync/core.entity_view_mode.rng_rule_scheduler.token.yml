@@ -1,0 +1,10 @@
+uuid: 864acecb-d2ad-47ec-a11e-ae93915520c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: rng_rule_scheduler.token
+label: Token
+targetEntityType: rng_rule_scheduler
+cache: true
