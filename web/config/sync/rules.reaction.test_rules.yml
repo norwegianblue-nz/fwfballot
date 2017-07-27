@@ -1,0 +1,15 @@
+uuid: c79948ae-3c67-40b0-8c32-154d6822c0dc
+langcode: en
+status: true
+dependencies: {  }
+id: test_rules
+label: 'Test Rules'
+events:
+  -
+    event_name: 'rules_entity_insert:user'
+description: ''
+tags:
+  - norwegian.blue
+config_version: '3'
+expression:
+  id: rules_rule
