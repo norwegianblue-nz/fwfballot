@@ -1,0 +1,32 @@
+uuid: 7af21bc2-d439-4307-92bd-96ddf621ace8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.registration.token
+    - field.field.registration.ballot.field_block_preference
+    - field.field.registration.ballot.field_team_name
+    - rng.registration_type.ballot
+id: registration.ballot.token
+targetEntityType: registration
+bundle: ballot
+mode: token
+content:
+  field_block_preference:
+    weight: 1
+    label: above
+    settings:
+      view_mode: ballotprioritydisplay
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_team_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

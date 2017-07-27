@@ -1,0 +1,24 @@
+uuid: e5839f95-eba8-41ae-945a-6124989c9780
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.token
+    - field.field.taxonomy_term.priority.field_priority
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.token
+targetEntityType: taxonomy_term
+bundle: priority
+mode: token
+content:
+  field_priority:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  description: true
