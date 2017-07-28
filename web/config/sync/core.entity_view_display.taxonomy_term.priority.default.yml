@@ -3,9 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.priority.field_area_map
     - field.field.taxonomy_term.priority.field_priority
     - taxonomy.vocabulary.priority
   module:
+    - image
     - text
 id: taxonomy_term.priority.default
 targetEntityType: taxonomy_term
@@ -19,6 +21,15 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_area_map:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
   field_priority:
     weight: 0
     label: hidden

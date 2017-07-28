@@ -4,13 +4,25 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
+    - field.field.taxonomy_term.priority.field_area_map
     - field.field.taxonomy_term.priority.field_priority
     - taxonomy.vocabulary.priority
+  module:
+    - image
 id: taxonomy_term.priority.full
 targetEntityType: taxonomy_term
 bundle: priority
 mode: full
 content:
+  field_area_map:
+    type: image
+    weight: 1
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
   field_priority:
     weight: 0
     label: hidden

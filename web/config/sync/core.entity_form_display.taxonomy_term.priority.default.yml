@@ -3,9 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.taxonomy_term.priority.field_area_map
     - field.field.taxonomy_term.priority.field_priority
+    - image.style.thumbnail
     - taxonomy.vocabulary.priority
   module:
+    - image
     - text
 id: taxonomy_term.priority.default
 targetEntityType: taxonomy_term
@@ -20,6 +23,14 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_area_map:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   field_priority:
     weight: 1
     settings:
