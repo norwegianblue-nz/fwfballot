@@ -1,0 +1,11 @@
+name: Entity Reference Drag & Drop
+type: module
+description: Provides a nice drag and drop widget for entity reference fields.
+package: Fields
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2017-02-26
+version: '8.x-1.0'
+core: '8.x'
+project: 'entityreference_dragdrop'
+datestamp: 1488135195

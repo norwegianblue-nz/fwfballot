@@ -1,0 +1,27 @@
+diff --git a/src/Plugin/Field/FieldWidget/EntityReferenceDragDropWidget.php b/src/Plugin/Field/FieldWidget/EntityReferenceDragDropWidget.php
+index 5ad6323..ac7331a 100644
+--- a/src/Plugin/Field/FieldWidget/EntityReferenceDragDropWidget.php
++++ b/src/Plugin/Field/FieldWidget/EntityReferenceDragDropWidget.php
+@@ -167,7 +167,9 @@ class EntityReferenceDragDropWidget extends OptionsWidgetBase implements Contain
+     $element['target_id'] = array(
+       '#type' => 'hidden',
+       '#default_value' => implode(',', array_keys($selected)),
+-      '#element_validate' => array('entityreference_dragdrop_element_validate'),
++      '#element_validate' => array(
++        array($this, 'entityreference_dragdrop_element_validate')
++      ),
+       '#attached' => array(
+         'library' => array('entityreference_dragdrop/init'),
+         'drupalSettings' => array(
+@@ -339,4 +341,11 @@ class EntityReferenceDragDropWidget extends OptionsWidgetBase implements Contain
+     return $options;
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function entityreference_dragdrop_element_validate($element, FormStateInterface $form_state) {
++    // TODO: Implement element_validate() function.
++  }
++
+ }
