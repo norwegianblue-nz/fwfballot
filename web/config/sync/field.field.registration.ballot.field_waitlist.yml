@@ -1,0 +1,23 @@
+uuid: 9813c58c-9f2e-46fa-a7ea-b2c9604cfb21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_waitlist
+    - rng.registration_type.ballot
+id: registration.ballot.field_waitlist
+field_name: field_waitlist
+entity_type: registration
+bundle: ballot
+label: 'Retain entry if unsuccessful'
+description: 'Do you wish your application form to be kept for cancellations if you miss out in the ballot? <br /> Please note: you may be contacted by collect phone call at LATE NOTICE.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Waitlist
+  off_label: 'No Waitlist'
+field_type: boolean

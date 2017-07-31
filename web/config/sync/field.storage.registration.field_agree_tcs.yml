@@ -1,0 +1,18 @@
+uuid: 6ab6d972-ea63-4eae-af38-2f5300b55efd
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.field_agree_tcs
+field_name: field_agree_tcs
+entity_type: registration
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 6ada9760-b1be-413d-aa08-8d684cf5ae23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_agree_tcs
+    - rng.registration_type.ballot
+id: registration.ballot.field_agree_tcs
+field_name: field_agree_tcs
+entity_type: registration
+bundle: ballot
+label: 'I agree to the Terms and Conditions'
+description: 'In order for your entry to the ballot to be accepted you must agree to the <a href="terms_and_conditions" target="_blank">Terms and Conditions</a>'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Agree
+  off_label: Decline
+field_type: boolean

@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.registration.ballot.field_agree_tcs
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_team_name
+    - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
   module:
     - entityreference_dragdrop
@@ -13,8 +15,15 @@ targetEntityType: registration
 bundle: ballot
 mode: default
 content:
-  field_block_preference:
+  field_agree_tcs:
     weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_block_preference:
+    weight: 3
     settings:
       view_mode: taxonomy_term.dragdrop
       available_entities_label: 'Available blocks'
@@ -30,5 +39,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_waitlist:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
 hidden: {  }

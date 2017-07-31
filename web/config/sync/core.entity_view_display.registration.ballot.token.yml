@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.registration.token
+    - field.field.registration.ballot.field_agree_tcs
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_team_name
+    - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
 id: registration.ballot.token
 targetEntityType: registration
@@ -13,7 +15,7 @@ bundle: ballot
 mode: token
 content:
   field_block_preference:
-    weight: 1
+    weight: 2
     label: above
     settings:
       view_mode: ballotprioritydisplay
@@ -29,4 +31,15 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-hidden: {  }
+  field_waitlist:
+    type: boolean
+    weight: 1
+    region: content
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+hidden:
+  field_agree_tcs: true
