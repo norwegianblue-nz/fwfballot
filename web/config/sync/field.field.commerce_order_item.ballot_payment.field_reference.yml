@@ -9,9 +9,9 @@ id: commerce_order_item.ballot_payment.field_reference
 field_name: field_reference
 entity_type: commerce_order_item
 bundle: ballot_payment
-label: 'Team Name'
-description: ''
-required: false
+label: 'Hunting Party Name'
+description: "Enter the name you chose for your party.<br />\r\nEnter it exactly as you did on your ballot entry form.<br />\r\nIt was also included in the confirmation email you received."
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

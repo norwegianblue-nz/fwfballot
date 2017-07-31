@@ -16,20 +16,20 @@ bundle: ballot_payment
 mode: default
 content:
   field_entry_id:
-    weight: 4
+    weight: 5
     settings:
       form_mode: default
       label_singular: ''
       label_plural: ''
+      allow_existing: true
       match_operator: CONTAINS
       override_labels: false
       allow_new: false
-      allow_existing: false
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
   field_reference:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -38,7 +38,7 @@ content:
     region: content
   purchased_entity:
     type: entity_reference_autocomplete
-    weight: -1
+    weight: 0
     settings:
       match_operator: CONTAINS
       size: 60

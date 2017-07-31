@@ -17,7 +17,7 @@ mode: add_to_cart
 content:
   field_entry_id:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 2
     region: content
     settings:
       match_operator: STARTS_WITH
@@ -26,7 +26,7 @@ content:
     third_party_settings: {  }
   field_reference:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 25
@@ -34,15 +34,15 @@ content:
     third_party_settings: {  }
   purchased_entity:
     type: commerce_product_variation_title
-    weight: 3
+    weight: 4
     region: content
     settings:
       label_display: true
-      label_text: 'Please select'
+      label_text: 'Choose hunter origin'
     third_party_settings: {  }
   quantity:
     type: commerce_quantity
-    weight: 2
+    weight: 3
     region: content
     settings:
       step: '1'
