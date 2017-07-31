@@ -1,0 +1,26 @@
+uuid: 2f9440fd-b6a8-47df-9c3b-a82c33afa5c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.ballotprioritydisplay
+    - field.field.taxonomy_term.priority.field_area_map
+    - field.field.taxonomy_term.priority.field_priority
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.ballotprioritydisplay
+targetEntityType: taxonomy_term
+bundle: priority
+mode: ballotprioritydisplay
+content:
+  field_priority:
+    weight: 0
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+hidden:
+  description: true
+  field_area_map: true

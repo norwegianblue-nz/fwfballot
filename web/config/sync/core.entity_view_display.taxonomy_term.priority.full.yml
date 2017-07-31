@@ -9,14 +9,22 @@ dependencies:
     - taxonomy.vocabulary.priority
   module:
     - image
+    - text
 id: taxonomy_term.priority.full
 targetEntityType: taxonomy_term
 bundle: priority
 mode: full
 content:
+  description:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_area_map:
     type: image
-    weight: 1
+    weight: 2
     region: content
     label: above
     settings:
@@ -32,5 +40,4 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-hidden:
-  description: true
+hidden: {  }

@@ -28,7 +28,7 @@ expression:
         id: rules_action
         uuid: 2e74d394-50fa-410e-bdac-369604af4458
         context_values:
-          url: /home
+          url: /
         context_mapping: {  }
         context_processors:
           url:
