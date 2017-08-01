@@ -1,0 +1,23 @@
+uuid: 56a1013d-1d63-4e31-ac8e-9cfd89a04b79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_instructions
+    - rng.registration_type.ballot
+id: registration.ballot.field_instructions
+field_name: field_instructions
+entity_type: registration
+bundle: ballot
+label: Instructions
+description: "Click and drag from 'Available' and release in 'Chosen'<br />\r\nReorder the blocks in the 'Chosen' at will<br />"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

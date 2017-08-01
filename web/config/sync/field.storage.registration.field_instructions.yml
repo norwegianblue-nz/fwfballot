@@ -1,0 +1,18 @@
+uuid: 8d019c12-264b-45b1-b5b5-c9045ea08971
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.field_instructions
+field_name: field_instructions
+entity_type: registration
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

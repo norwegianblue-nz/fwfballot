@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.registration.ballot.field_agree_tcs
     - field.field.registration.ballot.field_block_preference
+    - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
@@ -23,7 +24,7 @@ content:
     type: boolean_checkbox
     region: content
   field_block_preference:
-    weight: 3
+    weight: 4
     settings:
       view_mode: taxonomy_term.dragdrop
       available_entities_label: 'Available blocks'
@@ -31,6 +32,13 @@ content:
       display_filter: 0
     third_party_settings: {  }
     type: entityreference_dragdrop
+    region: content
+  field_instructions:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_team_name:
     weight: 0

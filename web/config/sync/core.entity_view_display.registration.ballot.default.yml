@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.registration.ballot.field_agree_tcs
     - field.field.registration.ballot.field_block_preference
+    - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
@@ -42,3 +43,4 @@ content:
     region: content
 hidden:
   field_agree_tcs: true
+  field_instructions: true
