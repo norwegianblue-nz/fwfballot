@@ -48,6 +48,7 @@
         "drupal/rng_quick": "^1.0",
         "drupal/smtp": "1.x-dev",
         "drupal/token": "^1.0",
+        "drupal/typed_data": "1.x-dev",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"

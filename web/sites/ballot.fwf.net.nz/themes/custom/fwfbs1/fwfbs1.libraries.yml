@@ -2,3 +2,9 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+  js:
+  # Custom Javascript file for your own JS modifications.
+  # Examples of behaviors in JS file.
+    js/fwfbs1.js: {}
+    js/jquery.ui.touch-punch.js: {}
+
