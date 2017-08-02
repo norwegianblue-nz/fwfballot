@@ -10,7 +10,7 @@ field_name: field_instructions
 entity_type: registration
 bundle: ballot
 label: Instructions
-description: "Click and drag from 'Available' and release in 'Chosen'<br />\r\nReorder the blocks in the 'Chosen' at will<br />"
+description: "<span id='title'>Choose Desired Block Preference Order</span>\r\n<p>Click and drag blocks 'Available' and release in 'Chosen'<br />\r\nReorder the ‘chosen’ blocks if required - this will be the order they are allocated in so <strong>make sure you are happy before saving.</strong></p>"
 required: false
 translatable: false
 default_value:
