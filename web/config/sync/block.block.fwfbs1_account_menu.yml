@@ -13,7 +13,7 @@ _core:
 id: fwfbs1_account_menu
 theme: fwfbs1
 region: navigation_collapsible
-weight: 11
+weight: -9
 provider: null
 plugin: 'system_menu_block:account'
 settings:

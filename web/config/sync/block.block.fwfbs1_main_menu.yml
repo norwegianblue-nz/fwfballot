@@ -13,7 +13,7 @@ _core:
 id: fwfbs1_main_menu
 theme: fwfbs1
 region: navigation_collapsible
-weight: 10
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:

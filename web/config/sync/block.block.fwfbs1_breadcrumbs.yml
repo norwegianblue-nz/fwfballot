@@ -11,7 +11,7 @@ _core:
 id: fwfbs1_breadcrumbs
 theme: fwfbs1
 region: header
-weight: -100
+weight: -9
 provider: null
 plugin: system_breadcrumb_block
 settings:

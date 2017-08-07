@@ -12,7 +12,7 @@ dependencies:
 id: fwfbs1_tmdmainbuttons
 theme: fwfbs1
 region: sidebar_second
-weight: 0
+weight: -6
 provider: null
 plugin: 'block_content:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
 settings:

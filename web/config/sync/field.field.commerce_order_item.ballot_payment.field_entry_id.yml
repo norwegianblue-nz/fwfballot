@@ -9,7 +9,7 @@ id: commerce_order_item.ballot_payment.field_entry_id
 field_name: field_entry_id
 entity_type: commerce_order_item
 bundle: ballot_payment
-label: 'Entry ID'
+label: 'Ballot Entry ID'
 description: "Enter the Ballot Entry ID.<br />\r\nThis was included in the confimation email you received after completing the ballot entry"
 required: true
 translatable: false

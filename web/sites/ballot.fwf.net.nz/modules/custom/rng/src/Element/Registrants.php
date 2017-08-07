@@ -402,7 +402,8 @@ class Registrants extends FormElement {
         $person_subform['existing'] = [
           '#type' => 'details',
           '#open' => TRUE,
-          '#title' => t('Existing @entity_type', ['@entity_type' => $entity_type->getLabel()]),
+// nb //          '#title' => t('Existing @entity_type', ['@entity_type' => $entity_type->getLabel()]),
+          '#title' => t("Start typing hunter's username and choose the correct one from list only. See the FAQ if you can’t find a username you expected to see."),
           '#identity_element_existing_container' => TRUE,
           '#attributes' => [
             'class' => ['existing-container'],

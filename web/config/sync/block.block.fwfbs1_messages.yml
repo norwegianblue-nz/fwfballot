@@ -11,7 +11,7 @@ _core:
 id: fwfbs1_messages
 theme: fwfbs1
 region: header
-weight: -50
+weight: -9
 provider: null
 plugin: system_messages_block
 settings:

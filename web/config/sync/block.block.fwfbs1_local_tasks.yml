@@ -9,7 +9,7 @@ _core:
 id: fwfbs1_local_tasks
 theme: fwfbs1
 region: header
-weight: 10
+weight: -9
 provider: null
 plugin: local_tasks_block
 settings:
