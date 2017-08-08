@@ -1,6 +1,6 @@
 uuid: 3126af6c-3155-45c9-b3da-95da4812c77b
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - commerce_stripe

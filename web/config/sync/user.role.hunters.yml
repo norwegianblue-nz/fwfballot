@@ -15,3 +15,4 @@ permissions:
   - 'access user contact forms'
   - 'rng register role hunters'
   - 'rng register self'
+  - 'view own commerce_order'

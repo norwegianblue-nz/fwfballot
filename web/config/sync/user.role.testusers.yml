@@ -1,0 +1,10 @@
+uuid: 8188e49b-baba-406a-af1f-dbd130004bf3
+langcode: en
+status: true
+dependencies: {  }
+id: testusers
+label: TestUsers
+weight: 4
+is_admin: null
+permissions:
+  - 'access site in maintenance mode'
