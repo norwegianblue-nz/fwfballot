@@ -20,7 +20,7 @@ class StripeOrderInfoMessage extends CheckoutPaneBase implements CheckoutPaneInt
    */
   public function buildPaneForm(array $pane_form, FormStateInterface $form_state, array &$complete_form) {
     $pane_form['message'] = [
-      '#markup' => $this->t("This is a custom message to display something about Stripe.<br />A second line."),
+      '#markup' => $this->t("<p>FWF accept Visa and MasterCard payments. We use secure payment provided by Stripe and secure encrypted connections using https.</p>"),
     ];
     return $pane_form;
   }
