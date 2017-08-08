@@ -1,0 +1,5 @@
+name: Stripe_Message_Pane
+type: module
+description: Stripe Custom Checkout Pane
+core: 8.x
+package: norwegian.blue

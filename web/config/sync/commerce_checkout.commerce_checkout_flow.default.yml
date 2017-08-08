@@ -1,7 +1,10 @@
 uuid: e2087455-45ae-452f-bc74-2e690c033fdb
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_payment
+    - stripe_message_pane
 _core:
   default_config_hash: wwkDVBiXUqSzRifJbb71ajFBklJdNJ_DgS67IF-_qgY
 id: default
@@ -11,24 +14,31 @@ configuration:
   display_checkout_progress: true
   panes:
     login:
-      allow_guest_checkout: true
+      allow_guest_checkout: false
       allow_registration: false
       step: login
       weight: 0
     contact_information:
       double_entry: true
       step: order_information
-      weight: 1
-    billing_information:
-      step: order_information
       weight: 2
     review:
       step: review
-      weight: 3
+      weight: 4
     completion_message:
       step: complete
-      weight: 4
+      weight: 6
     order_summary:
       view: commerce_checkout_order_summary
       step: _sidebar
+      weight: 7
+    payment_process:
+      capture: true
+      step: payment
       weight: 5
+    payment_information:
+      step: order_information
+      weight: 3
+    stripe_order_info_message:
+      step: order_information
+      weight: 1

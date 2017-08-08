@@ -6,29 +6,39 @@ dependencies:
     - commerce_order.commerce_order_item_type.ballot_payment
     - field.field.commerce_order_item.ballot_payment.field_entry_id
     - field.field.commerce_order_item.ballot_payment.field_reference
+  module:
+    - commerce_price
 id: commerce_order_item.ballot_payment.default
 targetEntityType: commerce_order_item
 bundle: ballot_payment
 mode: default
 content:
   field_entry_id:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: entity_reference_entity_id
     region: content
   field_reference:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  unit_price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      strip_trailing_zeroes: false
+      display_currency_code: false
+    third_party_settings: {  }
 hidden:
   adjustments: true
   purchased_entity: true
   quantity: true
   total_price: true
-  unit_price: true

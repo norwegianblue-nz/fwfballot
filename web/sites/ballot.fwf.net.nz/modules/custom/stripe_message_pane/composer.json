@@ -1,0 +1,14 @@
+{
+  "name": "drupal/stripe_message_pane",
+  "type": "drupal-module",
+  "description": "Stripe Custom Checkout Pane",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/stripe_message_pane",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/stripe_message_pane",
+    "source": "http://cgit.drupalcode.org/stripe_message_pane"
+  },
+  "require": { }
+}

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains stripe_message_pane.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function stripe_message_pane_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the stripe_message_pane module.
+    case 'help.page.stripe_message_pane':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Stripe Custom Checkout Pane') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function stripe_message_pane_theme() {
+  return [
+    'stripe_message_pane' => [
+      'render element' => 'children',
+    ],
+  ];
+}
