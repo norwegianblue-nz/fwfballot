@@ -1,0 +1,20 @@
+## YAML Template.
+---
+
+draw_hunting_ballot.drawballot:
+  path: '/manage/draw_hunting_ballot/drawballot'
+  defaults:
+    _controller: '\Drupal\draw_hunting_ballot\Controller\DrawBallotController::drawballot'
+    _title: 'Draw Ballot'
+  requirements:
+    _permission: 'access content'
+    
+## nb |entity.registration.draw_ballot:
+## nb |  path: '/registration/{registration}/event/drawballot'
+## nb |  defaults:
+## nb |    _controller: '\Drupal\draw_hunting_ballot\Controller\DrawBallotController::drawballot'
+## nb |#    _entity_form: 'registration.edit'
+## nb |    _title: 'Draw Ballot'
+## nb |  requirements:
+## nb |    _entity_access: 'registration.update'
+

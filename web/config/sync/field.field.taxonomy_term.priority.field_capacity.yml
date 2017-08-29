@@ -1,0 +1,25 @@
+uuid: 1a8a2566-587a-4c56-a69e-f94a498a0ad4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_capacity
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.field_capacity
+field_name: field_capacity
+entity_type: taxonomy_term
+bundle: priority
+label: 'Available Capacity'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 6
+default_value_callback: ''
+settings:
+  min: null
+  max: 6
+  prefix: ''
+  suffix: ' hunters'
+field_type: integer

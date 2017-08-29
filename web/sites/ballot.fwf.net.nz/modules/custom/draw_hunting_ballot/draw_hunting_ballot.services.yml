@@ -1,0 +1,13 @@
+services:
+  draw_hunting-ballot.route_subscriber:
+    class: Drupal\draw_hunting_ballot\Routing\RouteSubscriber
+    arguments: ['@entity_type.manager', '@rng.event_manager']
+    tags:
+      - { name: event_subscriber }
+  draw_hunting-ballot.currententries:
+    class: Drupal\draw_hunting_ballot\CurrentEntries
+    arguments: []
+  draw_hunting-ballot.shuffleobject:
+    class: Drupal\draw_hunting_ballot\ShuffleObject
+    arguments: []
+

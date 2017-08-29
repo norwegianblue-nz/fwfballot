@@ -1,0 +1,8 @@
+## YAML Template.
+---
+## nb|draw_hunting_ballot.manage:
+## nb|  title: 'Manage Ballots'
+## nb|  description: 'Manage Ballot'
+## nb|  parent: system.admin
+## nb|  route_name: draw_hunting_ballot.drawballot
+## nb|  weight: 3

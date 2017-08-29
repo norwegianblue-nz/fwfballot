@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.registration.ballot.field_agree_tcs
+    - field.field.registration.ballot.field_allocated_block
+    - field.field.registration.ballot.field_allocated_in_draw
     - field.field.registration.ballot.field_block_preference
+    - field.field.registration.ballot.field_drawn
     - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
@@ -14,14 +17,41 @@ targetEntityType: registration
 bundle: ballot
 mode: default
 content:
-  field_block_preference:
+  field_allocated_block:
     weight: 2
+    label: inline
+    settings:
+      view_mode: ballotprioritydisplay
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_allocated_in_draw:
+    weight: 5
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_block_preference:
+    weight: 3
     label: hidden
     settings:
       view_mode: ballotprioritydisplay
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_drawn:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_team_name:
     weight: 0

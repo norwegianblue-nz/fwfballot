@@ -1,0 +1,21 @@
+uuid: 9de771e5-66f6-448c-bef7-5cb230aca936
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ballotyear
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_ballotyear
+field_name: field_ballotyear
+entity_type: node
+bundle: event
+label: BallotYear
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

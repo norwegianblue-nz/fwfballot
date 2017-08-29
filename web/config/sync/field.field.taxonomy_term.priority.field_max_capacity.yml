@@ -1,0 +1,25 @@
+uuid: 665762bf-d7fa-4bb8-9e65-33eaff01cd1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_max_capacity
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.field_max_capacity
+field_name: field_max_capacity
+entity_type: taxonomy_term
+bundle: priority
+label: 'Max Capacity'
+description: 'The maximum number of hunters permitted into this hunting block at any one time.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 6
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ' hunters'
+field_type: integer

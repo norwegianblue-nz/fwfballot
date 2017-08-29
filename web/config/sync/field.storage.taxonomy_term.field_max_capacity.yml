@@ -1,0 +1,20 @@
+uuid: 2ad0d465-d404-4d84-beb4-0c422dfb1ce7
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_max_capacity
+field_name: field_max_capacity
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

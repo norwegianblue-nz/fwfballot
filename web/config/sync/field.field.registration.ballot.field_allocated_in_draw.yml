@@ -1,0 +1,23 @@
+uuid: a1a37c53-e505-4e3e-9f9a-84bf3b706691
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_allocated_in_draw
+    - rng.registration_type.ballot
+id: registration.ballot.field_allocated_in_draw
+field_name: field_allocated_in_draw
+entity_type: registration
+bundle: ballot
+label: 'Allocated in draw'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

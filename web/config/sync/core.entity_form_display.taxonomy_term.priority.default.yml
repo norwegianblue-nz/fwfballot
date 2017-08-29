@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.priority.field_area_map
+    - field.field.taxonomy_term.priority.field_capacity
+    - field.field.taxonomy_term.priority.field_max_capacity
     - field.field.taxonomy_term.priority.field_priority
     - image.style.thumbnail
     - taxonomy.vocabulary.priority
@@ -17,19 +19,26 @@ mode: default
 content:
   description:
     type: text_textarea
-    weight: 2
+    weight: 3
     region: content
     settings:
-      rows: 5
+      rows: 2
       placeholder: ''
     third_party_settings: {  }
   field_area_map:
-    weight: 3
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_max_capacity:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_priority:
     weight: 1
@@ -47,4 +56,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_capacity: true
   path: true

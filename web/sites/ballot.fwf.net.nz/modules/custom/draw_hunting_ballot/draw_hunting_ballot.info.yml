@@ -1,0 +1,7 @@
+name: Draw_Hunting_Ballot
+type: module
+description: FWF Hunting Ballot block allocation
+core: 8.x
+package: norwegian.blue
+dependencies:
+  - rng

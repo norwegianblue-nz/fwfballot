@@ -5,7 +5,7 @@ entity.registration.canonical:
   path: '/registration/{registration}'
   defaults:
     _entity_view: 'registration'
-    _title: 'Registration'
+    _title: 'Ballot entry'
   requirements:
     _entity_access: 'registration.view'
 
@@ -29,9 +29,9 @@ entity.registration.registrants:
   path: '/registration/{registration}/registrants'
   defaults:
     _entity_form: 'registration.registrants'
-    _title: 'Edit identities'
+    _title: 'Party members'
   requirements:
-    _entity_access: 'registration.update'
+    _entity_access: 'registration.view'
 
 # registration_type entities
 entity.registration_type.add:

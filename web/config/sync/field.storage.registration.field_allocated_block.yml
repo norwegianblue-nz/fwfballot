@@ -1,0 +1,20 @@
+uuid: 2789beb9-d8d2-4386-a9f6-94197e7dcfe5
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+    - taxonomy
+id: registration.field_allocated_block
+field_name: field_allocated_block
+entity_type: registration
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

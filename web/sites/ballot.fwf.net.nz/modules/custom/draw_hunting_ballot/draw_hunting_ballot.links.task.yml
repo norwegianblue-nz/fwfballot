@@ -1,0 +1,4 @@
+draw_hunting_ballot.local_tasks:
+  class: \Drupal\Core\Menu\LocalTaskDefault
+  deriver: \Drupal\draw_hunting_ballot\Plugin\Derivative\LocalTasks
+

@@ -1,0 +1,20 @@
+uuid: 85bf96a0-10c5-4413-a8d6-6c1efc990a0b
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_ballotyear
+field_name: field_ballotyear
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

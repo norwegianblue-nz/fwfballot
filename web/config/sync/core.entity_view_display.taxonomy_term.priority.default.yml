@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.priority.field_area_map
+    - field.field.taxonomy_term.priority.field_capacity
+    - field.field.taxonomy_term.priority.field_max_capacity
     - field.field.taxonomy_term.priority.field_priority
     - taxonomy.vocabulary.priority
   module:
@@ -29,6 +31,24 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
+  field_capacity:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_max_capacity:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
     region: content
   field_priority:
     weight: 0

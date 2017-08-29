@@ -1,0 +1,28 @@
+uuid: 873f0627-eef2-4272-9833-82ccbd349a45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_allocated_block
+    - rng.registration_type.ballot
+    - taxonomy.vocabulary.priority
+id: registration.ballot.field_allocated_block
+field_name: field_allocated_block
+entity_type: registration
+bundle: ballot
+label: 'Allocated Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      priority: priority
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -5,6 +5,9 @@ dependencies:
   config:
     - field.storage.registration.field_team_name
     - rng.registration_type.ballot
+    - system.menu.admin
+    - user.role.administrator
+    - user.role.hunters
   module:
     - rng
     - user
@@ -24,8 +27,11 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            administrator: administrator
+            hunters: hunters
       cache:
         type: tag
         options: {  }
@@ -323,6 +329,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_team_name'
   block_1:
@@ -367,6 +374,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_team_name'
   entity_reference_1:
@@ -529,6 +537,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_team_name'
   entity_reference_2:
@@ -623,6 +632,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_team_name'
   page_1:
@@ -995,11 +1005,21 @@ display:
           replica: false
           query_comment: ''
           query_tags: null
+      menu:
+        type: normal
+        title: 'Ballot Entries'
+        description: 'Show entries to Ballot'
+        expanded: true
+        parent: 'views_view:views.events.page_1'
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_team_name'

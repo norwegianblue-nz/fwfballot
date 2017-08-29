@@ -1,0 +1,20 @@
+uuid: f2e8a5f2-7b70-47b7-ab97-6eaa612849a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.field_allocated_in_draw
+field_name: field_allocated_in_draw
+entity_type: registration
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

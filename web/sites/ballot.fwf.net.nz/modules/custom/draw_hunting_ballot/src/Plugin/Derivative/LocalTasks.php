@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\rng\Plugin\Derivative;
+namespace Drupal\draw_hunting_ballot\Plugin\Derivative;
 
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
@@ -10,8 +10,9 @@ use Drupal\Core\Routing\RouteProviderInterface;
 use Drupal\rng\EventManagerInterface;
 use Drupal\Core\Cache\Cache;
 
+
 /**
- * Provides dynamic tasks for RNG.
+ * Provides dynamic tasks.
  */
 class LocalTasks extends DeriverBase implements ContainerDeriverInterface {
 
@@ -81,61 +82,23 @@ class LocalTasks extends DeriverBase implements ContainerDeriverInterface {
       // Only need one set of tasks task per entity type.
       if ($this->routeProvider->getRouteByName("entity.$entity_type.canonical")) {
         $event_default = "rng.event.$entity_type.event.default";
-        $this->derivatives[$event_default] = array(
-          'title' => t('Event', [], ['context' => 'rng']),
-          'base_route' => "entity.$entity_type.canonical",
-          'route_name' => "rng.event.$entity_type.event",
-          'weight' => 30,
-          'cache_tags' => $cache_tags,
-        );
 
-        $this->derivatives["rng.event.$entity_type.register.type_list"] = [
-          'route_name' => "rng.event.$entity_type.register.type_list",
-          'base_route' => "entity.$entity_type.canonical",
-          'title' => t('Register', [], ['context' => 'rng']),
-          'weight' => 40,
-          'cache_tags' => $cache_tags,
-        ];
-
-        $this->derivatives["rng.event.$entity_type.register"] = [
-          'route_name' => "rng.event.$entity_type.register",
-          'parent_id' => 'rng.local_tasks:' . "rng.event.$entity_type.register.type_list",
-          'title' => t('Register', [], ['context' => 'rng']),
-          'weight' => 40,
-          'cache_tags' => $cache_tags,
-        ];
-
-        $this->derivatives["rng.event.$entity_type.event.settings"] = array(
-          'title' => t('Settings'),
-          'route_name' => $this->derivatives[$event_default]['route_name'],
+        $this->derivatives["rng.event.$entity_type.event.drawballot"] = array(
+          'title' => t('Draw Ballot'),
+          'route_name' => "rng.event.$entity_type.drawballot",
           'parent_id' => 'rng.local_tasks:' . $event_default,
-          'weight' => -100,
+          'weight' => -90,
           'cache_tags' => $cache_tags,
         );
 
-        $this->derivatives["rng.event.$entity_type.event.access"] = array(
-          'title' => t('Access'),
-          'route_name' => "rng.event.$entity_type.access",
+        $this->derivatives["rng.event.$entity_type.event.resetballot"] = array(
+          'title' => t('Prepare Ballot'),
+          'route_name' => "rng.event.$entity_type.resetballot",
           'parent_id' => 'rng.local_tasks:' . $event_default,
-          'weight' => 149,
+          'weight' => -91,
           'cache_tags' => $cache_tags,
         );
 
-        $this->derivatives["rng.event.$entity_type.event.messages"] = array(
-          'title' => t('Messages'),
-          'route_name' => "rng.event.$entity_type.messages",
-          'parent_id' => 'rng.local_tasks:' . $event_default,
-          'weight' => -40,
-          'cache_tags' => $cache_tags,
-        );
-
-        $this->derivatives["rng.event.$entity_type.event.group.list"] = array(
-          'title' => t('Groups', [], ['context' => 'rng']),
-          'route_name' => "rng.event.$entity_type.group.list",
-          'parent_id' => 'rng.local_tasks:' . $event_default,
-          'weight' => 150,
-          'cache_tags' => $cache_tags,
-        );
       }
     }
 

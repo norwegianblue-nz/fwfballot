@@ -1,0 +1,20 @@
+uuid: 64b8754a-0256-41e9-862b-3d8e49da2b22
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.field_drawn
+field_name: field_drawn
+entity_type: registration
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

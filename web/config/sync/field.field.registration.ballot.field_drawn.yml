@@ -1,0 +1,23 @@
+uuid: f0c8c751-1bff-46a7-826a-94a36e4b2bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_drawn
+    - rng.registration_type.ballot
+id: registration.ballot.field_drawn
+field_name: field_drawn
+entity_type: registration
+bundle: ballot
+label: Drawn
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

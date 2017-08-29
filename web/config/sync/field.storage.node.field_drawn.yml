@@ -1,0 +1,20 @@
+uuid: 56125d3f-4b02-4f0e-b2d0-26b0406a5428
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_drawn
+field_name: field_drawn
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

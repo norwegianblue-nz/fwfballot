@@ -1,0 +1,14 @@
+{
+  "name": "drupal/draw_hunting_ballot",
+  "type": "drupal-module",
+  "description": "FWF Hunting Ballot block allocation",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/draw_hunting_ballot",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/draw_hunting_ballot",
+    "source": "http://cgit.drupalcode.org/draw_hunting_ballot"
+  },
+  "require": { }
+}

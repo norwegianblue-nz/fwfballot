@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains draw_hunting_ballot.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\rng\EventMetaInterface;
+use Drupal\rng\EventManagerInterface;
+
+/**
+ * Implements hook_help().
+ */
+function draw_hunting_ballot_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the draw_hunting_ballot module.
+    case 'help.page.draw_hunting_ballot':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('FWF Hunting Ballot block allocation') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function draw_hunting_ballot_theme() {
+  return [
+    'draw_hunting_ballot' => [
+      'render element' => 'children',
+    ],
+  ];
+}

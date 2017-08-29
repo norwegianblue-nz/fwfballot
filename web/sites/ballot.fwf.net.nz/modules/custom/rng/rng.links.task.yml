@@ -52,7 +52,7 @@ entity.registration.delete:
 entity.registration.registrants:
   route_name: entity.registration.registrants
   base_route: entity.registration.canonical
-  title: 'Identities'
+  title: 'Party Members'
   weight: 15
 
 # Registrant type

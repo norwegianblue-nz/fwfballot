@@ -27,6 +27,7 @@ module:
   courier: 0
   datetime: 0
   dblog: 0
+  draw_hunting_ballot: 0
   dynamic_entity_reference: 0
   dynamic_page_cache: 0
   editor: 0
@@ -58,9 +59,7 @@ module:
   rdf: 0
   registration_role: 0
   rng: 0
-  rng_conflict: 0
   rng_date_scheduler: 0
-  rng_quick: 0
   rules: 0
   search: 0
   shortcut: 0
