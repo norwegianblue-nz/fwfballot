@@ -28,4 +28,4 @@
 /web/sites/*/themes/custom/*/sass_this
 
 # Ignore config files with payment details
-web/config/sync/commerce_payment.commerce_payment_gateway.stripe*
+/web/config/sync/commerce_payment.commerce_payment_gateway.stripe*
