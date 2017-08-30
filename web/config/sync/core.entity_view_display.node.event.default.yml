@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_ballot_closes
+    - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
     - field.field.node.event.rng_capacity
@@ -22,6 +24,24 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  field_ballot_closes:
+    weight: 104
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ballot_opens:
+    weight: 103
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_ballotyear:
     weight: 101
     label: inline

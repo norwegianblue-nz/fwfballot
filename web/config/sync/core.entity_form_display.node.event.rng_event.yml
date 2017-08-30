@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.node.rng_event
+    - field.field.node.event.field_ballot_closes
+    - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
     - field.field.node.event.rng_capacity
@@ -16,15 +18,28 @@ dependencies:
     - field.field.node.event.rng_status
     - node.type.event
   module:
+    - datetime
     - unlimited_number
 id: node.event.rng_event
 targetEntityType: node
 bundle: event
 mode: rng_event
 content:
+  field_ballot_closes:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ballot_opens:
+    type: datetime_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   rng_capacity:
     type: unlimited_number
-    weight: 3
+    weight: 4
     settings:
       value_unlimited: 0
       label_unlimited: Unlimited
@@ -39,7 +54,7 @@ content:
       label_unlimited: 'No maximum'
       label_number: Maximum
       placeholder: ''
-    weight: 2
+    weight: 3
     third_party_settings: {  }
     region: content
   rng_registrants_minimum:
@@ -49,7 +64,7 @@ content:
       label_unlimited: 'No registrants required'
       label_number: Minimum
       placeholder: ''
-    weight: 1
+    weight: 2
     third_party_settings: {  }
     region: content
   rng_reply_to:
@@ -57,16 +72,16 @@ content:
     settings:
       placeholder: 'Leave empty to use site default.'
       size: 60
-    weight: 4
+    weight: 5
     third_party_settings: {  }
     region: content
   rng_status:
     type: boolean_checkbox
-    weight: 0
+    weight: 6
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   field_ballotyear: true

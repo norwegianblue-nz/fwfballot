@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.field_ballot_closes
+    - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
     - field.field.node.event.rng_capacity
@@ -28,6 +30,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_ballot_closes:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_ballot_opens:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_ballotyear:
     weight: 6
     settings: {  }

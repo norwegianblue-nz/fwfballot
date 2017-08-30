@@ -60,6 +60,7 @@ module:
   registration_role: 0
   rng: 0
   rng_date_scheduler: 0
+  rng_views: 0
   rules: 0
   search: 0
   shortcut: 0
@@ -76,6 +77,8 @@ module:
   typed_data: 0
   unlimited_number: 0
   user: 0
+  veoa: 0
+  views_advanced_routing: 0
   views_ui: 0
   menu_link_content: 1
   views: 10

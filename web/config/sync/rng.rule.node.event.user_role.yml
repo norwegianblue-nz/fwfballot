@@ -21,6 +21,6 @@ actions:
     configuration:
       operations:
         create: true
-        view: false
+        view: true
         update: false
         delete: false

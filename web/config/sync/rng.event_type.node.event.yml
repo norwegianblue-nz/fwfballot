@@ -5,6 +5,33 @@ dependencies:
   config:
     - node.type.event
     - rng.registrant_type.registrant
+  module:
+    - rng_date_scheduler
+third_party_settings:
+  rng_date_scheduler:
+    default_access: null
+    fields:
+      -
+        status: true
+        field_name: field_ballot_closes
+        access:
+          before: null
+          during: null
+          after: false
+      -
+        status: true
+        field_name: field_ballot_opens
+        access:
+          before: false
+          during: null
+          after: null
+      -
+        status: false
+        field_name: field_ballotyear
+        access:
+          before: null
+          during: null
+          after: null
 id: node.event
 entity_type: node
 bundle: event
