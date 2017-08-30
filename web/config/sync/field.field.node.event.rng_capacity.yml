@@ -13,10 +13,12 @@ label: 'Maximum registrations'
 description: 'Maximum amount of registrations for this event.'
 required: false
 translatable: true
-default_value: {  }
+default_value:
+  -
+    value: 0
 default_value_callback: ''
 settings:
-  min: 1
+  min: 0
   max: null
   prefix: ''
   suffix: ''
