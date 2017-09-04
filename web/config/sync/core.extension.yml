@@ -25,6 +25,8 @@ module:
   contact: 0
   contextual: 0
   courier: 0
+  courier_message_composer: 0
+  courier_test_message: 0
   datetime: 0
   dblog: 0
   draw_hunting_ballot: 0
