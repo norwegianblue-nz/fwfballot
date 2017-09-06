@@ -54,4 +54,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_agree_tcs: true
+  field_allocated_in_draw: true
+  field_drawn: true
   field_instructions: true
