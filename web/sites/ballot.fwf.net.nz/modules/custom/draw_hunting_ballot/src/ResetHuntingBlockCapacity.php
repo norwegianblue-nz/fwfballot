@@ -26,9 +26,8 @@ class ResetHuntingBlockCapacity
   public function resetCapacities()
   {
     foreach ($this->getHuntingBlocks() as $huntingblock) {
-      //$huntingblockid = $huntingblock->get('tid')->value;
+      //$huntingblock->field_max_capacity = '3';                // This line can be uncommented to initialise the max capacity of all exisiting hunting blocks
       $huntingblockmaxcapacity = $huntingblock->get('field_max_capacity')[0]->value;
-      //$huntingblock->field_max_capacity = '6';                // This line can be uncommented to initialise the max capacity of all exisiting hunting blocks
       $huntingblock->field_capacity = $huntingblockmaxcapacity;
       $huntingblock->save();
     }

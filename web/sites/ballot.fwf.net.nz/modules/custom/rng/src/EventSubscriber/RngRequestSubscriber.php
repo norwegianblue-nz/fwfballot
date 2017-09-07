@@ -65,6 +65,7 @@ class RngRequestSubscriber implements EventSubscriberInterface {
         $registration = $this->entityTypeManager
           ->getStorage('registration')
           ->load($operation_record->getEntityId());
+        //$event_meta = $this->eventManager->getMeta($registration->getEvent());
         if (!$registration) {
           // Registration no longer exists, need full object to act on.
           // @todo: if entity is about to be deleted, then all existing
@@ -77,7 +78,15 @@ class RngRequestSubscriber implements EventSubscriberInterface {
             $trigger_id = 'entity:registration:new';
             break;
           case 'update':
+            if ($registration->get('field_allocated_in_draw')[0]->value > '0'){
+              $trigger_id = 'entity:registration:drawn';
+            }
+            else if ($registration->getEvent()->get('field_drawn')[0]->value > '0'){
+              $trigger_id = 'entity:registration:missedout';
+            }
+            else {
             $trigger_id = 'entity:registration:update';
+            }
             break;
         }
 

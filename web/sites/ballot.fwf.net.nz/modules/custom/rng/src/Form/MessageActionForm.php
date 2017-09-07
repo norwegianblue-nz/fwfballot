@@ -82,8 +82,10 @@ class MessageActionForm extends FormBase {
     $triggers = array(
       'rng:custom:date' => $this->t('To all registrations, on a date.'),
       (string) $this->t('Registrations') => array(
-        'entity:registration:new' => $this->t('To a single registration, when it is created.'),
-        'entity:registration:update' => $this->t('To a single registration, when it is updated.'),
+        'entity:registration:new' => $this->t('To a single ballot entry, when it is created.'),
+        'entity:registration:update' => $this->t('To a single ballot entry, when it is updated.'),
+        'entity:registration:drawn' => $this->t('To a single ballot entry, when it is drawn.'),
+        'entity:registration:missedout' => $this->t('To a single ballot entry, when unsuccessful in ballot.'),
       ),
     );
 

@@ -118,38 +118,11 @@ class ResetBallotForm extends FormBase {
     
 
     foreach ($registrations as $entry) {
-//      $allocated = $entry->get('field_allocated_block');
-//      $allocatedid = $allocated[0]->get('tid')->value;
-//      if ($allocatedid > '0'){
         //Reset the entry's flags
       $entry->field_allocated_block = NULL;
       $entry->field_allocated_in_draw = '0';
       $entry->field_drawn = '0';
       $entry->save();
-//      }
-//    $hunters = $entry->getRegistrants();
-//    $partysize = count($hunters);
-//    //drupal_set_message(t('Entry no: '. $entry->label() . ' - Party size: ' . $partysize)); /* debug info */
-//    
-//    /* Retrieve the Hunting block selection for this entry */
-//    //$choice = $entry->get('field_block_preference')[0]->target_id;
-//    $huntingblocks = $entry->get('field_block_preference')->referencedEntities();
-//    //$huntingblock = $entry->get('field_block_preference')[0]->entity;
-//    foreach ($huntingblocks as $huntingblock) {
-//      $huntingblockid = $huntingblock->get('tid')->value;
-//      $huntingblockcapacity = $huntingblock->get('field_capacity')[0]->value;
-//      if ($partysize <= $huntingblockcapacity) {
-//        $huntingblockcapacity = $huntingblockcapacity - $partysize;
-//        $huntingblock->field_capacity = $huntingblockcapacity;
-//        $huntingblock->save();
-//        drupal_set_message(t('Entry no: '. $entry->label() . ' - Party size: ' . $partysize . ' Allocated block: '. $huntingblockid . ' Space remaining: ' . $huntingblockcapacity)); /* debug info */
-//        break;
-//      }
-//      //drupal_set_message(t('Capacity: ' . $huntingblockcapacity));
-//    }
-//    $entry->field_allocated_block = $huntingblock;
-//    $entry->save();
-//    
     }
     drupal_set_message(t('The ' . $event->label() . ' preparation complete ' ));
   }

@@ -99,8 +99,10 @@ class MessageListForm extends FormBase {
 
     // @todo: move trigger definitions to a discovery service.
     $rng_triggers = [
-      'entity:registration:new' => $this->t('Registration creation'),
-      'entity:registration:update' => $this->t('Registration updated'),
+      'entity:registration:new' => $this->t('Ballot entry creation'),
+      'entity:registration:update' => $this->t('Ballot entry updated'),
+      'entity:registration:drawn' => $this->t('Ballot entry drawn'),
+      'entity:registration:missedout' => $this->t('Entry unsuccessful when ballot drawn'),
       'rng:custom:date' => $this->t('Send on a date'),
     ];
 

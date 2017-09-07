@@ -110,15 +110,17 @@ class DrawBallotForm extends FormBase {
       $cap->resetCapacities();
     }
     $ballotdrawn++;
+    $event->field_drawn = $ballotdrawn;
+    $event->save();
 
     foreach ($drawnballot as $entry) {
       $allocated = $entry->get('field_allocated_in_draw')->value;
       if ($allocated == '0'){
-        $drawnorder++;
         $hunters = $entry->getRegistrants();
         $partysize = count($hunters);
         //drupal_set_message(t('Entry no: '. $entry->label() . ' - Party size: ' . $partysize)); /* debug info */
         
+
         /* Retrieve the Hunting block selection for this entry */
         //$choice = $entry->get('field_block_preference')[0]->target_id;
         $huntingblocks = $entry->get('field_block_preference')->referencedEntities();
@@ -127,23 +129,24 @@ class DrawBallotForm extends FormBase {
           $huntingblockid = $huntingblock->get('tid')->value;
           $huntingblockcapacity = $huntingblock->get('field_capacity')[0]->value;
           if ($partysize <= $huntingblockcapacity) {
+            $drawnorder++;
             $huntingblockcapacity = $huntingblockcapacity - $partysize;
             $huntingblock->field_capacity = $huntingblockcapacity;
             $huntingblock->save();
+            /* Set the ballot entry's flags */
+            $entry->field_allocated_block = $huntingblock;
+            $entry->field_allocated_in_draw = $ballotdrawn;
+            $entry->field_drawn = $drawnorder;
+
             //drupal_set_message(t('Entry no: '. $entry->label() . ' - Party size: ' . $partysize . ' Allocated block: '. $huntingblockid . ' Space remaining: ' . $huntingblockcapacity)); /* debug info */
             break;
           }
           //drupal_set_message(t('Capacity: ' . $huntingblockcapacity));
         }
-        // Update the entry data.
-        $entry->field_allocated_block = $huntingblock;
-        $entry->field_allocated_in_draw = $ballotdrawn;
-        $entry->field_drawn = $drawnorder;
+        // Save the ballot entry .
         $entry->save();
       }
     }
-    $event->field_drawn = $ballotdrawn;
-    $event->save();
 //    drupal_set_message(t('Event: ' . $event->label() . ' Registrations: ' . $ballot->countRegistrations()));
     drupal_set_message(t('' . $event->label() . ' drawn: ' . $drawnorder . ' parties allocated hunting blocks'));
   }
