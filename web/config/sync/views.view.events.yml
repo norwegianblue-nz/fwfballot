@@ -10,15 +10,14 @@ dependencies:
     - field.storage.node.rng_status
     - node.type.event
     - system.menu.admin
-    - user.role.administrator
   module:
     - node
     - user
 id: events
-label: Events
+label: Ballots
 module: views
-description: ''
-tag: ''
+description: 'Display Ballots'
+tag: norwegian.blue
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -30,10 +29,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: perm
         options:
-          role:
-            administrator: administrator
+          perm: 'administer registration entity'
       cache:
         type: tag
         options: {  }
@@ -503,7 +501,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Events
+      title: Ballots
       header: {  }
       footer: {  }
       empty: {  }
@@ -517,7 +515,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.node.rng_capacity'
         - 'config:field.storage.node.rng_registrants_duplicate'
@@ -531,7 +529,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: events
+      path: manage/events
       menu:
         type: normal
         title: 'Manage Ballots'
@@ -548,7 +546,7 @@ display:
         - 'languages:language_interface'
         - url.query_args
         - 'user.node_grants:view'
-        - user.roles
+        - user.permissions
       tags:
         - 'config:field.storage.node.rng_capacity'
         - 'config:field.storage.node.rng_registrants_duplicate'

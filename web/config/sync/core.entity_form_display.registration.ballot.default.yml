@@ -26,13 +26,6 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
-  field_allocated_in_draw:
-    type: number
-    weight: 7
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
   field_block_preference:
     weight: 4
     settings:
@@ -67,4 +60,5 @@ content:
     region: content
 hidden:
   field_allocated_block: true
+  field_allocated_in_draw: true
   field_drawn: true

@@ -3,17 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.registration.field_allocated_block
     - field.storage.registration.field_allocated_in_draw
     - field.storage.registration.field_team_name
+    - field.storage.registration.field_waitlist
   module:
     - node
     - rng
+    - user
     - veoa
 id: rng_registrations_node
 label: 'RNG: Content: Registrations'
 module: views
-description: 'Registrations for Content events.'
-tag: 'rng, event, list, node'
+description: 'Entries to this ballot'
+tag: 'rng, event, list, node, norwegian.blue'
 base_table: registration_field_data
 base_field: id
 core: 8.x
@@ -126,6 +129,69 @@ display:
           entity_type: null
           entity_field: id
           plugin_id: field
+        field_team_name:
+          id: field_team_name
+          table: registration__field_team_name
+          field: field_team_name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Hunting Party'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         created:
           id: created
           table: registration_field_data
@@ -201,7 +267,7 @@ display:
           group_type: group
           admin_label: ''
           label: Operations
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -244,6 +310,69 @@ display:
           destination: true
           entity_type: registration
           plugin_id: entity_operations
+        field_allocated_block:
+          id: field_allocated_block
+          table: registration__field_allocated_block
+          field: field_allocated_block
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Allocated Block'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_allocated_in_draw:
           id: field_allocated_in_draw
           table: registration__field_allocated_in_draw
@@ -308,14 +437,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_team_name:
-          id: field_team_name
-          table: registration__field_team_name
-          field: field_team_name
+        field_allocated_in_draw_1:
+          id: field_allocated_in_draw_1
+          table: registration__field_allocated_in_draw
+          field: field_allocated_in_draw
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Hunting Party'
+          label: 'Allocated in draw'
           exclude: false
           alter:
             alter_text: false
@@ -357,9 +486,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
+          type: number_integer
           settings:
-            link_to_entity: true
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -371,9 +501,350 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-      filters: {  }
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: node__event
+          group_type: group
+          admin_label: ''
+          label: 'Entered by'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: field
+        field_waitlist:
+          id: field_waitlist
+          table: registration__field_waitlist
+          field: field_waitlist
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Retain entry'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_true: ''
+            format_custom_false: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      filters:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: node__event
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: 'Entered by'
+            description: ''
+            use_operator: false
+            operator: uid_op
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: uid
+          plugin_id: user_name
+        field_team_name_value:
+          id: field_team_name_value
+          table: registration__field_team_name
+          field: field_team_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_team_name_value_op
+            label: 'Hunting Party Name'
+            description: ''
+            use_operator: false
+            operator: field_team_name_value_op
+            identifier: field_team_name_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        id:
+          id: id
+          table: registration_field_data
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: id_op
+            label: 'Entry ID'
+            description: ''
+            use_operator: false
+            operator: id_op
+            identifier: id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: registration
+          entity_field: id
+          plugin_id: numeric
+        field_waitlist_value:
+          id: field_waitlist_value
+          table: registration__field_waitlist
+          field: field_waitlist_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: All
+          group: 1
+          exposed: true
+          expose:
+            operator_id: ''
+            label: 'Retain entry'
+            description: ''
+            use_operator: false
+            operator: field_waitlist_value_op
+            identifier: field_waitlist_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: boolean
+        field_allocated_in_draw_value:
+          id: field_allocated_in_draw_value
+          table: registration__field_allocated_in_draw
+          field: field_allocated_in_draw_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_allocated_in_draw_value_op
+            label: Draw
+            description: ''
+            use_operator: false
+            operator: field_allocated_in_draw_value_op
+            identifier: field_allocated_in_draw_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
       sorts: {  }
-      title: Registrations
+      title: 'Ballot Entries'
       header: {  }
       footer: {  }
       empty:
@@ -446,12 +917,14 @@ display:
       cacheable: false
       max-age: 0
       tags:
+        - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_allocated_in_draw'
         - 'config:field.storage.registration.field_team_name'
+        - 'config:field.storage.registration.field_waitlist'
   page_1:
     display_plugin: page
     id: page_1
-    display_title: 'My Page'
+    display_title: 'Entries Page'
     position: 1
     display_options:
       display_extenders:
@@ -464,8 +937,9 @@ display:
       path: node/%node/registrations
       menu:
         type: tab
-        title: 'Registration List'
-        description: 'Menu link description goes here'
+        title: 'Entries list'
+        description: 'List entries in this ballot'
+        expanded: false
         parent: ''
         weight: 35
         context: '1'
@@ -484,5 +958,7 @@ display:
       cacheable: false
       max-age: 0
       tags:
+        - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_allocated_in_draw'
         - 'config:field.storage.registration.field_team_name'
+        - 'config:field.storage.registration.field_waitlist'

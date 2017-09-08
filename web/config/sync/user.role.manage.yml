@@ -1,0 +1,33 @@
+uuid: 5ab70d41-b5a6-4799-8614-a579288bae82
+langcode: en
+status: true
+dependencies: {  }
+id: manage
+label: Manage
+weight: 5
+is_admin: null
+permissions:
+  - 'access commerce_order overview'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access in-place editing'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer commerce_order'
+  - 'administer registration entity'
+  - 'administer users'
+  - 'administer views_send'
+  - 'attachments with views_send'
+  - 'courier_message_composer compose courier_email to user'
+  - 'create event content'
+  - 'edit any event content'
+  - 'edit any page content'
+  - 'edit own event content'
+  - 'edit terms in priority'
+  - 'mass mailing with views_send'
+  - 'use text format basic_html'
+  - 'view any profile'
+  - 'view commerce_order'
+  - 'view own profile'
+  - 'view the administration theme'

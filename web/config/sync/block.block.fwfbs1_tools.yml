@@ -5,6 +5,8 @@ dependencies:
   config:
     - system.menu.tools
   module:
+    - node
+    - rng
     - system
   theme:
     - fwfbs1
@@ -23,4 +25,29 @@ settings:
   label_display: visible
   level: 1
   depth: 0
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  rng_current_time:
+    id: rng_current_time
+    date: '1504839255'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1504839255'
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations"
+    negate: true
+    context_mapping: {  }

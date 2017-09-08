@@ -4,7 +4,9 @@ status: true
 dependencies:
   module:
     - commerce_checkout
+    - node
     - rng
+    - system
     - user
   theme:
     - fwfbs1
@@ -39,3 +41,16 @@ visibility:
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations"
+    negate: true
+    context_mapping: {  }
