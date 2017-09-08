@@ -82,7 +82,7 @@ class LocalTasks extends DeriverBase implements ContainerDeriverInterface {
       if ($this->routeProvider->getRouteByName("entity.$entity_type.canonical")) {
         $event_default = "rng.event.$entity_type.event.default";
         $this->derivatives[$event_default] = array(
-          'title' => t('Event', [], ['context' => 'rng']),
+          'title' => t('Ballot Control', [], ['context' => 'rng']),
           'base_route' => "entity.$entity_type.canonical",
           'route_name' => "rng.event.$entity_type.event",
           'weight' => 30,
