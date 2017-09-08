@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "893e930a849ff6ca3201981a99acfc79",
-    "content-hash": "69c939a98ef8f82b88928c2520e28cd9",
+    "hash": "0fb519db5bd1b84c37c71392a8c8178b",
+    "content-hash": "6c18d4d25711a009396a953dcd0b5a75",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4285,6 +4285,53 @@
                 "source": "http://cgit.drupalcode.org/views_advanced_routing"
             },
             "time": "2016-05-22 14:11:42"
+        },
+        {
+            "name": "drupal/views_send",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_send",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_send-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "b5cfc562e786af38251243fe67e68394737ee52c"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1502866144",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "hansfn",
+                    "homepage": "https://www.drupal.org/user/40521"
+                }
+            ],
+            "description": "Provides a way to send e-mails from a list created with Views",
+            "homepage": "https://www.drupal.org/project/views_send",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_send"
+            }
         },
         {
             "name": "drush/drush",

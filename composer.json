@@ -51,6 +51,7 @@
         "drupal/typed_data": "1.x-dev",
         "drupal/veoa": "^1.0",
         "drupal/views_advanced_routing": "1.x-dev",
+        "drupal/views_send": "^1.1",
         "drush/drush": "~8.0",
         "webflo/drupal-finder": "^0.3.0",
         "webmozart/path-util": "^2.3"
