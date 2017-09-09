@@ -6,3 +6,9 @@
 ## nb|  parent: system.admin
 ## nb|  route_name: draw_hunting_ballot.drawballot
 ## nb|  weight: 3
+draw_hunting_ballot.manage:
+  title: 'Ballots'
+  route_name: 'draw_hunting_ballot.manage'
+  parent: 'system.admin'
+  description: 'Manage Ballots.'
+  weight: -20

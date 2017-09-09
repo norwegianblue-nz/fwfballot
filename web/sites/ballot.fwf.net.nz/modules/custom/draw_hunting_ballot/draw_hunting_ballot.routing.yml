@@ -1,20 +1,23 @@
 ## YAML Template.
 ---
 
-draw_hunting_ballot.drawballot:
-  path: '/manage/draw_hunting_ballot/drawballot'
-  defaults:
-    _controller: '\Drupal\draw_hunting_ballot\Controller\DrawBallotController::drawballot'
-    _title: 'Draw Ballot'
-  requirements:
-    _permission: 'access content'
-    
-## nb |entity.registration.draw_ballot:
-## nb |  path: '/registration/{registration}/event/drawballot'
+## nb |draw_hunting_ballot.drawballot:
+## nb |  path: '/manage/draw_hunting_ballot/drawballot'
 ## nb |  defaults:
 ## nb |    _controller: '\Drupal\draw_hunting_ballot\Controller\DrawBallotController::drawballot'
-## nb |#    _entity_form: 'registration.edit'
 ## nb |    _title: 'Draw Ballot'
 ## nb |  requirements:
-## nb |    _entity_access: 'registration.update'
+## nb |    _permission: 'access content'
+    
+draw_hunting_ballot.manage:
+  path: '/manage/ballots'
+  defaults:
+    _controller: '\Drupal\draw_hunting_ballot\Controller\DrawBallotController::manageBallots'
+## nb |    _form: '\Drupal\draw_hunting_ballot\Form\ManageBallotsForm'
+    _title: 'Ballots'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
 

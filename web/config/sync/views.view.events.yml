@@ -535,10 +535,11 @@ display:
         title: 'Manage Ballots'
         description: 'Manage Hunting Ballots'
         expanded: false
-        parent: system.admin
+        parent: draw_hunting_ballot.manage
         weight: -50
         context: '0'
         menu_name: admin
+        enabled: true
     cache_metadata:
       max-age: 0
       contexts:
