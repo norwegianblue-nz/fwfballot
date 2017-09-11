@@ -17,10 +17,7 @@ class DrawBallotController extends ControllerBase {
    *   Return Hello string.
    */
   public function drawballot() {
-    return [
-      '#type' => 'markup',
-      '#markup' => $this->t('Implement method: drawballot')
-    ];
+    
   }
   public function manageBallots() {
     $options = ['absolute' => TRUE, 'attributes' => ['class' => 'label']];
