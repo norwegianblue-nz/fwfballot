@@ -57,6 +57,10 @@ class RouteSubscriber extends RouteSubscriberBase {
           '_entity_access' => $entity_type . '.manage event',
           '_entity_is_event' => 'TRUE',
         ];
+        $admin_requirements = [
+          '_role' => 'administrator',
+          '_entity_is_event' => 'TRUE',
+        ];
         $options = [];
         $options['parameters'][$entity_type]['type'] = 'entity:' . $entity_type;
 
@@ -74,17 +78,18 @@ class RouteSubscriber extends RouteSubscriberBase {
         $collection->add("rng.event.$entity_type.drawballot", $route);
 
         // Reset Ballot
-        $route = new Route(
+        $route1 = new Route(
           $canonical_path . '/event/resetballot',
           array(
             '_form' => '\Drupal\draw_hunting_ballot\Form\ResetBallotForm',
-            '_title' => 'Prepare the Ballot',
+            '_title' => 'Ballot Hard Reset',
             'event' => $entity_type,
           ),
-          $manage_requirements,
+          //$manage_requirements,
+          $admin_requirements,
           $options
         );
-        $collection->add("rng.event.$entity_type.resetballot", $route);
+        $collection->add("rng.event.$entity_type.resetballot", $route1);
       }
     }
   }

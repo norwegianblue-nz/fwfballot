@@ -92,7 +92,7 @@ class LocalTasks extends DeriverBase implements ContainerDeriverInterface {
         );
 
         $this->derivatives["rng.event.$entity_type.event.resetballot"] = array(
-          'title' => t('Prepare Ballot'),
+          'title' => t('Ballot Hard Reset'),
           'route_name' => "rng.event.$entity_type.resetballot",
           'parent_id' => 'rng.local_tasks:' . $event_default,
           'weight' => -91,

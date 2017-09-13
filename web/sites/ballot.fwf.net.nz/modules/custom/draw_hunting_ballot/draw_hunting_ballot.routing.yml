@@ -16,7 +16,7 @@ draw_hunting_ballot.manage:
 ## nb |    _form: '\Drupal\draw_hunting_ballot\Form\ManageBallotsForm'
     _title: 'Ballots'
   requirements:
-    _permission: 'access administration pages'
+    _role: 'manage'
   options:
     _admin_route: TRUE
 

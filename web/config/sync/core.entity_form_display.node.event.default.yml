@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
+    - field.field.node.event.field_prepared
     - field.field.node.event.rng_capacity
     - field.field.node.event.rng_registrants_duplicate
     - field.field.node.event.rng_registrants_maximum
@@ -31,13 +32,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_ballot_closes:
-    weight: 27
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_ballot_opens:
-    weight: 26
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
@@ -48,6 +49,13 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_prepared:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   path:
     type: path
     weight: 5

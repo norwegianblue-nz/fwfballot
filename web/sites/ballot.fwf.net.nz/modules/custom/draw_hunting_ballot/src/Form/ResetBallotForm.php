@@ -71,9 +71,10 @@ class ResetBallotForm extends FormBase {
     $no_registrations = $event_meta->countRegistrations();
     $event_label = $rng_event->label();
 
-    $form['help']['#markup'] = $this->t("<p>This will prepare the system and make it ready to draw the %label. <br />"
-        . "This needs to be done ONLY ONCE PER YEAR, before that year's ballot is drawn.<br />"
-        . 'Once the ballot has been drawn, this should NOT be done - all data about the draw will be erased if it is.</p>', [
+    $form['help']['#markup'] = $this->t('<p class="warning">WARNING</p>'
+        . "<p>This will perform a HARD RESET on the %label. <br />"
+        . "This is an emergency action only.<br />"
+        . "This action will erase all data re this ballot's draw.</p>", [
       '%label' => $rng_event->label(),
     ]);
     $form['table'] = [
@@ -83,7 +84,7 @@ class ResetBallotForm extends FormBase {
     ];
     $form['actions']['submit'] = [
       '#type' => 'submit',
-      '#value' => t('Prepare the ' . $event_label),
+      '#value' => t('Hard Reset the ' . $event_label),
       '#button_type' => 'primary',
     ];
     /*$form['actions']['submit'] = [
@@ -114,6 +115,7 @@ class ResetBallotForm extends FormBase {
     
     /* Reset the 'Drawn' status to 0 */
     $event->field_drawn = '0';
+    $event->field_prepared = '0';
     $event->save();
     
 
@@ -124,7 +126,7 @@ class ResetBallotForm extends FormBase {
       $entry->field_drawn = '0';
       $entry->save();
     }
-    drupal_set_message(t('The ' . $event->label() . ' preparation complete ' ));
+    drupal_set_message(t('The ' . $event->label() . ' Hard Reset complete ' ));
   }
 
 }
