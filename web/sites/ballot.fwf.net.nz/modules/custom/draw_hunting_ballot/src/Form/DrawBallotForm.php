@@ -73,51 +73,40 @@ class DrawBallotForm extends FormBase {
     $no_registrations = $event_meta->countRegistrations();
     $event_label = $rng_event->label();
     $ballotdrawn = $entity->get('field_drawn')[0]->value;
-//    $ballotprepared = $entity->get('field_prepared')[0]->value;
 
     $form['table'] = [
       '#type' => 'table',
       '#header' => $this->t(' '),
       '#empty' => $this->t('There are %noentries entries.', ['%noentries' => $no_registrations,]),
     ];
-//nb |    if ($ballotdrawn == '0' && $ballotprepared == '0'){
-//nb |      $form['help']['#markup'] = $this->t("<p>Prior to drawing the ballot, the system requires a few things to be set up.<br />"
-//nb |          . 'Click the "Prepare the %label" button below to automatically make the system ready for the draw.</p>', [
-//nb |        '%label' => $rng_event->label(),
-//nb |      ]);
-//nb |      $form['actions']['submit_prepare'] = [
-//nb |        '#type' => 'submit',
-//nb |        '#value' => t('Prepare the ' . $event_label),
-//nb |        //'#button_type' => 'primary',
-//nb |        '#submit' => array('::submitFormPrepare'),
-//nb |      ];
-//nb |    }
-//
-//nb |    if ($ballotprepared == '1'){
-    if ($ballotdrawn == '0'){
-      $form['help']['#markup'] = $this->t("<p>System preparation has been done.<br />"
-          . 'Go ahead and Draw the %label</p>', [
-        '%label' => $rng_event->label(),
-      ]);
-    } else if ($ballotdrawn == '1'){
-      $form['help']['#markup'] = $this->t("<p>The %label has been drawn once.<br />"
-          . 'Drawing it again will allocate any spaces now available to parties on the waitlist</p>', [
-        '%label' => $rng_event->label(),
-      ]);
+    $ballotclose = \Drupal\Core\Datetime\DrupalDateTime::createFromFormat('Y-m-d\Th:i:s',$entity->get('field_ballot_closes')[0]->value);
+    $timenow = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp(time());
+    if (($entity->get('rng_status')[0]->value) === '1' && $timenow < $ballotclose ){
+      drupal_set_message(t('The ballot is still accepting entries. The draw cannot be made until the ballot is closed'),'warning');
     } else {
-      $form['help']['#markup'] = $this->t("<p>The %label has been drawn %drawn times.<br />"
-          . 'Drawing it again will allocate any spaces now available to parties on the waitlist</p>', [
-        '%label' => $rng_event->label(),
-        '%drawn' => $ballotdrawn,
-      ]);
-    }
-    $form['actions']['submit_draw'] = [
-      '#type' => 'submit',
-      '#value' => t('Draw the ' . $event_label),
-      '#button_type' => 'primary',
+      if ($ballotdrawn == '0'){
+        $form['help']['#markup'] = $this->t("<p>System preparation has been done.<br />"
+            . 'Go ahead and Draw the %label</p>', [
+          '%label' => $rng_event->label(),
+        ]);
+      } else if ($ballotdrawn == '1'){
+        $form['help']['#markup'] = $this->t("<p>The %label has been drawn once.<br />"
+            . 'Drawing it again will allocate any spaces now available to parties on the waitlist</p>', [
+          '%label' => $rng_event->label(),
+        ]);
+      } else {
+        $form['help']['#markup'] = $this->t("<p>The %label has been drawn %drawn times.<br />"
+            . 'Drawing it again will allocate any spaces now available to parties on the waitlist</p>', [
+          '%label' => $rng_event->label(),
+          '%drawn' => $ballotdrawn,
+        ]);
+      }
+      $form['actions']['submit_draw'] = [
+        '#type' => 'submit',
+        '#value' => t('Draw the ' . $event_label),
+        '#button_type' => 'primary',
       ];
-//nb |    } // Endif for if ballotprepared=1
-   
+    }
     return $form;
   }
 
