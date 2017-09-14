@@ -7,12 +7,6 @@ class ResetHuntingBlockCapacity
 
 
 {
-/*  private $obj;
-      
-  public function __construct($obj)
-  {
-    $this->obj = $obj;
-  }*/
   
   public function getHuntingBlocks()
   {
@@ -26,9 +20,11 @@ class ResetHuntingBlockCapacity
   public function resetCapacities()
   {
     foreach ($this->getHuntingBlocks() as $huntingblock) {
-      //$huntingblock->field_max_capacity = '3';                // This line can be uncommented to initialise the max capacity of all exisiting hunting blocks
+      //$huntingblock->field_max_capacity = '6';                // This line can be uncommented to initialise the max capacity of all exisiting hunting blocks
+      //$huntingblock->field_max_parties = '2';                // This line can be uncommented to initialise the max parties of all exisiting hunting blocks
       $huntingblockmaxcapacity = $huntingblock->get('field_max_capacity')[0]->value;
       $huntingblock->field_capacity = $huntingblockmaxcapacity;
+      $huntingblock->field_parties = '0';
       $huntingblock->save();
     }
   }

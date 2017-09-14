@@ -10,12 +10,12 @@ namespace Drupal\draw_hunting_ballot\Form;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\rng\EventManagerInterface;
-use Drupal\rng\EventMeta;
+//use Drupal\rng\EventMeta;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Render\Element;
-use Drupal\draw_hunting_ballot\ShuffleObject;
-use Drupal\draw_hunting_ballot\ResetHuntingBlockCapacity;
+//use Drupal\Core\Render\Element;
+use Drupal\draw_hunting_ballot\PrepBallot;
+//use Drupal\draw_hunting_ballot\ResetHuntingBlockCapacity;
 
 /**
  * Draw the ballot when user presses the "go" button.
@@ -59,10 +59,6 @@ class ResetBallotForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state, EntityInterface $rng_event = NULL) {
-/*    $form['help']['#markup'] = $this->t('The current event is: %label', [
-      '%label' => $rng_event->label(),
-    ]);
-*/
     $entity = clone $rng_event;
     $form_state->set('event', $entity);
 
@@ -70,7 +66,7 @@ class ResetBallotForm extends FormBase {
     $form_state->set('currentevent', $event_meta);
     $no_registrations = $event_meta->countRegistrations();
     $event_label = $rng_event->label();
-
+    drupal_set_message(t('WARNING - This is an emergency procedure only. Ensure you know the consequences of proceeding.'), 'warning');
     $form['help']['#markup'] = $this->t('<p class="warning">WARNING</p>'
         . "<p>This will perform a HARD RESET on the %label. <br />"
         . "This is an emergency action only.<br />"
@@ -87,12 +83,6 @@ class ResetBallotForm extends FormBase {
       '#value' => t('Hard Reset the ' . $event_label),
       '#button_type' => 'primary',
     ];
-    /*$form['actions']['submit'] = [
-      '#type' => 'submit',
-      '#value' => t('Please do not press this button'),
-      '#button_type' => 'primary',
-    ];*/
-    //echo (t('Registrations: ' . $no_registrations));
    
     return $form;
   }
@@ -102,30 +92,9 @@ class ResetBallotForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $event = $form_state->get('event');
-    $ballotdrawn = $event->get('field_drawn')[0]->value;
     $ballot = $form_state->get('currentevent');
-    $registrations = $ballot->getRegistrations();
-
-//    $shuffle = new ShuffleObject($registrations);
-//    $drawnballot = $shuffle->shuffleObjects();
-    
-    /* Reset the capacities to max */
-    $cap = new ResetHuntingBlockCapacity();
-    $cap->resetCapacities();
-    
-    /* Reset the 'Drawn' status to 0 */
-    $event->field_drawn = '0';
-    $event->field_prepared = '0';
-    $event->save();
-    
-
-    foreach ($registrations as $entry) {
-        //Reset the entry's flags
-      $entry->field_allocated_block = NULL;
-      $entry->field_allocated_in_draw = '0';
-      $entry->field_drawn = '0';
-      $entry->save();
-    }
+    $prep = new PrepBallot($event, $ballot);
+    $prep->ballotprep();
     drupal_set_message(t('The ' . $event->label() . ' Hard Reset complete ' ));
   }
 

@@ -1,12 +1,12 @@
-uuid: f3ca793e-ec35-4d40-b377-c4e169737188
+uuid: f856ccc9-daac-49b1-bd81-40a24a647f4f
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_prepared
-field_name: field_prepared
-entity_type: node
+    - taxonomy
+id: taxonomy_term.field_parties
+field_name: field_parties
+entity_type: taxonomy_term
 type: integer
 settings:
   unsigned: false

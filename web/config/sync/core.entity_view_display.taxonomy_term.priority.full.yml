@@ -7,6 +7,8 @@ dependencies:
     - field.field.taxonomy_term.priority.field_area_map
     - field.field.taxonomy_term.priority.field_capacity
     - field.field.taxonomy_term.priority.field_max_capacity
+    - field.field.taxonomy_term.priority.field_max_parties
+    - field.field.taxonomy_term.priority.field_parties
     - field.field.taxonomy_term.priority.field_priority
     - taxonomy.vocabulary.priority
   module:
@@ -26,7 +28,7 @@ content:
     third_party_settings: {  }
   field_area_map:
     type: image
-    weight: 4
+    weight: 6
     region: content
     label: above
     settings:
@@ -45,6 +47,24 @@ content:
   field_max_capacity:
     type: number_integer
     weight: 2
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_max_parties:
+    type: number_integer
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_parties:
+    type: number_integer
+    weight: 5
     region: content
     label: inline
     settings:

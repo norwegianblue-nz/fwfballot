@@ -1,0 +1,25 @@
+uuid: 3d95c857-42ad-4b15-8c52-e98c5d38412f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_max_parties
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.field_max_parties
+field_name: field_max_parties
+entity_type: taxonomy_term
+bundle: priority
+label: 'Max Parties'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 2
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' hunting parties'
+field_type: integer

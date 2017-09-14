@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
-    - field.field.node.event.field_prepared
     - field.field.node.event.rng_capacity
     - field.field.node.event.rng_registrants_duplicate
     - field.field.node.event.rng_registrants_maximum
@@ -55,15 +54,6 @@ content:
   field_drawn:
     weight: 102
     label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_prepared:
-    weight: 105
-    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true

@@ -1,0 +1,25 @@
+uuid: c445d259-b47f-44e9-b318-58c667b1203a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_parties
+    - taxonomy.vocabulary.priority
+id: taxonomy_term.priority.field_parties
+field_name: field_parties
+entity_type: taxonomy_term
+bundle: priority
+label: 'No. Parties Allocated'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ' hunting parties'
+field_type: integer
