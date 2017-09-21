@@ -100,7 +100,8 @@ class RegistrationForm extends ContentEntityForm {
     $form['people'] = [
       '#type' => 'details',
       '#title' => $this->t('Hunting party members'),
-      '#description' => $this->t('Select hunting party members to associate with this ballot entry.'),
+      '#description' => $this->t('Select hunting party members to associate with this ballot entry.'
+          . '<br /><span class="important_note">Please note: there is a $100 fee per change of hunter once the ballot has been drawn.</span>'),
       '#open' => TRUE,
       '#tree' => TRUE,
     ];
