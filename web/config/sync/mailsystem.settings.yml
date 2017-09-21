@@ -9,3 +9,7 @@ modules:
     none:
       formatter: mime_mail
       sender: SMTPMailSystem
+  views_send:
+    none:
+      formatter: mime_mail
+      sender: SMTPMailSystem
