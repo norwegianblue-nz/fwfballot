@@ -31,3 +31,5 @@
 /web/config/sync/commerce_payment.commerce_payment_gateway.stripe*
 # Ignore the site version block
 /web/config/sync/block.block.identifywhichversionofthesitesthisis.yml
+#Ignore the views_send_email settings
+/web/config/sync/views_send.user_settings.yml
