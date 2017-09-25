@@ -13,7 +13,7 @@ dependencies:
     - field.field.user.user.field_physical_address
     - field.field.user.user.field_relationship
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.useravatar100
   module:
     - address
     - datetime
@@ -135,7 +135,7 @@ content:
     weight: 1
     region: content
     settings:
-      image_style: thumbnail
+      image_style: useravatar100
       image_link: file
     third_party_settings: {  }
     label: hidden

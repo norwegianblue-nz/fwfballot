@@ -1,0 +1,14 @@
+uuid: bfcf3f5b-36ba-4392-866c-0318544bbafd
+langcode: en
+status: true
+dependencies: {  }
+name: useravatar100
+label: UserAvatar100
+effects:
+  fd2d9d86-0514-4612-babc-58e912fdbcfc:
+    uuid: fd2d9d86-0514-4612-babc-58e912fdbcfc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100

@@ -27,6 +27,7 @@ module:
   courier: 0
   courier_message_composer: 0
   courier_test_message: 0
+  csv_serialization: 0
   datetime: 0
   dblog: 0
   draw_hunting_ballot: 0
@@ -60,11 +61,13 @@ module:
   quickedit: 0
   rdf: 0
   registration_role: 0
+  rest: 0
   rng: 0
   rng_date_scheduler: 0
   rng_views: 0
   rules: 0
   search: 0
+  serialization: 0
   shortcut: 0
   smtp: 0
   state_machine: 0
@@ -81,6 +84,7 @@ module:
   user: 0
   veoa: 0
   views_advanced_routing: 0
+  views_data_export: 0
   views_send: 0
   views_ui: 0
   menu_link_content: 1
