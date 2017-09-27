@@ -26,15 +26,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_allocated_in_draw:
-    weight: 5
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_block_preference:
     weight: 3
     label: hidden
@@ -43,15 +34,6 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
-    region: content
-  field_drawn:
-    weight: 4
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
     region: content
   field_team_name:
     weight: 0
@@ -73,4 +55,6 @@ content:
     region: content
 hidden:
   field_agree_tcs: true
+  field_allocated_in_draw: true
+  field_drawn: true
   field_instructions: true

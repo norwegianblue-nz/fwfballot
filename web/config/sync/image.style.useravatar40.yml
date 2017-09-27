@@ -1,0 +1,14 @@
+uuid: b082d975-1388-42a1-8bc1-ebb7571fe5d2
+langcode: en
+status: true
+dependencies: {  }
+name: useravatar40
+label: UserAvatar40
+effects:
+  ce040ac5-21de-49a2-831f-0689aecc6162:
+    uuid: ce040ac5-21de-49a2-831f-0689aecc6162
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 40
+      height: 40

@@ -7,6 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\rng\RegistrationInterface;
 use Drupal\Core\Entity\EntityInterface;
 
+
 /**
  * Configure registrant settings.
  */
@@ -41,18 +42,27 @@ class RegistrationRegistrantEditForm extends ContentEntityForm {
       else {
         $row[] = t('<em>Deleted</em>');
       }
-        //$fullname = $identity->get('field_physical_address')[0]->given_name . ' ' . $identity->get('field_physical_address')[0]->family_name;
-        //$city = $identity->get('field_physical_address')[0]->locality;
-        //$city = $identity->field_physical_address[0]->locality;
-      $row[] = $registrant->id();
-      //$row[] = $fullname;
-      //$row[] = $city;
+      $hunterdetails = $identity->get('field_physical_address')->getValue();
+      $fullname = $hunterdetails[0]['given_name'] . ' ' . $hunterdetails[0]['family_name'];
+      $of = $hunterdetails[0]['locality'] . ', ' . $hunterdetails[0]['country_code'];
+      //$hunterpic = $identity->get('user_picture')[0];
+      //$hunteruid = $identity->get('uid')->value;
+      //$thishunter = \user_load($hunteruid);
+      //$picuri = entity_load($hunterpic);
+      //$row[] = $registrant->id();
+      //$styled_image_url = \Drupal\image\Entity\ImageStyle::load('useravatar60')->buildUrl($identity->user_picture->entity->getFileUri());
+      //$style = \Drupal\image\Entity\ImageStyle::load('useravatar60');
+      $styled_hunterpic_uri = \Drupal\image\Entity\ImageStyle::load('useravatar60')->buildUri($identity->user_picture->entity->getFileUri());
+      $hunterpic = array('#theme' => 'image', '#uri' => $styled_hunterpic_uri, '#alt' => 'Hunter Photo', '#style_name' => 'useravatar60');
+      $row[] = $fullname;
+      $row[] = $of;
+      $row[] = \render($hunterpic);
       $rows[] = $row;
     }
 
     $form['registrants'] = array(
       '#type' => 'table',
-      '#header' => array($this->t("Hunter's username"), $this->t('Hunter ID')/*, $this->t("Hunter's name"), $this->t('of')*/),
+      '#header' => array($this->t("Hunter's username")/*, $this->t('Hunter ID')*/, $this->t("Hunter's name"), $this->t('of')),
       '#rows' => $rows,
       '#empty' => $this->t('No identities associated with this registration.'),
     );

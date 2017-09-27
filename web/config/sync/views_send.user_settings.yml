@@ -2,7 +2,6 @@
   'uid:1':
     bulk_form:
       - 0
-      - 0
     from_name: 'FWF Ballot'
     from_mail: info@fwf.net.nz
     tokens:
@@ -16,12 +15,51 @@
       field_allocated_in_draw_pos_8: field_allocated_in_draw
       field_drawn_pos_9: field_drawn
       field_allocated_block_pos_10: field_allocated_block
-    to_name: field_physical_address_given_name_pos_3
+    to_name: field_physical_address_family_name_pos_4
     to_mail: mail_pos_5
-    subject: 'Successful Ballot allocation'
+    subject: 'A message from FWF'
     message:
-      value: "<p>Congratulations your party [views-send:field_team_name]</p>\r\n\r\n<p>has been allocated block: [views-send:field_allocated_block].</p>\r\n\r\n<p>Your party was drawn [views-send:field_drawn].</p>\r\n\r\n<p>Add all the legal and admin stuff below here [current-date:html_datetime]</p>\r\n\r\n<p>-----------------------------------------------------------------------------------------------</p>\r\n\r\n<p>Current User:</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Account Name [current-user:account-name]<br />\r\n&nbsp;&nbsp;&nbsp; Names [current-user:field_physical_address:given_name] [current-user:field_physical_address:family_name]<br />\r\n&nbsp;&nbsp;&nbsp; Country [current-user:field_physical_address:country_code]<br />\r\n&nbsp;&nbsp;&nbsp; Phone [current-user:field_contact_phone]<br />\r\n&nbsp;&nbsp;&nbsp; Display Name [current-user:display-name]<br />\r\n&nbsp;&nbsp;&nbsp; DOB [current-user:field_dob]<br />\r\n&nbsp;&nbsp;&nbsp; Firearms License [current-user:field_fire_arms_licence_number]<br />\r\n&nbsp;&nbsp;&nbsp; URL [current-user:url]<br />\r\n&nbsp;&nbsp;&nbsp; Absolute URL [current-user:url:absolute]<br />\r\n&nbsp;&nbsp;&nbsp; User ID [current-user:uid]</p>\r\n\r\n<p>Identies:</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Identity identity<br />\r\n&nbsp;&nbsp;&nbsp; Label [identity:label]</p>\r\n\r\n<p>Node:</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Author [node:author]<br />\r\n&nbsp;&nbsp;&nbsp; Opens [node:field_ballot_opens]<br />\r\n&nbsp;&nbsp;&nbsp; Closes [node:field_ballot_closes]<br />\r\n&nbsp;&nbsp;&nbsp; Ballot Year [node:field_ballotyear]<br />\r\n&nbsp;&nbsp;&nbsp; Ballot Year Date [node:field_ballotyear:value]<br />\r\n&nbsp;&nbsp;&nbsp; Drawn [node:field_drawn]</p>\r\n\r\n<p>Registrations:</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp; Registration registration<br />\r\n&nbsp;&nbsp;&nbsp; Allocated Block [registration:field_allocated_block]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Term [registration:field_allocated_block:entity]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name [registration:field_allocated_block:entity:name]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Priority [registration:field_allocated_block:entity:field_priority]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TID [registration:field_allocated_block:entity:tid]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; URL [registration:field_allocated_block:entity:url]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Taxonomy TermID [registration:field_allocated_block:target_id]<br />\r\n&nbsp;&nbsp;&nbsp; Block Prefs [registration:field_block_preference]<br />\r\n&nbsp;&nbsp;&nbsp; Created [registration:created]<br />\r\n&nbsp;&nbsp;&nbsp; Drawn [registration:field_drawn]<br />\r\n&nbsp;&nbsp;&nbsp; Edit URL [registration:edit-url]<br />\r\n&nbsp;&nbsp;&nbsp; Hunting Party Name [registration:field_team_name]<br />\r\n&nbsp;&nbsp;&nbsp; Registration ID [registration:id]<br />\r\n&nbsp;&nbsp;&nbsp; Waitlist [registration:field_waitlist]<br />\r\n&nbsp;&nbsp;&nbsp; URL [registration:url]<br />\r\n&nbsp;&nbsp;&nbsp; Abs Url [registration:url:absolute]<br />\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Arguments [registration:url:args]</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>------------------------------------------------------------------------------------------------</p>\r\n"
-      format: full_html
+      value: "<p>Dear [views-send:field_physical_address_given_name],</p>\r\n\r\n<p>you are entered in the [views-send:field_physical_address_given_name] with team [views-send:field_team_name] (Entry number [views-send:id]).</p>\r\n\r\n<p>We are unable to find a record of payment for this team. Untill payment in full is received, your entry is not confirmed.</p>\r\n\r\n<p>Please contact the committee by emailing</p>\r\n\r\n<p>or by calling 03 249 0000</p>\r\n\r\n<p>to resolve the issue.</p>\r\n\r\n<p>Regards</p>\r\n\r\n<p>the team.</p>\r\n"
+      format: basic_html
+    attachments: ''
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 0
+    carbon_copy: 0
+    remember: 1
+'unpaid_entries_0_2:page_1':
+  'uid:1':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    from_name: 'FWF Ballot'
+    from_mail: info@fwf.net.nz
+    tokens:
+      id_pos_0: id
+      identity__target_id_pos_1: identity__target_id
+      registration_pos_2: registration
+      order_id_pos_3: order_id
+      mail_pos_5: mail
+      field_team_name_pos_6: field_team_name
+      field_physical_address_given_name_pos_7: field_physical_address_given_name
+      field_physical_address_family_name_pos_8: field_physical_address_family_name
+      event__target_id_pos_9: event__target_id
+    to_name: field_physical_address_given_name_pos_7
+    to_mail: mail_pos_5
+    subject: 'Ballot entry'
+    message:
+      value: "<p>Dear [views-send:field_physical_address_given_name],</p>\r\n\r\n<p>we cannot find any record of payment for your entry as a member of \"[views-send:field_team_name]\" into the [views-send:event__target_id]</p>\r\n\r\n<p>Unless payment is made in full by &lt;enter a date here&gt;, then your ballot entry is invalid and will not be included in the draw.</p>\r\n\r\n<p>Please arrange for payment to be made - payments can be made by visiting &lt;insert URL here&gt;</p>\r\n\r\n<p>best of luck in the ballot</p>\r\n\r\n<p>the team</p>\r\n"
+      format: basic_html
     attachments: ''
     priority: '0'
     receipt: 0

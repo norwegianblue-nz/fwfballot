@@ -1,0 +1,14 @@
+uuid: 560bbac3-962a-4f40-a17d-6df11779ce14
+langcode: en
+status: true
+dependencies: {  }
+name: useravatar60
+label: UserAvatar60
+effects:
+  50e0f37e-67fc-4bb2-8ecd-f0e3e66dc0ab:
+    uuid: 50e0f37e-67fc-4bb2-8ecd-f0e3e66dc0ab
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 60
+      height: 60
