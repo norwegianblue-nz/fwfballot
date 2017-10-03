@@ -1,0 +1,21 @@
+uuid: d2532abc-f9c1-4663-9a1e-f45ab37707c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_drawnon
+    - node.type.event
+  module:
+    - datetime
+id: node.event.field_drawnon
+field_name: field_drawnon
+entity_type: node
+bundle: event
+label: 'Drawn on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,21 @@
+uuid: e45cb789-0c01-45e3-93f3-ae8e9df10536
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_officialposn
+field_name: field_officialposn
+entity_type: node
+type: string
+settings:
+  max_length: 128
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

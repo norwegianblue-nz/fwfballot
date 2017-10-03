@@ -1,0 +1,19 @@
+uuid: 6aa9ab9a-6096-4fd5-b93c-4f2313c1b00a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_officialname
+    - node.type.event
+id: node.event.field_officialname
+field_name: field_officialname
+entity_type: node
+bundle: event
+label: 'Drawn by'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -9,6 +9,7 @@ namespace Drupal\draw_hunting_ballot;
 
 use Drupal\draw_hunting_ballot\ShuffleObject;
 use Drupal\draw_hunting_ballot\ResetHuntingBlockCapacity;
+use Drupal\Core\Datetime\DrupalDateTime;
 
 
 class DrawBallot
@@ -16,11 +17,13 @@ class DrawBallot
 {
   private $event;
   private $ballot;
+  private $official;
       
-  public function __construct($event, $ballot)
+  public function __construct($event, $ballot, $official)
   {
     $this->event = $event;
     $this->ballot = $ballot;
+    $this->official = $official;
   }
   
   public function ballotdraw()
@@ -28,6 +31,7 @@ class DrawBallot
     $ballotdrawn = $this->event->get('field_drawn')[0]->value;
     $registrations = $this->ballot->getRegistrations();
 
+    $timenow = \Drupal\Core\Datetime\DrupalDateTime::createFromTimestamp(time());
     $drawnorder = '0'; // This may have to be set elsewhere dependant upon waitlist logic
     $shuffle = new ShuffleObject($registrations);
     $drawnballot = $shuffle->shuffleObjects();
@@ -39,6 +43,11 @@ class DrawBallot
     if ($ballotdrawn === '0'){
       $cap = new ResetHuntingBlockCapacity();
       $cap->resetCapacities();
+      $this->event->field_officialname = $this->official['officialname'];
+      $this->event->field_officialposn = $this->official['officialposn'];
+      $this->event->field_officialidtype = $this->official['officialidtype'];
+      $this->event->field_officialid = $this->official['officialid'];
+      $this->event->field_drawnon = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s'); 
     }
     $ballotdrawn++;
     $this->event->field_drawn = $ballotdrawn;

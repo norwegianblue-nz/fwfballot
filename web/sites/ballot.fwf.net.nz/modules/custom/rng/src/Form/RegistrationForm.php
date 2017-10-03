@@ -64,7 +64,7 @@ class RegistrationForm extends ContentEntityForm {
     $form = parent::form($form, $form_state);
 
     if (!$registration->isNew()) {
-      $form['#title'] = $this->t('Edit Registration', [
+      $form['#title'] = $this->t('Edit %event_label entry number %registration_id', [
         '%event_label' => $event->label(),
         '%event_id' => $event->id(),
         '%registration_id' => $registration->id(),

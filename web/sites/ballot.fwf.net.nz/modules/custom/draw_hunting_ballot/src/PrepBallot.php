@@ -33,6 +33,12 @@ class PrepBallot
     
     // Reset the 'Drawn' status to 0 
     $this->event->field_drawn = '0';
+    $this->event->field_officialname = null;
+    $this->event->field_officialposn = null;
+    $this->event->field_officialidtype = null;
+    $this->event->field_officialid = null;
+    $this->event->field_drawnon = null;
+        
     $this->event->save();
     
 

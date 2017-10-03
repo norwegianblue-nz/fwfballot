@@ -45,13 +45,6 @@ class RegistrationRegistrantEditForm extends ContentEntityForm {
       $hunterdetails = $identity->get('field_physical_address')->getValue();
       $fullname = $hunterdetails[0]['given_name'] . ' ' . $hunterdetails[0]['family_name'];
       $of = $hunterdetails[0]['locality'] . ', ' . $hunterdetails[0]['country_code'];
-      //$hunterpic = $identity->get('user_picture')[0];
-      //$hunteruid = $identity->get('uid')->value;
-      //$thishunter = \user_load($hunteruid);
-      //$picuri = entity_load($hunterpic);
-      //$row[] = $registrant->id();
-      //$styled_image_url = \Drupal\image\Entity\ImageStyle::load('useravatar60')->buildUrl($identity->user_picture->entity->getFileUri());
-      //$style = \Drupal\image\Entity\ImageStyle::load('useravatar60');
       $styled_hunterpic_uri = \Drupal\image\Entity\ImageStyle::load('useravatar60')->buildUri($identity->user_picture->entity->getFileUri());
       $hunterpic = array('#theme' => 'image', '#uri' => $styled_hunterpic_uri, '#alt' => 'Hunter Photo', '#style_name' => 'useravatar60');
       $row[] = $fullname;

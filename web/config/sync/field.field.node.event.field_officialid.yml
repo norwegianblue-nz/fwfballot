@@ -1,0 +1,19 @@
+uuid: 410d84e9-7f1c-40b5-b18c-5cc61426a9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_officialid
+    - node.type.event
+id: node.event.field_officialid
+field_name: field_officialid
+entity_type: node
+bundle: event
+label: 'Official ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

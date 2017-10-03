@@ -7,6 +7,11 @@ dependencies:
     - field.field.node.event.field_ballot_opens
     - field.field.node.event.field_ballotyear
     - field.field.node.event.field_drawn
+    - field.field.node.event.field_drawnon
+    - field.field.node.event.field_officialid
+    - field.field.node.event.field_officialidtype
+    - field.field.node.event.field_officialname
+    - field.field.node.event.field_officialposn
     - field.field.node.event.rng_capacity
     - field.field.node.event.rng_registrants_duplicate
     - field.field.node.event.rng_registrants_maximum
@@ -25,7 +30,7 @@ bundle: event
 mode: default
 content:
   field_ballot_closes:
-    weight: 104
+    weight: 4
     label: inline
     settings:
       timezone_override: ''
@@ -34,7 +39,7 @@ content:
     type: datetime_default
     region: content
   field_ballot_opens:
-    weight: 103
+    weight: 3
     label: inline
     settings:
       timezone_override: ''
@@ -43,7 +48,7 @@ content:
     type: datetime_default
     region: content
   field_ballotyear:
-    weight: 101
+    weight: 1
     label: inline
     settings:
       timezone_override: ''
@@ -52,7 +57,7 @@ content:
     type: datetime_default
     region: content
   field_drawn:
-    weight: 102
+    weight: 2
     label: inline
     settings:
       thousand_separator: ''
@@ -60,8 +65,49 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_drawnon:
+    weight: 5
+    label: inline
+    settings:
+      timezone_override: Pacific/Auckland
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_officialid:
+    weight: 9
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_officialidtype:
+    weight: 8
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_officialname:
+    weight: 6
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_officialposn:
+    weight: 7
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
