@@ -18,5 +18,5 @@ actions:
     configuration:
       operations:
         view: true
-        update: false
+        update: true
         delete: false

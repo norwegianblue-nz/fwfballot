@@ -26,6 +26,8 @@ permissions:
   - 'edit own event content'
   - 'edit terms in priority'
   - 'mass mailing with views_send'
+  - 'use ballotentry transition accept'
+  - 'use ballotentry transition withdraw'
   - 'use text format basic_html'
   - 'view any profile'
   - 'view commerce_order'

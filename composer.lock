@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5ec4ede218cbece00d842b80e1a8ce9b",
-    "content-hash": "68856e0fd304425018f3cd3eacde1345",
+    "hash": "9723361f132b08930a413a5ec1ce7825",
+    "content-hash": "197dae2804ceaf1efa544abb8b9f3352",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2167,16 +2167,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.3.5",
+            "version": "8.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "7adfc8c43615258e242868a393e82971a67be51a"
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/7adfc8c43615258e242868a393e82971a67be51a",
-                "reference": "7adfc8c43615258e242868a393e82971a67be51a",
+                "url": "https://api.github.com/repos/drupal/core/zipball/32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
+                "reference": "32f66ed9cc593f8e9ab0eaaaeff4cadbd859d5ff",
                 "shasum": ""
             },
             "require": {
@@ -2348,7 +2348,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2017-07-05 17:03:07"
+            "time": "2017-08-16 17:10:35"
         },
         {
             "name": "drupal/courier",
@@ -4443,6 +4443,48 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_send"
             }
+        },
+        {
+            "name": "drupal/workflows_field",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/workflows_field",
+                "reference": "69f9925f221c4f8e23029c1e864e04c782406006"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1506677944",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "Adds a field type which can be used for storing and transitioning states according to workflows.",
+            "homepage": "https://www.drupal.org/project/workflows_field",
+            "support": {
+                "source": "http://cgit.drupalcode.org/workflows_field"
+            },
+            "time": "2017-09-29 09:43:55"
         },
         {
             "name": "drush/drush",
@@ -9236,6 +9278,7 @@
         "drupal/typed_data": 20,
         "drupal/views_advanced_routing": 20,
         "drupal/views_data_export": 20,
+        "drupal/workflows_field": 20,
         "drupal/devel": 20
     },
     "prefer-stable": true,

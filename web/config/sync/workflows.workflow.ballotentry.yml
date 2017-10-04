@@ -1,0 +1,62 @@
+uuid: f6c9e1ef-5844-4267-8bb4-e70bcfdb2593
+langcode: en
+status: true
+dependencies:
+  config:
+    - rng.registration_type.ballot
+  module:
+    - content_moderation
+id: ballotentry
+label: BallotEntry
+states:
+  allocated:
+    label: Allocated
+    weight: -8
+  confirmed:
+    label: Accepted
+    weight: -7
+  draft:
+    label: Unallocated
+    weight: -9
+  published:
+    label: Published
+    weight: -10
+  withdrawn:
+    label: Withdrawn
+    weight: -6
+transitions:
+  accept:
+    label: Accept
+    from:
+      - allocated
+    to: confirmed
+    weight: 2
+  withdraw:
+    label: Withdraw
+    from:
+      - allocated
+      - confirmed
+      - draft
+    to: withdrawn
+    weight: 3
+type: content_moderation
+type_settings:
+  states:
+    allocated:
+      published: false
+      default_revision: false
+    confirmed:
+      published: false
+      default_revision: false
+    draft:
+      published: false
+      default_revision: false
+    published:
+      published: true
+      default_revision: true
+    withdrawn:
+      published: false
+      default_revision: false
+  entity_types:
+    registration:
+      - ballot

@@ -15,4 +15,6 @@ permissions:
   - 'access user contact forms'
   - 'rng register role hunters'
   - 'rng register self'
+  - 'use ballotentry transition accept'
+  - 'use ballotentry transition withdraw'
   - 'view own commerce_order'

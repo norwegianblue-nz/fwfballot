@@ -17,6 +17,9 @@ targetEntityType: registration
 bundle: ballot
 mode: default
 content:
+  content_moderation_control:
+    weight: -20
+    region: content
   field_allocated_block:
     weight: 2
     label: inline

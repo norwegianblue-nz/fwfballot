@@ -23,6 +23,7 @@ module:
   commerce_stripe: 0
   config: 0
   contact: 0
+  content_moderation: 0
   contextual: 0
   courier: 0
   courier_message_composer: 0
@@ -81,12 +82,14 @@ module:
   tour: 0
   typed_data: 0
   unlimited_number: 0
+  update: 0
   user: 0
   veoa: 0
   views_advanced_routing: 0
   views_data_export: 0
   views_send: 0
   views_ui: 0
+  workflows: 0
   menu_link_content: 1
   views: 10
   standard: 1000

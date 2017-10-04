@@ -5,15 +5,18 @@ dependencies:
   config:
     - core.entity_view_mode.registration.userentry
     - rng.registration_type.ballot
+    - user.role.administrator
+    - user.role.hunters
+    - user.role.manage
   module:
     - dynamic_entity_reference
     - rng
     - user
 id: user_entry
-label: 'user entry'
+label: 'User Entry'
 module: views
-description: ''
-tag: ''
+description: 'Display Ballot Entry tab on user page'
+tag: norwegian.blue
 base_table: registration_field_data
 base_field: id
 core: 8.x
@@ -25,8 +28,12 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            administrator: administrator
+            hunters: hunters
+            manage: manage
       cache:
         type: tag
         options: {  }
@@ -148,8 +155,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: 'registration/{{ id }}/edit'
             absolute: false
             external: false
             replace_spaces: false
@@ -653,6 +660,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.roles
       tags:
         - 'config:core.entity_view_display.registration.ballot.default'
         - 'config:core.entity_view_display.registration.ballot.token'
@@ -682,6 +690,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.roles
       tags:
         - 'config:core.entity_view_display.registration.ballot.default'
         - 'config:core.entity_view_display.registration.ballot.token'
