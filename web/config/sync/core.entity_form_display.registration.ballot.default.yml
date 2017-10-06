@@ -13,6 +13,7 @@ dependencies:
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
   module:
+    - content_moderation
     - entityreference_dragdrop
 id: registration.ballot.default
 targetEntityType: registration

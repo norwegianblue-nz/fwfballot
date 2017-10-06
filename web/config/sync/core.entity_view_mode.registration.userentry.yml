@@ -1,0 +1,10 @@
+uuid: a264f512-e14b-4249-be3e-58036f6cd34c
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.userentry
+label: UserEntry
+targetEntityType: registration
+cache: true
