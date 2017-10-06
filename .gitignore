@@ -33,3 +33,8 @@
 /web/config/sync/block.block.identifywhichversionofthesitesthisis.yml
 #Ignore the views_send_email settings
 /web/config/sync/views_send.user_settings.yml
+
+#Backup of 'broken version'
+/web84
+oldcomposer.lck
+web/certbot.log

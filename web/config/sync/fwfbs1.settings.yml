@@ -15,7 +15,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/FWF-logo.jpg
+  path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/images/top-logo-fwf.png
   url: ''
   use_default: false
 breadcrumb: '2'
