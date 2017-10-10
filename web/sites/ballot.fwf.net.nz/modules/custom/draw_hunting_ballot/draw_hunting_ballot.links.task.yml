@@ -2,3 +2,7 @@ draw_hunting_ballot.local_tasks:
   class: \Drupal\Core\Menu\LocalTaskDefault
   deriver: \Drupal\draw_hunting_ballot\Plugin\Derivative\LocalTasks
 
+draw_hunting_ballot.user_ballot_entry:
+  route_name: draw_hunting_ballot.user_ballot_entry
+  base_route: entity.user.canonical
+  title: 'Ballot entry'

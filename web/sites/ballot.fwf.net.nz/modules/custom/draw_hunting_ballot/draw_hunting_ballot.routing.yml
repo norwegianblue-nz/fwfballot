@@ -21,3 +21,12 @@ draw_hunting_ballot.manage:
     _admin_route: TRUE
 
 
+
+draw_hunting_ballot.user_ballot_entry:
+  path: '/user/{user}/user_ballot_entry'
+  defaults:
+    _form: '\Drupal\draw_hunting_ballot\Form\UserBallotEntry'
+    _title: 'Ballot Entry'
+  requirements:
+    _access: 'TRUE'
+  
