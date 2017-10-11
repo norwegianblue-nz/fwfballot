@@ -9,9 +9,12 @@ dependencies:
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_drawn
     - field.field.registration.ballot.field_instructions
+    - field.field.registration.ballot.field_status
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
+  module:
+    - options
 id: registration.ballot.default
 targetEntityType: registration
 bundle: ballot
@@ -30,7 +33,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_block_preference:
-    weight: 3
+    weight: 4
     label: hidden
     settings:
       view_mode: ballotprioritydisplay
@@ -38,6 +41,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
+  field_status:
+    type: list_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
   field_team_name:
     weight: 0
     label: inline
@@ -51,8 +61,8 @@ content:
     label: hidden
     settings:
       format: default
-      format_custom_false: ''
       format_custom_true: ''
+      format_custom_false: ''
     third_party_settings: {  }
     type: boolean
     region: content

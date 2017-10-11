@@ -55,7 +55,8 @@ class DrawBallot
 
     foreach ($drawnballot as $entry) {
       $allocated = $entry->get('field_allocated_in_draw')->value;
-      if ($allocated == '0'){
+      $status = $entry->get('field_status')->value;
+      if ($allocated === '0' && $status <> 'withdrawn' && $status <> 'cancelled'){
         $partysize = \count($entry->getRegistrants());
 
         /* Retrieve the Hunting block selection for this entry */
@@ -76,6 +77,7 @@ class DrawBallot
             $entry->field_allocated_block = $huntingblock;
             $entry->field_allocated_in_draw = $ballotdrawn;
             $entry->field_drawn = $drawnorder;
+            $entry->field_status = 'allo';
 
             break;
           }

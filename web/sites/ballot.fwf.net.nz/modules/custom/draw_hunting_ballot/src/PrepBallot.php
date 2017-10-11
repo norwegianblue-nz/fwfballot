@@ -47,6 +47,7 @@ class PrepBallot
       $entry->field_allocated_block = NULL;
       $entry->field_allocated_in_draw = '0';
       $entry->field_drawn = '0';
+      $entry->field_status = 'unallocated';
       $entry->save();
     }
 /*    $this->event->field_prepared = '0';

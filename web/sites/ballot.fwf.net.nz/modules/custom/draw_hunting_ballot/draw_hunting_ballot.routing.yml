@@ -28,5 +28,5 @@ draw_hunting_ballot.user_ballot_entry:
     _form: '\Drupal\draw_hunting_ballot\Form\UserBallotEntry'
     _title: 'Ballot Entry'
   requirements:
-    _access: 'TRUE'
+    _user_is_logged_in: 'TRUE'
   

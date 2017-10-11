@@ -9,6 +9,7 @@ dependencies:
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_drawn
     - field.field.registration.ballot.field_instructions
+    - field.field.registration.ballot.field_status
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
@@ -62,3 +63,4 @@ hidden:
   field_allocated_block: true
   field_allocated_in_draw: true
   field_drawn: true
+  field_status: true
