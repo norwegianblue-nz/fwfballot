@@ -9,7 +9,6 @@ dependencies:
       - commerce_product
   module:
     - commerce_order
-    - commerce_price
 _core:
   default_config_hash: MM_IKfdHzcnfT_RdhapoaQHn8nYqrV8gbXHdqA2p_sY
 id: commerce_order_item.default.default
@@ -35,9 +34,10 @@ content:
     third_party_settings: {  }
     region: content
   unit_price:
-    type: commerce_price_default
+    type: commerce_unit_price
     weight: 2
-    settings: {  }
+    settings:
+      require_confirmation: true
     third_party_settings: {  }
     region: content
 hidden:

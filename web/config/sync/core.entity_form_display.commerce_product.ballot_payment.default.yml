@@ -24,6 +24,13 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    third_party_settings: {  }
+    region: content
   variations:
     type: inline_entity_form_complex
     weight: 1
@@ -40,7 +47,6 @@ content:
 hidden:
   created: true
   path: true
-  status: true
   stores: true
   title: true
   uid: true

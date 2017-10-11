@@ -21,7 +21,7 @@ content:
     type: address_default
     weight: 0
     settings:
-      default_country: site_default
+      default_country: null
     third_party_settings: {  }
     region: content
 hidden: {  }

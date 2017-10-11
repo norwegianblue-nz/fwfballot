@@ -4,18 +4,19 @@ schemas:
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/favicon.ico
-  url: 'http://ballot.fwf.net.nz/sites/ballot.fwf.net.nz/themes/custom/fwfbs1/favicon.ico'
+  url: 'http://scud.ballot.fwf.net.nz/sites/ballot.fwf.net.nz/themes/custom/fwfbs1/favicon.ico'
   use_default: false
 cdn_jsdelivr_theme: cosmo
 table_responsive: '-1'
 table: ''
-features:
-  comment_user_picture: true
-  comment_user_verification: true
-  favicon: true
-  node_user_picture: true
 logo:
   path: sites/ballot.fwf.net.nz/themes/custom/fwfbs1/images/top-logo-fwf.png
   url: ''
   use_default: false
 breadcrumb: '2'
+navbar_position: ''
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true

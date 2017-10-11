@@ -828,7 +828,7 @@ display:
           decimal: .
           separator: ''
           format_plural: 0
-          format_plural_string: "1\x03@count"
+          format_plural_string: !!binary MQNAY291bnQ=
           prefix: NZ$
           suffix: ''
           click_sort_column: number
@@ -2073,7 +2073,7 @@ display:
           precision: 0
           decimal: .
           format_plural: 0
-          format_plural_string: "1\x03@count"
+          format_plural_string: !!binary MQNAY291bnQ=
           prefix: NZ$
           suffix: ''
           entity_type: commerce_payment
