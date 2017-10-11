@@ -10,7 +10,7 @@ field_name: field_reference
 entity_type: commerce_order_item
 bundle: ballot_payment
 label: 'Hunting Party Name'
-description: "Enter the name you chose for your party.<br />\r\nEnter it exactly as you did on your ballot entry form.<br />\r\nIt was also included in the confirmation email you received."
+description: "Enter the name you chose for your party.<br />\r\nEnter it exactly as you did on your ballot entry form.<br /><br />\r\nIt can also be found by selecting 'Ballot entry' tab under the 'My Account' display<br/>\r\nIt was also included in the confirmation email you received."
 required: true
 translatable: false
 default_value: {  }

@@ -36,7 +36,7 @@ class UserBallotEntry extends FormBase {
     
     $current_uid = \Drupal::currentUser()->id();
     $current_user = User::load($current_uid);
-    $testing = FALSE;
+    $testing = TRUE;
     
     $registrant_ids = \Drupal::entityQuery('registrant')
       ->condition('identity__target_type', $current_user->getEntityTypeId(), '=')
@@ -128,6 +128,8 @@ class UserBallotEntry extends FormBase {
     $entry = $form_state->get('entry');
     $entry->field_status = 'allocated_confirmed';
     $entry->save();
+    $url = \Drupal\Core\Url::fromUserInput('/donation');
+    $form_state->setRedirectUrl($url);
     // Display result.
     //foreach ($form_state->getValues() as $key => $value) {
     //  drupal_set_message($key . ': ' . $value);
