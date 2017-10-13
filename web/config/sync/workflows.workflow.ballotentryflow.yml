@@ -1,0 +1,31 @@
+uuid: 4d38d650-c87c-4e1b-8b8b-89189cd6e123
+langcode: en
+status: true
+dependencies:
+  module:
+    - workflows_field
+id: ballotentryflow
+label: BallotEntryFlow
+type: workflows_field
+type_settings:
+  states:
+    allo:
+      label: Unconfirmed
+      weight: 1
+    allocated_confirmed:
+      label: Allocated-Confirmed
+      weight: 2
+    allocated_paid:
+      label: Allocated-Paid
+      weight: 3
+    cancelled:
+      label: Cancelled
+      weight: 5
+    unallocated:
+      label: Unallocated
+      weight: 0
+    withdrawn:
+      label: Withdrawn
+      weight: 4
+  transitions: {  }
+  initial_state: unallocated

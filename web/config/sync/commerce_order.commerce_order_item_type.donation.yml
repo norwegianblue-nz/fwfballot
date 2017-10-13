@@ -1,0 +1,9 @@
+uuid: 587652de-ba53-462b-b606-6aed64c40ee4
+langcode: en
+status: true
+dependencies: {  }
+label: Donation
+id: donation
+purchasableEntityType: commerce_product_variation
+orderType: default
+traits: {  }

@@ -1,0 +1,16 @@
+uuid: 857ea02a-4b56-42f0-b298-863021ddaf05
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.donation
+id: commerce_product_variation.donation.default
+targetEntityType: commerce_product_variation
+bundle: donation
+mode: default
+content: {  }
+hidden:
+  price: true
+  product_id: true
+  sku: true
+  title: true

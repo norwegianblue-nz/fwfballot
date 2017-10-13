@@ -1,0 +1,10 @@
+uuid: 78df3eab-b7c5-47fe-b324-33df1305ac91
+langcode: en
+status: true
+dependencies:
+  module:
+    - rng
+id: registration.cancellation
+label: Cancellation
+targetEntityType: registration
+cache: true

@@ -1,0 +1,10 @@
+uuid: 4ef1498f-a8a5-44a8-bf04-b9aeea1ad909
+langcode: en
+status: true
+dependencies: {  }
+id: donation
+label: Donation
+description: ''
+variationType: donation
+injectVariationFields: true
+traits: {  }

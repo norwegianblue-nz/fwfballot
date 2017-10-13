@@ -1,0 +1,43 @@
+uuid: 90247152-3a31-416f-aced-3058fc7b73ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.registration.cancellation
+    - field.field.registration.ballot.field_agree_tcs
+    - field.field.registration.ballot.field_allocated_block
+    - field.field.registration.ballot.field_allocated_in_draw
+    - field.field.registration.ballot.field_block_preference
+    - field.field.registration.ballot.field_drawn
+    - field.field.registration.ballot.field_instructions
+    - field.field.registration.ballot.field_status
+    - field.field.registration.ballot.field_team_name
+    - field.field.registration.ballot.field_waitlist
+    - rng.registration_type.ballot
+id: registration.ballot.cancellation
+targetEntityType: registration
+bundle: ballot
+mode: cancellation
+content:
+  field_status:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_team_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  field_agree_tcs: true
+  field_allocated_block: true
+  field_allocated_in_draw: true
+  field_block_preference: true
+  field_drawn: true
+  field_instructions: true
+  field_waitlist: true

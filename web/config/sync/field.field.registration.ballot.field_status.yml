@@ -1,0 +1,23 @@
+uuid: d9314092-b0f0-4acb-855f-a8b162b59b3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_status
+    - rng.registration_type.ballot
+  module:
+    - workflows_field
+id: registration.ballot.field_status
+field_name: field_status
+entity_type: registration
+bundle: ballot
+label: Status
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: unallocated
+default_value_callback: ''
+settings: {  }
+field_type: workflows_field_item
