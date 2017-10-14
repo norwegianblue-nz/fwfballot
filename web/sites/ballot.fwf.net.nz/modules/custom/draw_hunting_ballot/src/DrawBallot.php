@@ -47,8 +47,9 @@ class DrawBallot
       $this->event->field_officialposn = $this->official['officialposn'];
       $this->event->field_officialidtype = $this->official['officialidtype'];
       $this->event->field_officialid = $this->official['officialid'];
-      $this->event->field_drawnon = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s'); 
+      //$this->event->field_drawnon = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s'); 
     }
+    $this->event->field_drawnon[$ballotdrawn] = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s');
     $ballotdrawn++;
     $this->event->field_drawn = $ballotdrawn;
     $this->event->save();

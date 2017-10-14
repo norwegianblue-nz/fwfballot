@@ -36,7 +36,7 @@ class UserBallotEntry extends FormBase {
     
     $current_uid = \Drupal::currentUser()->id();
     $current_user = User::load($current_uid);
-    $testing = TRUE;
+    $testing = FALSE;
     
     $registrant_ids = \Drupal::entityQuery('registrant')
       ->condition('identity__target_type', $current_user->getEntityTypeId(), '=')
