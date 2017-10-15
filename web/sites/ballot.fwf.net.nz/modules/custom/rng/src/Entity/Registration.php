@@ -40,6 +40,7 @@ use Drupal\Core\Entity\EntityStorageInterface;
  *       "default" = "Drupal\rng\Form\RegistrationForm",
  *       "add" = "Drupal\rng\Form\RegistrationForm",
  *       "edit" = "Drupal\rng\Form\RegistrationForm",
+ *       "cancel" = "Drupal\draw_hunting_ballot\Form\BallotEntryCancelForm",
  *       "delete" = "Drupal\rng\Form\RegistrationDeleteForm",
  *       "registrants" = "Drupal\rng\Form\RegistrationRegistrantEditForm"
  *     }

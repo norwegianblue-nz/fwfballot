@@ -17,6 +17,14 @@ entity.registration.edit_form:
   requirements:
     _entity_access: 'registration.update'
 
+entity.registration.cancel_form:
+  path: '/registration/{registration}/cancel'
+  defaults:
+    _entity_form: 'registration.cancel'
+    _title: 'Cancel registration'
+  requirements:
+    _entity_access: 'registration.delete'
+
 entity.registration.delete_form:
   path: '/registration/{registration}/delete'
   defaults:

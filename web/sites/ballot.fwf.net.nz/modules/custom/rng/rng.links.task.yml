@@ -43,6 +43,12 @@ entity.registration.edit:
   title: 'Edit'
   weight: 10
 
+entity.registration.cancel:
+  route_name: entity.registration.cancel_form
+  base_route: entity.registration.canonical
+  title: 'Cancel'
+  weight: 17
+
 entity.registration.delete:
   route_name: entity.registration.delete_form
   base_route: entity.registration.canonical

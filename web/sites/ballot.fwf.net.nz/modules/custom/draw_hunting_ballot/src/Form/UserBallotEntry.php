@@ -12,6 +12,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\rng\EventMetaInterface;
 use Drupal\rng\RegistrantInterface;
 use Drupal\rng\Entity\Registrant;
+use Drupal\draw_hunting_ballot\ReleaseHuntingBlock;
 
 
 
@@ -140,19 +141,9 @@ class UserBallotEntry extends FormBase {
     $entry = $form_state->get('entry');
     
     //Release the block allocationi
-    if ($entry->get('field_status')->value === 'allo' || $entry->get('field_status')->value === 'allocated_confirmed' || $entry->get('field_status')->value === 'allocated_paid'){
-      $partysize = \count($entry->getRegistrants());
-      $huntingblocks = $entry->get('field_allocated_block')->referencedEntities();
-      $huntingblock = $huntingblocks[0];
-      $huntingblockcapacity = $huntingblock->get('field_capacity')[0]->value + $partysize;
-      $huntingblockparties = $huntingblock->get('field_parties')[0]->value;
-      $huntingblockparties--;
-      $huntingblock->field_capacity = $huntingblockcapacity;
-      $huntingblock->field_parties = $huntingblockparties;
-      $huntingblock->save();
-    }
-//drupal_set_message($partysize);
-    // Set the entry status
+    $release = new ReleaseHuntingBlock($entry);
+    $release->releaseblock();
+
     $entry->field_status = 'withdrawn';
     $entry->save();
 
