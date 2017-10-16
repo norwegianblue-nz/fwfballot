@@ -8,12 +8,14 @@ dependencies:
     - field.field.registration.ballot.field_allocated_in_draw
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_drawn
+    - field.field.registration.ballot.field_drawnon
     - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_status
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
   module:
+    - datetime
     - options
 id: registration.ballot.default
 targetEntityType: registration
@@ -40,6 +42,15 @@ content:
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
+    region: content
+  field_drawnon:
+    weight: 5
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_status:
     type: list_default

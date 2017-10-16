@@ -1,0 +1,5 @@
+toolbar:
+  version: VERSION
+  css:
+    theme:
+      css/draw_hunting_ballot.css: {}

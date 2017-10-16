@@ -8,12 +8,14 @@ dependencies:
     - field.field.registration.ballot.field_allocated_in_draw
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_drawn
+    - field.field.registration.ballot.field_drawnon
     - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_status
     - field.field.registration.ballot.field_team_name
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
   module:
+    - datetime
     - entityreference_dragdrop
 id: registration.ballot.default
 targetEntityType: registration
@@ -36,6 +38,12 @@ content:
       display_filter: 0
     third_party_settings: {  }
     type: entityreference_dragdrop
+    region: content
+  field_drawnon:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_instructions:
     weight: 3

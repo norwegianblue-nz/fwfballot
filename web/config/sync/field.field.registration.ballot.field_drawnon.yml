@@ -1,0 +1,21 @@
+uuid: 401996a7-6e6b-4d7e-a763-805e7a32e6d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.registration.field_drawnon
+    - rng.registration_type.ballot
+  module:
+    - datetime
+id: registration.ballot.field_drawnon
+field_name: field_drawnon
+entity_type: registration
+bundle: ballot
+label: 'Drawn on'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

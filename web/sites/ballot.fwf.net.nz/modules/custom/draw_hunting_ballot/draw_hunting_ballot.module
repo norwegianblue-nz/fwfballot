@@ -10,6 +10,13 @@ use Drupal\rng\EventMetaInterface;
 use Drupal\rng\EventManagerInterface;
 
 /**
+ * Implements hook_toolbar_alter().
+ */
+function draw_hunting_ballot_toolbar_alter(&$items) {
+  $items['administration']['#attached']['library'][] = 'draw_hunting_ballot/toolbar';
+}
+
+/**
  * Implements hook_help().
  */
 function draw_hunting_ballot_help($route_name, RouteMatchInterface $route_match) {

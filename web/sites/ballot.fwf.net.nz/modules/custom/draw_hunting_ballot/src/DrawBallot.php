@@ -49,7 +49,8 @@ class DrawBallot
       $this->event->field_officialid = $this->official['officialid'];
       //$this->event->field_drawnon = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s'); 
     }
-    $this->event->field_drawnon[$ballotdrawn] = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s');
+    $drawntimestamp = DrupalDateTime::createFromTimestamp(time())->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d\TH:i:s');
+    $this->event->field_drawnon[$ballotdrawn] = $drawntimestamp;
     $ballotdrawn++;
     $this->event->field_drawn = $ballotdrawn;
     $this->event->save();
@@ -77,6 +78,7 @@ class DrawBallot
             /* Set the ballot entry's flags */
             $entry->field_allocated_block = $huntingblock;
             $entry->field_allocated_in_draw = $ballotdrawn;
+            $entry->field_drawnon = $drawntimestamp;
             $entry->field_drawn = $drawnorder;
             $entry->field_status = 'allo';
 

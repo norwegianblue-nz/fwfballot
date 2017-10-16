@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Draw_Hunting_Ballot toolbar icon styling.
+ */
+
+/* Bar styling (first row), currently unused. */
+.toolbar-bar .toolbar-icon-draw-hunting-ballot-manage:before {
+  background-image: url("../icons/ballot-manage-icon.svg");
+}
+.toolbar-bar .toolbar-icon-draw-hunting-ballot-manage:active:before {
+  background-image: url("../icons/ballot-manage-icon.svg");
+}
+
+/* Tray styling (second row) *//*Copied from Commerce - left in for example purposes */
+/*.toolbar-tray .toolbar-icon.toolbar-icon-draw-hunting-ballot-manage:before {
+  background-image: url("../icons/787878/drupal-cart.svg");
+}
+.toolbar-tray .toolbar-icon.toolbar-icon-draw-hunting-ballot-manage:active:before {
+  background-image: url("../icons/000000/drupal-cart.svg");
+}*/

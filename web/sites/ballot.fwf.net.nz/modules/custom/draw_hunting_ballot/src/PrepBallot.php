@@ -46,6 +46,7 @@ class PrepBallot
       //Reset the entry's flags
       $entry->field_allocated_block = NULL;
       $entry->field_allocated_in_draw = '0';
+      $entry->field_drawnon = null;
       $entry->field_drawn = '0';
       $entry->field_status = 'unallocated';
       $entry->save();
