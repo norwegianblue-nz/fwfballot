@@ -91,9 +91,12 @@ class UserBallotEntry extends FormBase {
       if ($registration->get('field_status')->value <> 'withdrawn' && $registration->get('field_status')->value <> 'cancelled'){
         $form['actions']['submit_withdraw'] = [
           '#type' => 'submit',
-          '#value' => t('Decline/Withdraw'),
+          '#value' => t('Decline/Withdraw Party'),
           '#submit' => array('::submitFormWithdraw'),
         ];
+        $form['help']['#markup'] = $this->t('<p>Pressing "Decline/Withdraw Party", withdraws the <strong>whole party</strong><br />'
+            . '<strong>This cannot be undone.</strong></p>'
+            );
       }
       if ($testing){
         $form['actions']['submit_testing'] = [

@@ -9,6 +9,7 @@ dependencies:
     - field.field.registration.ballot.field_allocated_in_draw
     - field.field.registration.ballot.field_block_preference
     - field.field.registration.ballot.field_drawn
+    - field.field.registration.ballot.field_drawnon
     - field.field.registration.ballot.field_instructions
     - field.field.registration.ballot.field_status
     - field.field.registration.ballot.field_team_name
@@ -25,10 +26,19 @@ content:
     type: entity_reference_entity_view
     weight: 3
     region: content
-    label: inline
+    label: hidden
     settings:
       view_mode: ballotprioritydisplay
       link: false
+    third_party_settings: {  }
+  field_allocated_in_draw:
+    type: number_integer
+    weight: 4
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
   field_block_preference:
     weight: 2
@@ -41,7 +51,7 @@ content:
     region: content
   field_status:
     type: list_default
-    weight: 4
+    weight: 5
     region: content
     label: inline
     settings: {  }
@@ -66,6 +76,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_agree_tcs: true
-  field_allocated_in_draw: true
   field_drawn: true
+  field_drawnon: true
   field_instructions: true

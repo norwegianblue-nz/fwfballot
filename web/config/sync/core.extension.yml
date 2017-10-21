@@ -84,6 +84,7 @@ module:
   user: 0
   veoa: 0
   views_advanced_routing: 0
+  views_bulk_operations: 0
   views_data_export: 0
   views_send: 0
   views_ui: 0

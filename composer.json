@@ -43,6 +43,7 @@
         "drupal/typed_data": "~1.0",
         "drupal/veoa": "^1.0",
         "drupal/views_advanced_routing": "~1.0",
+        "drupal/views_bulk_operations": "1.x-dev",
         "drupal/views_data_export": "~1.0",
         "drupal/views_send": "^1.1",
         "drupal/workflows_field": "~1.0",

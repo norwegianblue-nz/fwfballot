@@ -15,7 +15,6 @@ dependencies:
     - field.field.registration.ballot.field_waitlist
     - rng.registration_type.ballot
   module:
-    - datetime
     - entityreference_dragdrop
 id: registration.ballot.default
 targetEntityType: registration
@@ -38,12 +37,6 @@ content:
       display_filter: 0
     third_party_settings: {  }
     type: entityreference_dragdrop
-    region: content
-  field_drawnon:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   field_instructions:
     weight: 3
@@ -71,4 +64,5 @@ hidden:
   field_allocated_block: true
   field_allocated_in_draw: true
   field_drawn: true
+  field_drawnon: true
   field_status: true

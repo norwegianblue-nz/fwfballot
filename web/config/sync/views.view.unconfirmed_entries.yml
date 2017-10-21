@@ -1431,14 +1431,14 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: UnconfirmedAllocations
     position: 1
     display_options:
       display_extenders: {  }
       path: manage/unconfirmed_entries
       menu:
         type: normal
-        title: 'Unconfirmed Entries'
+        title: 'Unconfirmed Block Allocations'
         description: 'Manage entries which haven''t confirmed or withdrawn'
         expanded: false
         parent: 'views_view:views.allocated_block.page_1'
@@ -1449,6 +1449,456 @@ display:
         filters: true
         filter_groups: true
         fields: true
+      display_description: ''
+    cache_metadata:
+      max-age: 0
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.registration.field_allocated_block'
+        - 'config:field.storage.registration.field_allocated_in_draw'
+        - 'config:field.storage.registration.field_drawn'
+        - 'config:field.storage.registration.field_drawnon'
+        - 'config:field.storage.registration.field_status'
+        - 'config:field.storage.registration.field_team_name'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: AllAllocations
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: manage/all_allocations
+      menu:
+        type: normal
+        title: 'All Block Allocations'
+        description: 'All Block Allocations'
+        expanded: false
+        parent: 'views_view:views.allocated_block.page_1'
+        weight: -5
+        context: '0'
+        menu_name: admin
+      defaults:
+        filters: false
+        filter_groups: false
+        fields: true
+      display_description: ''
+      filters:
+        field_team_name_value:
+          id: field_team_name_value
+          table: registration__field_team_name
+          field: field_team_name_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_team_name_value_op
+            label: 'Hunting Party'
+            description: ''
+            use_operator: false
+            operator: field_team_name_value_op
+            identifier: field_team_name_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        id:
+          id: id
+          table: registration_field_data
+          field: id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: id_op
+            label: 'Registration ID'
+            description: ''
+            use_operator: false
+            operator: id_op
+            identifier: id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: registration
+          entity_field: id
+          plugin_id: numeric
+        type:
+          id: type
+          table: registration_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            ballot: ballot
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: registration
+          entity_field: type
+          plugin_id: bundle
+        field_physical_address_family_name:
+          id: field_physical_address_family_name
+          table: user__field_physical_address
+          field: field_physical_address_family_name
+          relationship: user__identity
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_physical_address_family_name_op
+            label: 'Last name'
+            description: ''
+            use_operator: false
+            operator: field_physical_address_family_name_op
+            identifier: field_physical_address_family_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_physical_address_given_name:
+          id: field_physical_address_given_name
+          table: user__field_physical_address
+          field: field_physical_address_given_name
+          relationship: user__identity
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_physical_address_given_name_op
+            label: 'First Name'
+            description: ''
+            use_operator: false
+            operator: field_physical_address_given_name_op
+            identifier: field_physical_address_given_name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        mail:
+          id: mail
+          table: users_field_data
+          field: mail
+          relationship: user__identity
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: mail_op
+            label: Email
+            description: ''
+            use_operator: false
+            operator: mail_op
+            identifier: mail
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: user
+          entity_field: mail
+          plugin_id: string
+        uid:
+          id: uid
+          table: users_field_data
+          field: uid
+          relationship: user__identity
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: 'Name (autocomplete)'
+            description: ''
+            use_operator: false
+            operator: uid_op
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              hunters: '0'
+              testusers: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: user
+          entity_field: uid
+          plugin_id: user_name
+        field_ballotyear_value:
+          id: field_ballotyear_value
+          table: node__field_ballotyear
+          field: field_ballotyear_value
+          relationship: node__event
+          group_type: group
+          admin_label: ''
+          operator: between
+          value:
+            min: '2018-01-01'
+            max: '2018-12-31'
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_ballotyear_value_op
+            label: 'Ballot Years'
+            description: ''
+            use_operator: false
+            operator: field_ballotyear_value_op
+            identifier: field_ballotyear_value
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              administrator: administrator
+              manage: manage
+              anonymous: '0'
+              authenticated: '0'
+              hunters: '0'
+              testusers: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
+        field_status_value:
+          id: field_status_value
+          table: registration__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: allo
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_status_value_1:
+          id: field_status_value_1
+          table: registration__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '!='
+          value: unallocated
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: 0
       contexts:

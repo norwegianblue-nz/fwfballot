@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ad4186aed2de77bf64265007ffbe0925",
-    "content-hash": "3278786a82254624399df521b93ad924",
+    "hash": "1f5b865f26af11601a4e607b956c547f",
+    "content-hash": "4052fe40b296df5ff0a111d6040c445a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -4141,6 +4141,64 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_advanced_routing"
             }
+        },
+        {
+            "name": "drupal/views_bulk_operations",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_bulk_operations",
+                "reference": "6106b1c7a172d273e0407c49a4c4a8186c929573"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha2+17-dev",
+                    "datestamp": "1507365844",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Graber",
+                    "homepage": "https://www.drupal.org/user/1599440"
+                },
+                {
+                    "name": "Jon Pugh",
+                    "homepage": "https://www.drupal.org/user/17028"
+                },
+                {
+                    "name": "bojanz",
+                    "homepage": "https://www.drupal.org/user/86106"
+                },
+                {
+                    "name": "infojunkie",
+                    "homepage": "https://www.drupal.org/user/48424"
+                },
+                {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                }
+            ],
+            "description": "Views Bulk Operation",
+            "homepage": "https://www.drupal.org/project/views_bulk_operations",
+            "support": {
+                "source": "http://cgit.drupalcode.org/views_bulk_operations"
+            },
+            "time": "2017-10-10 13:43:17"
         },
         {
             "name": "drupal/views_data_export",
@@ -9133,7 +9191,8 @@
         "drupal/mimemail": 20,
         "drupal/registration_role": 20,
         "drupal/rng_conflict": 10,
-        "drupal/rng_contact": 10
+        "drupal/rng_contact": 10,
+        "drupal/views_bulk_operations": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -2,21 +2,24 @@
   'uid:1':
     bulk_form:
       - 0
+      - 0
     from_name: 'FWF Ballot'
     from_mail: info@fwf.net.nz
     tokens:
-      id_pos_0: id
-      name_pos_2: name
-      field_physical_address_given_name_pos_3: field_physical_address_given_name
-      field_physical_address_family_name_pos_4: field_physical_address_family_name
-      mail_pos_5: mail
-      event__target_id_pos_6: event__target_id
-      field_team_name_pos_7: field_team_name
-      field_allocated_in_draw_pos_8: field_allocated_in_draw
-      field_drawn_pos_9: field_drawn
-      field_allocated_block_pos_10: field_allocated_block
-    to_name: field_physical_address_family_name_pos_4
-    to_mail: mail_pos_5
+      field_team_name_pos_0: field_team_name
+      id_pos_1: id
+      name_pos_3: name
+      field_physical_address_given_name_pos_4: field_physical_address_given_name
+      field_physical_address_family_name_pos_5: field_physical_address_family_name
+      user_picture_pos_6: user_picture
+      mail_pos_7: mail
+      event__target_id_pos_8: event__target_id
+      field_status_pos_9: field_status
+      field_allocated_in_draw_pos_10: field_allocated_in_draw
+      field_drawn_pos_11: field_drawn
+      field_allocated_block_pos_12: field_allocated_block
+    to_name: name_pos_3
+    to_mail: mail_pos_7
     subject: 'A message from FWF'
     message:
       value: "<p>Dear [views-send:field_physical_address_given_name],</p>\r\n\r\n<p>you are entered in the [views-send:field_physical_address_given_name] with team [views-send:field_team_name] (Entry number [views-send:id]).</p>\r\n\r\n<p>We are unable to find a record of payment for this team. Untill payment in full is received, your entry is not confirmed.</p>\r\n\r\n<p>Please contact the committee by emailing</p>\r\n\r\n<p>or by calling 03 249 0000</p>\r\n\r\n<p>to resolve the issue.</p>\r\n\r\n<p>Regards</p>\r\n\r\n<p>the team.</p>\r\n"
