@@ -89,13 +89,16 @@ class UserBallotEntry extends FormBase {
         ];
       }
       if ($registration->get('field_status')->value <> 'withdrawn' && $registration->get('field_status')->value <> 'cancelled'){
-        $form['actions']['submit_withdraw'] = [
-          '#type' => 'submit',
-          '#value' => t('Decline/Withdraw Party'),
-          '#submit' => array('::submitFormWithdraw'),
-        ];
-        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Pressing 'Decline/Withdraw Party', withdraws the <strong>whole party</strong> from this year's ballot.<br />"
-            . '<strong>This cannot be undone.</strong></p>'
+//        $form['actions']['submit_withdraw'] = [
+//          '#type' => 'submit',
+//          '#value' => t('Decline/Withdraw Party'),
+//          '#submit' => array('::submitFormWithdraw'),
+//        ];
+//        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Pressing 'Decline/Withdraw Party', withdraws the <strong>whole party</strong> from this year's ballot.<br />"
+//            . '<strong>This cannot be undone.</strong></p>'
+//            );
+        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Please note: The ability to withdraw is currently disabled.<br />"
+            . 'If you wish to withdraw, please return to this page after 30th October 2017.</p>'
             );
       }
       if ($testing){
