@@ -94,7 +94,7 @@ class UserBallotEntry extends FormBase {
           '#value' => t('Decline/Withdraw Party'),
           '#submit' => array('::submitFormWithdraw'),
         ];
-        $form['help']['#markup'] = $this->t('<p>Pressing "Decline/Withdraw Party", withdraws the <strong>whole party</strong><br />'
+        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Pressing 'Decline/Withdraw Party', withdraws the <strong>whole party</strong> from this year's ballot.<br />"
             . '<strong>This cannot be undone.</strong></p>'
             );
       }
