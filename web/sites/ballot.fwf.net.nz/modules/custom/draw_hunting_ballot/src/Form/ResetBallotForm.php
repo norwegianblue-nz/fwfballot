@@ -10,12 +10,9 @@ namespace Drupal\draw_hunting_ballot\Form;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\rng\EventManagerInterface;
-//use Drupal\rng\EventMeta;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormStateInterface;
-//use Drupal\Core\Render\Element;
 use Drupal\draw_hunting_ballot\PrepBallot;
-//use Drupal\draw_hunting_ballot\ResetHuntingBlockCapacity;
 
 /**
  * Draw the ballot when user presses the "go" button.

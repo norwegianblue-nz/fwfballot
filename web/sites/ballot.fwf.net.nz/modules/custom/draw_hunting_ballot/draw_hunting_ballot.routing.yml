@@ -29,4 +29,12 @@ draw_hunting_ballot.user_ballot_entry:
     _title: 'Ballot Entry'
   requirements:
     _user_is_logged_in: 'TRUE'
+    
+draw_hunting_ballot.withdraw_entry:
+  path: '/user/{user}/withdraw_entry'
+  defaults:
+    _form: '\Drupal\draw_hunting_ballot\Form\WithdrawEntry'
+    _title: 'Ballot Entry'
+  requirements:
+    _user_is_logged_in: 'TRUE'
   

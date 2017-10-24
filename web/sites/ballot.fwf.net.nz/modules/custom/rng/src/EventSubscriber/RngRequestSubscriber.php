@@ -78,10 +78,10 @@ class RngRequestSubscriber implements EventSubscriberInterface {
             $trigger_id = 'entity:registration:new';
             break;
           case 'update':
-            if ($registration->get('field_allocated_in_draw')[0]->value > '0'){
+            if ($registration->get('field_allocated_in_draw')[0]->value > '0' && $registration->get('field_status')->value === 'allo'){
               $trigger_id = 'entity:registration:drawn';
             }
-            else if ($registration->getEvent()->get('field_drawn')[0]->value > '0'){
+            else if ($registration->getEvent()->get('field_drawn')[0]->value === '1' && $registration->get('field_status')->value === 'unallocated'){
               $trigger_id = 'entity:registration:missedout';
             }
             else {

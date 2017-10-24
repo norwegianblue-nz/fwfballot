@@ -4,17 +4,8 @@ namespace Drupal\draw_hunting_ballot\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Entity\ContentEntityForm;
-use Drupal\Core\Entity\EntityManagerInterface;
-use Drupal\rng\EventManagerInterface;
 use Drupal\user\Entity\User;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\rng\EventMetaInterface;
-use Drupal\rng\RegistrantInterface;
 use Drupal\rng\Entity\Registrant;
-use Drupal\draw_hunting_ballot\ReleaseHuntingBlock;
-
-
 
 /**
  * Class UserBallotEntry.
@@ -37,7 +28,8 @@ class UserBallotEntry extends FormBase {
     
     $current_uid = \Drupal::currentUser()->id();
     $current_user = User::load($current_uid);
-    $testing = FALSE;
+    $form_state->set('current_uid', $current_uid);
+    $form_state->set('current_user', $current_user);
     
     $registrant_ids = \Drupal::entityQuery('registrant')
       ->condition('identity__target_type', $current_user->getEntityTypeId(), '=')
@@ -51,7 +43,6 @@ class UserBallotEntry extends FormBase {
         //
         $registrant = Registrant::load($registrant_id);
         $registration = $registrant->getRegistration();
-        //drupal_set_message(t('The current reg is: ' . $registration->id() ));
   
       }
       $form_state->set('entry', $registration);
@@ -73,7 +64,6 @@ class UserBallotEntry extends FormBase {
         $rows[] = $row;
       }
     
-      //drupal_set_message(t('The current user is:' . $current_user->getUsername() ),'warning');
       
       $form['#title'] = $this->t(
         'Hunting party %party_name (entry number %regid)',[
@@ -82,6 +72,14 @@ class UserBallotEntry extends FormBase {
           ]
       );
       if ($registration->get('field_status')->value === 'allo'){
+        $form['message']['#markup'] = $this->t("<p class='accept-msg'>Your party (%party_name) has been allocated a block in this year's ballot.<br />"
+            . 'The block allocated and the status are displayed below.<br/ >'
+            . 'To accept this block allocation, make a note of your ballot entry number (%regid) and select the<br/>'
+            . '"Accept/Confirm allocated block" button.</p>',[
+            '%party_name' => $registration->get('field_team_name')->value,
+            '%regid' => $registration->id(),
+          ]
+            );
         $form['actions']['submit'] = [
           '#type' => 'submit',
           '#value' => t('Accept/Confirm allocated block'),
@@ -89,24 +87,20 @@ class UserBallotEntry extends FormBase {
         ];
       }
       if ($registration->get('field_status')->value <> 'withdrawn' && $registration->get('field_status')->value <> 'cancelled'){
-//        $form['actions']['submit_withdraw'] = [
-//          '#type' => 'submit',
-//          '#value' => t('Decline/Withdraw Party'),
-//          '#submit' => array('::submitFormWithdraw'),
-//        ];
-//        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Pressing 'Decline/Withdraw Party', withdraws the <strong>whole party</strong> from this year's ballot.<br />"
-//            . '<strong>This cannot be undone.</strong></p>'
-//            );
-        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Please note: The ability to withdraw is currently disabled.<br />"
-            . 'If you wish to withdraw, please return to this page after 30th October 2017.</p>'
+        $form['help']['#markup'] = $this->t(
+            "<p><br />Should your party no longer wish to hunt in this year's ballot blocks, select the<br />"
+            . '"Decline/Withdraw Party" button.</p>'
+            . "<p class='withdraw-warning'>NOTE: Selecting 'Decline/Withdraw Party', withdraws the <strong>whole party</strong> from this year's ballot.<br />"
+            . '<strong>This cannot be undone.</strong></p>'
             );
-      }
-      if ($testing){
-        $form['actions']['submit_testing'] = [
+        $form['withdraw']['submit_withdraw'] = [
           '#type' => 'submit',
-          '#value' => t('Testing'),
-          '#submit' => array('::submitFormTesting'),
+          '#value' => t('Decline/Withdraw Party'),
+          '#submit' => array('::submitFormWithdraw'),
         ];
+//        $form['help']['#markup'] = $this->t("<p class='withdraw-warning'>Please note: The ability to withdraw is currently disabled.<br />"
+//            . 'If you wish to withdraw, please return to this page after 30th October 2017.</p>'
+//            );
       }
       $form['hunters'] = array(
         '#type' => 'table',
@@ -133,25 +127,25 @@ class UserBallotEntry extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $entry = $form_state->get('entry');
+    $user = $form_state->get('current_uid');
     $entry->field_status = 'allocated_confirmed';
     $entry->save();
+    \Drupal::logger('draw_hunting_ballot')->notice('Hunter id: %user accepted Ballot entry %entry block allocation.',
+    array(
+        '%user' => $user,
+        '%entry' => $entry->id(),
+    ));
+    
     $url = \Drupal\Core\Url::fromUserInput('/donation');
     $form_state->setRedirectUrl($url);
-    // Display result.
-    //foreach ($form_state->getValues() as $key => $value) {
-    //  drupal_set_message($key . ': ' . $value);
-    //}
 
   }
   public function submitFormWithdraw(array &$form, FormStateInterface $form_state) {
     $entry = $form_state->get('entry');
+    $user = $form_state->get('current_uid');
     
-    //Release the block allocationi
-    $release = new ReleaseHuntingBlock($entry);
-    $release->releaseblock();
-
-    $entry->field_status = 'withdrawn';
-    $entry->save();
+    $url = \Drupal\Core\Url::fromRoute('draw_hunting_ballot.withdraw_entry',['user' => $user]);
+    $form_state->setRedirectUrl($url);
 
   }
   public function submitFormTesting(array &$form, FormStateInterface $form_state) {

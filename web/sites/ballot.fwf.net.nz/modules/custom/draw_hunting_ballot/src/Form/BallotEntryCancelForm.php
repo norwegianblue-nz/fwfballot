@@ -51,6 +51,11 @@ class BallotentryCancelForm extends ContentEntityConfirmFormBase {
 
       $entry->field_status = 'cancelled';
       $entry->save();
+      \Drupal::logger('draw_hunting_ballot')->notice('User id: %user cancelled Ballot entry %entry block allocation.',
+      array(
+          '%user' => \Drupal::currentUser()->id(),
+          '%entry' => $entry->id(),
+      ));      
     }
 
     drupal_set_message(t('Ballot entry cancelled.'));
