@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - node
     - rng
     - system
   theme:
@@ -25,15 +24,6 @@ settings:
   use_site_name: true
   use_site_slogan: false
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-      event: event
-      page: page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   rng_current_time:
     id: rng_current_time
     date: '1508984277'

@@ -9,8 +9,11 @@ dependencies:
     - field.storage.taxonomy_term.field_priority
     - field.storage.user.field_contact_phone
     - rng.registration_type.ballot
+    - user.role.administrator
     - user.role.anonymous
     - user.role.authenticated
+    - user.role.hunters
+    - user.role.manage
   module:
     - dynamic_entity_reference
     - options
@@ -1558,8 +1561,12 @@ display:
       display_extenders: {  }
       path: blockallocationcontactinfo
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            administrator: administrator
+            hunters: hunters
+            manage: manage
       defaults:
         access: false
         title: false
@@ -1570,6 +1577,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.roles
       tags:
         - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_status'

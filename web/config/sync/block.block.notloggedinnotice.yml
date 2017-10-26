@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:ba2d656d-ced5-4b0d-a4b7-ce4e12c419ec'
   module:
     - block_content
-    - node
     - rng
     - system
     - user
@@ -41,7 +40,7 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: "/ballot-entry\r\n/ballot-payment"
+    pages: "/ballot-entry\r\n/ballot-payment\r\n/blockallocationcontactinfo"
     negate: false
     context_mapping: {  }
   user_role:
@@ -51,12 +50,3 @@ visibility:
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-      event: event
-      page: page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
