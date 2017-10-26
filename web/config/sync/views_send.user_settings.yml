@@ -31,6 +31,39 @@
     direct: 0
     carbon_copy: 0
     remember: 1
+  'uid:751':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+    from_name: 'FWF Ballot'
+    from_mail: info@fwf.net.nz
+    tokens:
+      field_team_name_pos_0: field_team_name
+      id_pos_1: id
+      name_pos_3: name
+      field_physical_address_given_name_pos_4: field_physical_address_given_name
+      field_physical_address_family_name_pos_5: field_physical_address_family_name
+      user_picture_pos_6: user_picture
+      mail_pos_7: mail
+      event__target_id_pos_8: event__target_id
+      field_status_pos_9: field_status
+      field_allocated_in_draw_pos_10: field_allocated_in_draw
+      field_drawn_pos_11: field_drawn
+      field_allocated_block_pos_12: field_allocated_block
+    to_name: field_team_name_pos_0
+    to_mail: mail_pos_7
+    subject: Block
+    message:
+      value: "Thanks Ethan\r\nSorry you did not draw a block. All those who did will be on our web page in the next day or two."
+      format: plain_text
+    attachments: ''
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 0
+    carbon_copy: 1
+    remember: 1
 'unpaid_entries_0_2:page_1':
   'uid:1':
     bulk_form:
