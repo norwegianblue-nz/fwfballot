@@ -11,7 +11,6 @@ dependencies:
     - rng.registration_type.ballot
     - user.role.anonymous
     - user.role.authenticated
-    - user.role.manage
   module:
     - dynamic_entity_reference
     - options
@@ -1557,12 +1556,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: manage/blockalloctationcontactinfo
+      path: blockallocationcontactinfo
       access:
-        type: role
-        options:
-          role:
-            manage: manage
+        type: none
+        options: {  }
       defaults:
         access: false
         title: false
@@ -1573,7 +1570,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user.roles
       tags:
         - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_status'
