@@ -2,6 +2,9 @@ uuid: 60834898-8f63-4c50-9642-4a2b719753d4
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
+    - rng
   theme:
     - fwfbs1
 _core:
@@ -17,4 +20,25 @@ settings:
   label: 'Primary admin actions'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      event: event
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  rng_current_time:
+    id: rng_current_time
+    date: '1508988256'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1508988256'
+    negate: false
+    context_mapping: {  }

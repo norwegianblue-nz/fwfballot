@@ -1452,7 +1452,9 @@ display:
         filters: true
         filter_groups: true
         fields: true
+        title: false
       display_description: ''
+      title: 'Unconfirmed Allocations'
     cache_metadata:
       max-age: 0
       contexts:
@@ -1489,6 +1491,7 @@ display:
         filters: false
         filter_groups: false
         fields: true
+        title: false
       display_description: ''
       filters:
         field_team_name_value:
@@ -1902,6 +1905,7 @@ display:
         operator: AND
         groups:
           1: AND
+      title: 'All Allocations'
     cache_metadata:
       max-age: 0
       contexts:

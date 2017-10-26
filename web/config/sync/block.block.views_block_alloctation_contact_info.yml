@@ -1,49 +1,45 @@
-uuid: cb5628aa-d29d-4333-9dfa-af1556493f2b
+uuid: 75faf64d-f338-4de3-8e5b-2944a3892583
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.footer
+    - views.view.blockalloctationcontactinfo
   module:
     - node
     - rng
-    - system
+    - views
   theme:
     - fwfbs1
-_core:
-  default_config_hash: h06zhb3xV9_2_3Zy9NsyylL7YBaEDlMwMEqNwAn8kMo
-id: fwfbs1_footer
+id: views_block_alloctation_contact_info
 theme: fwfbs1
-region: footer
+region: content
 weight: 0
 provider: null
-plugin: 'system_menu_block:footer'
+plugin: 'views_block:blockalloctationcontactinfo-block_alloctation_contact_info'
 settings:
-  id: 'system_menu_block:footer'
-  label: 'Footer menu'
-  provider: system
+  id: 'views_block:blockalloctationcontactinfo-block_alloctation_contact_info'
+  label: ''
+  provider: views
   label_display: '0'
-  level: 1
-  depth: 0
+  views_label: ''
+  items_per_page: none
 visibility:
   node_type:
     id: node_type
     bundles:
-      article: article
-      event: event
-      page: page
+      nakednode: nakednode
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
   rng_current_time:
     id: rng_current_time
-    date: '1508988345'
+    date: '1508987963'
     negate: false
     context_mapping: {  }
   rng_rule_scheduler:
     id: rng_rule_scheduler
     rng_rule_component: null
     rng_rule_scheduler: null
-    date: '1508988345'
+    date: '1508987963'
     negate: false
     context_mapping: {  }

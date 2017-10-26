@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   module:
+    - node
+    - rng
     - system
   theme:
     - fwfbs1
@@ -19,4 +21,25 @@ settings:
   label: 'Status messages'
   provider: system
   label_display: '0'
-visibility: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      event: event
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  rng_current_time:
+    id: rng_current_time
+    date: '1508988268'
+    negate: false
+    context_mapping: {  }
+  rng_rule_scheduler:
+    id: rng_rule_scheduler
+    rng_rule_component: null
+    rng_rule_scheduler: null
+    date: '1508988268'
+    negate: false
+    context_mapping: {  }

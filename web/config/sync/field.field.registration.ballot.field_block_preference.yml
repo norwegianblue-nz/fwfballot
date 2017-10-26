@@ -10,7 +10,7 @@ id: registration.ballot.field_block_preference
 field_name: field_block_preference
 entity_type: registration
 bundle: ballot
-label: .
+label: 'Hunting blocks wanted (in preferred order)'
 description: "Drag and Drop available blocks into the 'Chosen block preference' area in order of preference.<br />\r\nThis order will be used to allocate blocks should your party be lucky in the ballot."
 required: false
 translatable: false

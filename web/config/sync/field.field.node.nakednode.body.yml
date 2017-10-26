@@ -1,0 +1,22 @@
+uuid: 5e87f588-6f59-4a4e-8603-b591c544c246
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.nakednode
+  module:
+    - text
+id: node.nakednode.body
+field_name: body
+entity_type: node
+bundle: nakednode
+label: 'Naked Content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
