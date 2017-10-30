@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - commerce_cart
-    - node
     - rng
     - system
     - user
@@ -35,6 +34,11 @@ visibility:
     date: '1502078430'
     negate: false
     context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations\r\n/manage/*\r\n/blockallocationcontactinfo"
+    negate: true
+    context_mapping: {  }
   user_role:
     id: user_role
     roles:
@@ -42,16 +46,3 @@ visibility:
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-      page: page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations"
-    negate: true
-    context_mapping: {  }

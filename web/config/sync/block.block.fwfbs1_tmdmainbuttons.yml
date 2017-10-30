@@ -6,7 +6,6 @@ dependencies:
     - 'block_content:basic:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
   module:
     - block_content
-    - node
     - rng
     - system
   theme:
@@ -14,7 +13,7 @@ dependencies:
 id: fwfbs1_tmdmainbuttons
 theme: fwfbs1
 region: sidebar_second
-weight: -6
+weight: -7
 provider: null
 plugin: 'block_content:2ca1b80b-3586-43fa-ac7c-763f2fe8de5d'
 settings:
@@ -38,16 +37,8 @@ visibility:
     date: '1500598502'
     negate: false
     context_mapping: {  }
-  node_type:
-    id: node_type
-    bundles:
-      article: article
-      page: page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   request_path:
     id: request_path
-    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations"
+    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations\r\n/manage/*\r\n/blockallocationcontactinfo"
     negate: true
     context_mapping: {  }
