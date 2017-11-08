@@ -148,10 +148,5 @@ class UserBallotEntry extends FormBase {
     $form_state->setRedirectUrl($url);
 
   }
-  public function submitFormTesting(array &$form, FormStateInterface $form_state) {
-    $entry = $form_state->get('entry');
-    $entry->field_status = 'allo';
-    $entry->save();
-  }
 
 }

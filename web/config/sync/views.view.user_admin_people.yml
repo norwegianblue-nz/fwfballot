@@ -82,8 +82,8 @@ display:
           summary: ''
           description: ''
           columns:
-            field_nok_address_given_name: field_nok_address_given_name
-            field_nok_address_family_name: field_nok_address_given_name
+            field_physical_address_given_name: field_physical_address_given_name
+            field_physical_address_family_name: field_physical_address_given_name
             name: name
             status: status
             mail: mail
@@ -93,14 +93,14 @@ display:
             operations: operations
             registration: registration
           info:
-            field_nok_address_given_name:
-              sortable: true
+            field_physical_address_given_name:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: '&nbsp;'
               empty_column: false
               responsive: ''
-            field_nok_address_family_name:
+            field_physical_address_family_name:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -1420,10 +1420,10 @@ display:
           entity_type: user
           plugin_id: standard
       fields:
-        field_nok_address_given_name:
-          id: field_nok_address_given_name
-          table: user__field_nok_address
-          field: field_nok_address_given_name
+        field_physical_address_given_name:
+          id: field_physical_address_given_name
+          table: user__field_physical_address
+          field: field_physical_address_given_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -1469,10 +1469,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           plugin_id: standard
-        field_nok_address_family_name:
-          id: field_nok_address_family_name
-          table: user__field_nok_address
-          field: field_nok_address_family_name
+        field_physical_address_family_name:
+          id: field_physical_address_family_name
+          table: user__field_physical_address
+          field: field_physical_address_family_name
           relationship: none
           group_type: group
           admin_label: ''
@@ -2023,8 +2023,8 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           fields:
-            field_nok_address_family_name: field_nok_address_family_name
-            field_nok_address_given_name: field_nok_address_given_name
+            field_physical_address_given_name: field_physical_address_given_name
+            field_physical_address_family_name: field_physical_address_family_name
           plugin_id: combine
         combine:
           id: combine
