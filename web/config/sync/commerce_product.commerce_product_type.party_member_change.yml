@@ -1,0 +1,10 @@
+uuid: e2bdc1ff-9017-4fe0-8e27-b90b6bee456d
+langcode: en
+status: true
+dependencies: {  }
+id: party_member_change
+label: 'Party Member Change'
+description: ''
+variationType: change_party_members
+injectVariationFields: true
+traits: {  }

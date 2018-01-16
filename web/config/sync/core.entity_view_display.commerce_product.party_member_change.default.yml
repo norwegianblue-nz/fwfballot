@@ -1,0 +1,36 @@
+uuid: f7ed7ffb-ef45-4318-bf8d-59573cace767
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.party_member_change
+    - field.field.commerce_product.party_member_change.body
+    - field.field.commerce_product.party_member_change.stores
+    - field.field.commerce_product.party_member_change.variations
+  module:
+    - commerce_product
+    - text
+id: commerce_product.party_member_change.default
+targetEntityType: commerce_product
+bundle: party_member_change
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: -4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  stores: true
+  uid: true

@@ -1,0 +1,28 @@
+uuid: 8ce9ca7d-ffa8-47a3-a256-18e8aec94ac8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.party_member_change
+    - field.storage.contact_message.field_hunter_to_add
+id: contact_message.party_member_change.field_hunter_to_add
+field_name: field_hunter_to_add
+entity_type: contact_message
+bundle: party_member_change
+label: 'Hunter (user names) to add'
+description: 'The hunter(s) to add IN PLACE OF those removed. This MUST match the number being removed.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

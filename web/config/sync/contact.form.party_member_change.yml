@@ -1,0 +1,12 @@
+uuid: 87772f53-f668-4a94-881f-299351902cfc
+langcode: en
+status: true
+dependencies: {  }
+id: party_member_change
+label: 'Party member change'
+recipients:
+  - tim@timmanndesign.co.nz
+reply: ''
+weight: 0
+message: "Thank you.\r\nPlease be aware that until complete payment has reached us, no changes will be made."
+redirect: ''

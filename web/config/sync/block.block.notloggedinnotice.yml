@@ -14,7 +14,7 @@ dependencies:
 id: notloggedinnotice
 theme: fwfbs1
 region: content
-weight: 0
+weight: -7
 provider: null
 plugin: 'block_content:ba2d656d-ced5-4b0d-a4b7-ce4e12c419ec'
 settings:

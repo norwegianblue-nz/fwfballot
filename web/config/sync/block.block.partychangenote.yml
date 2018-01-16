@@ -1,23 +1,24 @@
-uuid: 1d593235-8217-4441-9942-a918ef52bc8c
+uuid: ae6b42bc-58fe-4bf9-99c2-02d1666847b3
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:6c057d83-c8f8-42cf-8d8b-18f7c36cfaf9'
+    - 'block_content:basic:61069311-4caf-4b7b-9adf-4aa627b3b6ac'
   module:
     - block_content
     - rng
+    - system
   theme:
     - fwfbs1
-id: fwfbs1_identifywhichversionofthesitesthisis
+id: partychangenote
 theme: fwfbs1
 region: content
-weight: -6
+weight: -9
 provider: null
-plugin: 'block_content:6c057d83-c8f8-42cf-8d8b-18f7c36cfaf9'
+plugin: 'block_content:61069311-4caf-4b7b-9adf-4aa627b3b6ac'
 settings:
-  id: 'block_content:6c057d83-c8f8-42cf-8d8b-18f7c36cfaf9'
-  label: 'Identify which version of the sites this is'
+  id: 'block_content:61069311-4caf-4b7b-9adf-4aa627b3b6ac'
+  label: 'Party change note'
   provider: block_content
   label_display: '0'
   status: true
@@ -26,13 +27,18 @@ settings:
 visibility:
   rng_current_time:
     id: rng_current_time
-    date: '1500594796'
+    date: '1515472489'
     negate: false
     context_mapping: {  }
   rng_rule_scheduler:
     id: rng_rule_scheduler
     rng_rule_component: null
     rng_rule_scheduler: null
-    date: '1500594796'
+    date: '1515472489'
+    negate: false
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /contact/party_member_change
     negate: false
     context_mapping: {  }

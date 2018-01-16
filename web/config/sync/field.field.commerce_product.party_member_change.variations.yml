@@ -1,0 +1,24 @@
+uuid: d452d679-4df2-48d3-bf9b-c176d983c68c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.party_member_change
+    - commerce_product.commerce_product_variation_type.change_party_members
+    - field.storage.commerce_product.variations
+id: commerce_product.party_member_change.variations
+field_name: variations
+entity_type: commerce_product
+bundle: party_member_change
+label: Variations
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_product_variation'
+  handler_settings:
+    target_bundles:
+      - change_party_members
+field_type: entity_reference

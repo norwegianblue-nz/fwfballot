@@ -1,0 +1,21 @@
+uuid: ccc8b65d-4a6f-4c23-9072-cce8a05da0e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.party_member_change
+    - field.storage.commerce_product.stores
+id: commerce_product.party_member_change.stores
+field_name: stores
+entity_type: commerce_product
+bundle: party_member_change
+label: Stores
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_store'
+  handler_settings: {  }
+field_type: entity_reference

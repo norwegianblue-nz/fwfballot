@@ -1,0 +1,9 @@
+uuid: e86ce36d-c8ef-44d9-8db8-fe1e2a26a442
+langcode: en
+status: true
+dependencies: {  }
+id: change_party_members
+label: 'Party Member Change'
+orderItemType: party_member_change
+generateTitle: true
+traits: {  }

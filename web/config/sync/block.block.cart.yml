@@ -34,11 +34,6 @@ visibility:
     date: '1502078430'
     negate: false
     context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations\r\n/manage/*\r\n/blockallocationcontactinfo"
-    negate: true
-    context_mapping: {  }
   user_role:
     id: user_role
     roles:
@@ -46,3 +41,8 @@ visibility:
     negate: false
     context_mapping:
       user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "*/event/resetballot\r\n*/event/drawballot\r\n*/event/dates\r\n*/registrations\r\n/manage/*\r\n/blockallocationcontactinfo"
+    negate: true
+    context_mapping: {  }

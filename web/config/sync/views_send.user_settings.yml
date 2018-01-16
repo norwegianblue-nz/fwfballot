@@ -36,6 +36,34 @@
       - 0
       - 0
       - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
     from_name: 'FWF Ballot'
     from_mail: info@fwf.net.nz
     tokens:
@@ -51,11 +79,11 @@
       field_allocated_in_draw_pos_10: field_allocated_in_draw
       field_drawn_pos_11: field_drawn
       field_allocated_block_pos_12: field_allocated_block
-    to_name: field_team_name_pos_0
+    to_name: name_pos_3
     to_mail: mail_pos_7
     subject: Block
     message:
-      value: "Thanks Ethan\r\nSorry you did not draw a block. All those who did will be on our web page in the next day or two."
+      value: "Getting a few queries about the dates for each period for 2018. The dates are on the TERMS and CONDITIONS page of the ballot application but hope this helps. \r\nDates are as follows. \r\n1st Period 19th-28th March. Briefing at the Te Anau Club 18th March 3pm.\r\n 2nd Period 29th March -7th April Briefing at the Te Anau Club Wednesday 28th March 6pm . \r\n3rd Period 8th April -17th April. Briefing at the Te Anau Club Saturday 7th April 3pm.\r\n If you have yet to confirm your ballot acceptance please do so by the end of the month or YOU WILL LOSE IT.."
       format: plain_text
     attachments: ''
     priority: '0'
@@ -102,4 +130,154 @@
     headers: ''
     direct: 0
     carbon_copy: 0
+    remember: 1
+'unconfirmed_entries:page_1':
+  'uid:751':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+    from_name: 'FWF Ballot'
+    from_mail: info@fwf.net.nz
+    tokens:
+      field_team_name_pos_0: field_team_name
+      id_pos_1: id
+      name_pos_3: name
+      field_physical_address_given_name_pos_4: field_physical_address_given_name
+      field_physical_address_family_name_pos_5: field_physical_address_family_name
+      mail_pos_6: mail
+      event__target_id_pos_7: event__target_id
+      field_allocated_in_draw_pos_9: field_allocated_in_draw
+      field_drawnon_pos_10: field_drawnon
+      field_allocated_block_pos_11: field_allocated_block
+      field_status_pos_12: field_status
+      field_priority_pos_14: field_priority
+    to_name: field_physical_address_given_name_pos_4
+    to_mail: mail_pos_6
+    subject: 'Kea Survey'
+    message:
+      value: "Dear Members\r\n\r\n \r\n\r\nA Very Unique Opportunity:\r\n\r\n \r\n\r\nAs you will be aware the Fiordland Wapiti Foundation  have a partnership with the Kea Conservation Trust to monitor and look at opportunities to help our Kea in the Wapiti area. Over the last two years during the ballot hunters have surveyed the Kea, this is the biggest survey for Kea in the country. Now we are taking this to the next leave.\r\n\r\n \r\n\r\nWe are going to capture and monitor some Kea with the Conservation Trust. We will be doing this between the 17th and 26th of January. What we need is some volunteers to help with this project.\r\n\r\n \r\n\r\nAll you will need to do is get yourself to Te Anau. But there is a catch we would require you to have some camera skills both still and video. Also you would need to be fit as there is a lot of walking involved. However you will be transported by helicopter.\r\n\r\n \r\n\r\nIf you are keen to be involved with this once in a life time opportunity please either ring Roy Sloan on 021 900 423 or email the secretary on  fwfsecretary@gmail.com you can contact us asap please.\r\n\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary\r\nFiordland Wapiti Foundation\r\n0210758272"
+      format: plain_text
+    attachments: ''
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 0
+    carbon_copy: 1
+    remember: 1
+'unconfirmed_entries:page_2':
+  'uid:751':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    from_name: 'FWF Ballot'
+    from_mail: info@fwf.net.nz
+    tokens:
+      field_team_name_pos_0: field_team_name
+      id_pos_1: id
+      name_pos_3: name
+      field_physical_address_given_name_pos_4: field_physical_address_given_name
+      field_physical_address_family_name_pos_5: field_physical_address_family_name
+      mail_pos_6: mail
+      event__target_id_pos_7: event__target_id
+      field_allocated_in_draw_pos_9: field_allocated_in_draw
+      field_drawnon_pos_10: field_drawnon
+      field_allocated_block_pos_11: field_allocated_block
+      field_status_pos_12: field_status
+      field_priority_pos_14: field_priority
+    to_name: field_physical_address_given_name_pos_4
+    to_mail: mail_pos_6
+    subject: 'Kea Survey'
+    message:
+      value: "Dear Members\r\n\r\n \r\n\r\nA Very Unique Opportunity:\r\n\r\n \r\n\r\nAs you will be aware the Fiordland Wapiti Foundation  have a partnership with the Kea Conservation Trust to monitor and look at opportunities to help our Kea in the Wapiti area. Over the last two years during the ballot hunters have surveyed the Kea, this is the biggest survey for Kea in the country. Now we are taking this to the next leave.\r\n\r\n \r\n\r\nWe are going to capture and monitor some Kea with the Conservation Trust. We will be doing this between the 17th and 26th of January. What we need is some volunteers to help with this project.\r\n\r\n \r\n\r\nAll you will need to do is get yourself to Te Anau. But there is a catch we would require you to have some camera skills both still and video. Also you would need to be fit as there is a lot of walking involved. However you will be transported by helicopter.\r\n\r\n \r\n\r\nIf you are keen to be involved with this once in a life time opportunity please either ring Roy Sloan on 021 900 423 or email the secretary on  fwfsecretary@gmail.com you as soon as possible.\r\n\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary \r\nFiordland Wapiti Foundation\r\n0210758272"
+      format: plain_text
+    attachments: ''
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 0
+    carbon_copy: 1
+    remember: 1
+'unconfirmed_entries:page_3':
+  'uid:751':
+    bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    from_name: 'FWF Ballot'
+    from_mail: info@fwf.net.nz
+    tokens:
+      field_team_name_pos_0: field_team_name
+      id_pos_1: id
+      name_pos_3: name
+      field_physical_address_given_name_pos_4: field_physical_address_given_name
+      field_physical_address_family_name_pos_5: field_physical_address_family_name
+      mail_pos_6: mail
+      event__target_id_pos_7: event__target_id
+      field_allocated_in_draw_pos_9: field_allocated_in_draw
+      field_drawnon_pos_10: field_drawnon
+      field_allocated_block_pos_11: field_allocated_block
+      field_status_pos_12: field_status
+      field_priority_pos_14: field_priority
+    to_name: field_physical_address_given_name_pos_4
+    to_mail: mail_pos_6
+    subject: 'Kea Survey'
+    message:
+      value: "Dear Members\r\n\r\n \r\n\r\nA Very Unique Opportunity:\r\n\r\n \r\n\r\nAs you will be aware the Fiordland Wapiti Foundation  have a partnership with the Kea Conservation Trust to monitor and look at opportunities to help our Kea in the Wapiti area. Over the last two years during the ballot hunters have surveyed the Kea, this is the biggest survey for Kea in the country. Now we are taking this to the next leave.\r\n\r\n \r\n\r\nWe are going to capture and monitor some Kea with the Conservation Trust. We will be doing this between the 17th and 26th of January. What we need is some volunteers to help with this project.\r\n\r\n \r\n\r\nAll you will need to do is get yourself to Te Anau. But there is a catch we would require you to have some camera skills both still and video. Also you would need to be fit as there is a lot of walking involved. However you will be transported by helicopter.\r\n\r\n \r\n\r\nIf you are keen to be involved with this once in a life time opportunity please either ring Roy Sloan on 021 900 423 or email the secretary on  fwfsecretary@gmail.com you can you please contact us asap.\r\n\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary\r\nFiordland Wapiti Foundation\r\n02107508272"
+      format: plain_text
+    attachments: ''
+    priority: '0'
+    receipt: 0
+    headers: ''
+    direct: 0
+    carbon_copy: 1
     remember: 1

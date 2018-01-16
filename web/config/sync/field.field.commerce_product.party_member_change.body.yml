@@ -1,0 +1,22 @@
+uuid: b2d90efd-35dc-412d-b309-c969944fdaaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.party_member_change
+    - field.storage.commerce_product.body
+  module:
+    - text
+id: commerce_product.party_member_change.body
+field_name: body
+entity_type: commerce_product
+bundle: party_member_change
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,56 @@
+uuid: 9bd0407f-2243-4e32-8661-72d14cc76a82
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.party_member_change
+    - core.entity_view_mode.commerce_order_item.party_member_change_details
+    - field.field.commerce_order_item.party_member_change.field_entry_id
+    - field.field.commerce_order_item.party_member_change.field_hunter_user_names_to_add
+    - field.field.commerce_order_item.party_member_change.field_hunter_user_names_to_remov
+    - field.field.commerce_order_item.party_member_change.field_reference
+  module:
+    - dynamic_entity_reference
+id: commerce_order_item.party_member_change.party_member_change_details
+targetEntityType: commerce_order_item
+bundle: party_member_change
+mode: party_member_change_details
+content:
+  field_entry_id:
+    weight: 0
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_hunter_user_names_to_add:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: dynamic_entity_reference_label
+    region: content
+  field_hunter_user_names_to_remov:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: dynamic_entity_reference_label
+    region: content
+  field_reference:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  adjustments: true
+  purchased_entity: true
+  quantity: true
+  total_price: true
+  unit_price: true

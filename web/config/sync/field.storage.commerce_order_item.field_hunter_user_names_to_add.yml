@@ -1,0 +1,23 @@
+uuid: 91d8099b-4cda-4e77-94b7-ffb08a0b1a75
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - dynamic_entity_reference
+    - user
+id: commerce_order_item.field_hunter_user_names_to_add
+field_name: field_hunter_user_names_to_add
+entity_type: commerce_order_item
+type: dynamic_entity_reference
+settings:
+  exclude_entity_types: false
+  entity_type_ids:
+    user: user
+module: dynamic_entity_reference
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

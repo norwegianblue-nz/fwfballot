@@ -1,0 +1,9 @@
+uuid: 7fc30a6a-c3eb-42fa-8007-5fb714e38192
+langcode: en
+status: true
+dependencies: {  }
+label: 'Party Member Change'
+id: party_member_change
+purchasableEntityType: commerce_product_variation
+orderType: changerequest
+traits: {  }

@@ -1,0 +1,21 @@
+uuid: 5e584aa7-e7e0-4897-a33e-e66638c6fc3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_type.changerequest
+    - field.storage.commerce_order.order_items
+id: commerce_order.changerequest.order_items
+field_name: order_items
+entity_type: commerce_order
+bundle: changerequest
+label: 'Order items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_order_item'
+  handler_settings: {  }
+field_type: entity_reference

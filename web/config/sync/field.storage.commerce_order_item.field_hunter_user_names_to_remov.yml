@@ -1,0 +1,23 @@
+uuid: 239daf26-15b9-4dd2-96b5-b3f1407041f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_order
+    - dynamic_entity_reference
+    - user
+id: commerce_order_item.field_hunter_user_names_to_remov
+field_name: field_hunter_user_names_to_remov
+entity_type: commerce_order_item
+type: dynamic_entity_reference
+settings:
+  exclude_entity_types: false
+  entity_type_ids:
+    user: user
+module: dynamic_entity_reference
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

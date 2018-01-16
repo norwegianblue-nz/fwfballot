@@ -208,7 +208,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: id
+          default: field_allocated_block
           empty_table: false
       row:
         type: fields
@@ -2011,12 +2011,12 @@ display:
       display_extenders: {  }
       path: manage/withdrawn_allocations
       menu:
-        type: none
-        title: 'All Block Allocations'
-        description: 'All Block Allocations'
+        type: normal
+        title: Withdrawals
+        description: 'Withdrawn parties'
         expanded: false
         parent: 'views_view:views.allocated_block.page_1'
-        weight: -5
+        weight: 5
         context: '0'
         menu_name: admin
       defaults:

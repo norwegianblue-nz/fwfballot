@@ -1,0 +1,16 @@
+uuid: d6e8a3ec-8958-4f2c-abb5-ff0a5ecbd411
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.change_party_members
+id: commerce_product_variation.change_party_members.default
+targetEntityType: commerce_product_variation
+bundle: change_party_members
+mode: default
+content: {  }
+hidden:
+  price: true
+  product_id: true
+  sku: true
+  title: true

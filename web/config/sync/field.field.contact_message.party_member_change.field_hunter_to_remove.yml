@@ -1,0 +1,28 @@
+uuid: 883497ca-8172-4c34-9acf-191e5ab7af74
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.party_member_change
+    - field.storage.contact_message.field_hunter_to_remove
+id: contact_message.party_member_change.field_hunter_to_remove
+field_name: field_hunter_to_remove
+entity_type: contact_message
+bundle: party_member_change
+label: 'Hunter (user names) to remove'
+description: 'The username(s) of the hunter(s) that is(are) to be removed from the party.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

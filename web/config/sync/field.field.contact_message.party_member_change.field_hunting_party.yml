@@ -1,0 +1,19 @@
+uuid: 07b6a0eb-bf4e-4fc0-84f7-0e6397b0812d
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.party_member_change
+    - field.storage.contact_message.field_hunting_party
+id: contact_message.party_member_change.field_hunting_party
+field_name: field_hunting_party
+entity_type: contact_message
+bundle: party_member_change
+label: 'Hunting party name'
+description: 'The name of your hunting party.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

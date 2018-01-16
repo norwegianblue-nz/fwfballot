@@ -12,7 +12,7 @@ _core:
 id: fwfbs1_content
 theme: fwfbs1
 region: content
-weight: 0
+weight: -8
 provider: null
 plugin: system_main_block
 settings:
