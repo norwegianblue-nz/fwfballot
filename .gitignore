@@ -26,6 +26,7 @@
 /web/sites/*/themes/custom/*/.sass-cache/
 /web/sites/*/*~
 /web/sites/*/themes/custom/*/sass_this
+web/sites/ballot.fwf.net.nz/modules/custom/draw_hunting_ballot/css/draw_hunting_ballot.css.safe
 
 # Ignore config files with payment details
 /web/config/sync/commerce_payment.commerce_payment_gateway.stripe*

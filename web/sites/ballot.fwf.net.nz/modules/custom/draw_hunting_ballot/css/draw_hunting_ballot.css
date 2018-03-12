@@ -18,3 +18,10 @@
 .toolbar-tray .toolbar-icon.toolbar-icon-draw-hunting-ballot-manage:active:before {
   background-image: url("../icons/000000/drupal-cart.svg");
 }*/
+
+/* "next" button additional text for "Unpaid-entries" and "Manage entries" */
+#views-form-allocated-block-page-1 #edit-submit::after,
+#views-form-unpaid-entries-0-2-page-1 #edit-submit::after {
+	content: "> send email to selected hunters";
+	margin-left: 6px;
+}
