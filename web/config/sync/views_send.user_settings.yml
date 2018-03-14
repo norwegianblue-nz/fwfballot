@@ -40,30 +40,6 @@
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
     from_name: 'FWF Ballot'
     from_mail: info@fwf.net.nz
     tokens:
@@ -155,9 +131,9 @@
       field_priority_pos_14: field_priority
     to_name: field_physical_address_given_name_pos_4
     to_mail: mail_pos_6
-    subject: 'Kea Survey'
+    subject: 'Ballot Confirmation'
     message:
-      value: "Dear Members\r\n\r\n \r\n\r\nA Very Unique Opportunity:\r\n\r\n \r\n\r\nAs you will be aware the Fiordland Wapiti Foundation  have a partnership with the Kea Conservation Trust to monitor and look at opportunities to help our Kea in the Wapiti area. Over the last two years during the ballot hunters have surveyed the Kea, this is the biggest survey for Kea in the country. Now we are taking this to the next leave.\r\n\r\n \r\n\r\nWe are going to capture and monitor some Kea with the Conservation Trust. We will be doing this between the 17th and 26th of January. What we need is some volunteers to help with this project.\r\n\r\n \r\n\r\nAll you will need to do is get yourself to Te Anau. But there is a catch we would require you to have some camera skills both still and video. Also you would need to be fit as there is a lot of walking involved. However you will be transported by helicopter.\r\n\r\n \r\n\r\nIf you are keen to be involved with this once in a life time opportunity please either ring Roy Sloan on 021 900 423 or email the secretary on  fwfsecretary@gmail.com you can contact us asap please.\r\n\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary\r\nFiordland Wapiti Foundation\r\n0210758272"
+      value: "Hi Guys\r\nJust checking that you realize you have been allocated a block in the redraw. If you can accept/withdraw in the near future so we can continue with the process.\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary\r\nFiordland Wapiti Foundation\r\n0210758272"
       format: plain_text
     attachments: ''
     priority: '0'
@@ -169,6 +145,29 @@
 'unconfirmed_entries:page_2':
   'uid:751':
     bulk_form:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
       - 0
       - 0
       - 0
@@ -196,9 +195,9 @@
       field_priority_pos_14: field_priority
     to_name: field_physical_address_given_name_pos_4
     to_mail: mail_pos_6
-    subject: 'Kea Survey'
+    subject: Statue
     message:
-      value: "Dear Members\r\n\r\n \r\n\r\nA Very Unique Opportunity:\r\n\r\n \r\n\r\nAs you will be aware the Fiordland Wapiti Foundation  have a partnership with the Kea Conservation Trust to monitor and look at opportunities to help our Kea in the Wapiti area. Over the last two years during the ballot hunters have surveyed the Kea, this is the biggest survey for Kea in the country. Now we are taking this to the next leave.\r\n\r\n \r\n\r\nWe are going to capture and monitor some Kea with the Conservation Trust. We will be doing this between the 17th and 26th of January. What we need is some volunteers to help with this project.\r\n\r\n \r\n\r\nAll you will need to do is get yourself to Te Anau. But there is a catch we would require you to have some camera skills both still and video. Also you would need to be fit as there is a lot of walking involved. However you will be transported by helicopter.\r\n\r\n \r\n\r\nIf you are keen to be involved with this once in a life time opportunity please either ring Roy Sloan on 021 900 423 or email the secretary on  fwfsecretary@gmail.com you as soon as possible.\r\n\r\n \r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary \r\nFiordland Wapiti Foundation\r\n0210758272"
+      value: "Good Morning All\r\nOver the past two years the Fiordland Wapiti Foundation has gone through a process of moving the Wapiti Statue. For those of you who do not know  a large statue of Wapiti Bull has been on the entrance to Te Anau. Over the years it has been vandalized several times. The last time this happened the decision to relocate it to infront of the Real Journeys community events centre was made. Graeme Johnston has worked hard getting consents etc for this to happen and we are pleased to say it is being moved. The statue has been refurbished and due to be put in place.\r\nThe Fiordland Wapiti Foundation would like to invite you to an unveiling event at the Real Journeys Te Anau Community Events Centre on the 17th March beginning at 1.30 pm. Your presence if possible would be much appreciated.\r\n\r\n \r\n\r\nThanks \r\nRussell Wisely\r\nSecretary \r\nFiordland Wapiti Foundation\r\n0210758272"
       format: plain_text
     attachments: ''
     priority: '0'
