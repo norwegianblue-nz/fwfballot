@@ -18,4 +18,4 @@ traits: {  }
 refresh_mode: customer
 refresh_frequency: 300
 sendReceipt: true
-receiptBcc: 'gpracing.nz@gmail.com,tim@themanns.net'
+receiptBcc: 'tim@timmanndesign.co.nz,fwfsecretary@gmail.com'

@@ -1578,7 +1578,7 @@ display:
         description: 'Contact details for hunters with a block'
         expanded: false
         parent: 'menu_link_content:f2a30156-ce4d-4f74-88e6-6d37a8ca75a4'
-        weight: 20
+        weight: -44
         context: '0'
         menu_name: main
     cache_metadata:

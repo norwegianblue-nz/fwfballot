@@ -40,7 +40,7 @@ visibility:
     context_mapping: {  }
   request_path:
     id: request_path
-    pages: "/ballot-entry\r\n/ballot-payment\r\n/blockallocationcontactinfo\r\n/donation\r\n"
+    pages: "/ballot-entry\r\n/ballot-payment\r\n/blockallocationcontactinfo\r\n/donation\r\n/change-party-members\r\n"
     negate: false
     context_mapping: {  }
   user_role:
