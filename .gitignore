@@ -32,8 +32,11 @@ web/sites/ballot.fwf.net.nz/modules/custom/draw_hunting_ballot/css/draw_hunting_
 /web/config/sync/commerce_payment.commerce_payment_gateway.stripe*
 # Ignore the site version block
 /web/config/sync/block.block.identifywhichversionofthesitesthisis.yml
-#Ignore the views_send_email settings
+#Ignore the views_send_email settings , courier and smtp settings.
 /web/config/sync/views_send.user_settings.yml
+web/config/sync/courier.settings.yml
+web/config/sync/smtp.settings.yml
+
 
 #Backup of 'broken version'
 /web84
