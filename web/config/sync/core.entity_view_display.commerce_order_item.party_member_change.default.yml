@@ -16,6 +16,16 @@ targetEntityType: commerce_order_item
 bundle: party_member_change
 mode: default
 content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
   field_entry_id:
     weight: 2
     label: above

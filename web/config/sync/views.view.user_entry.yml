@@ -507,6 +507,8 @@ display:
           text: view
           entity_type: user
           plugin_id: entity_link
+          output_url_as_text: false
+          absolute: false
         uid:
           id: uid
           table: users_field_data

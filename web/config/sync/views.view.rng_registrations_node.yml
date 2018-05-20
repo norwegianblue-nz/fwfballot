@@ -802,6 +802,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -845,6 +846,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -930,6 +934,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1016,7 +1023,7 @@ display:
         - url
         - url.query_args
       cacheable: false
-      max-age: 0
+      max-age: -1
       tags:
         - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_allocated_in_draw'
@@ -1629,7 +1636,7 @@ display:
         - url
         - url.query_args
       cacheable: false
-      max-age: 0
+      max-age: -1
       tags:
         - 'config:field.storage.registration.field_allocated_block'
         - 'config:field.storage.registration.field_allocated_in_draw'

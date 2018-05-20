@@ -1,17 +1,18 @@
-uuid: c31318eb-5b0e-40ae-a391-7a29b59783ef
+uuid: 2ef29af7-5478-4058-a4b5-e456209bb262
 langcode: en
 status: true
 dependencies:
+  config:
+    - user.role.hunters
   module:
-    - dynamic_entity_reference
-    - rng
-id: registrants
-label: Registrants
+    - user
+id: hunters
+label: Hunters
 module: views
 description: ''
 tag: ''
-base_table: registrant
-base_field: id
+base_table: users_field_data
+base_field: uid
 core: 8.x
 display:
   default:
@@ -21,8 +22,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access user profiles'
       cache:
         type: tag
         options: {  }
@@ -63,46 +65,43 @@ display:
             previous: ‹‹
             next: ››
       style:
-        type: table
+        type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
       row:
         type: fields
+        options:
+          inline: {  }
+          separator: ''
+          hide_empty: false
+          default_field_elements: true
       fields:
-        id:
-          id: id
-          table: registrant
-          field: id
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          entity_type: user
+          entity_field: name
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            trim: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
-          label: ID
           exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
           element_type: ''
           element_class: ''
           element_label_type: ''
@@ -112,14 +111,10 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
+          type: user_name
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -130,17 +125,14 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: registrant
-          entity_field: id
-          plugin_id: field
-        identity__target_id:
-          id: identity__target_id
-          table: registrant
-          field: identity__target_id
+        field_physical_address_family_name:
+          id: field_physical_address_family_name
+          table: user__field_physical_address
+          field: field_physical_address_family_name
           relationship: none
           group_type: group
           admin_label: ''
-          label: Identity
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -173,7 +165,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -181,31 +173,15 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: dynamic_entity_reference_label
-          settings:
-            link: true
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: registrant
-          entity_field: identity
-          plugin_id: field
-        type:
-          id: type
-          table: registrant
-          field: type
+          plugin_id: standard
+        field_physical_address_given_name:
+          id: field_physical_address_given_name
+          table: user__field_physical_address
+          field: field_physical_address_given_name
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Registrant type'
+          label: ''
           exclude: false
           alter:
             alter_text: false
@@ -238,7 +214,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: true
+          element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -246,91 +222,20 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: registrant
-          entity_field: type
-          plugin_id: field
-        registration:
-          id: registration
-          table: registrant
-          field: registration
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Registration
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: registrant
-          entity_field: registration
-          plugin_id: field
-      filters: {  }
+          plugin_id: standard
+      filters:
+        status:
+          value: '1'
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: user
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
       sorts: {  }
-      title: Registrants
       header: {  }
       footer: {  }
       empty: {  }
@@ -343,47 +248,34 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user.permissions
       tags: {  }
   entity_reference_1:
     display_plugin: entity_reference
     id: entity_reference_1
-    display_title: 'Entity Reference'
-    position: 2
+    display_title: 'Hunter Reference'
+    position: 1
     display_options:
       display_extenders: {  }
+      display_description: ''
       style:
         type: entity_reference
         options:
           search_fields:
-            identity__target_id: identity__target_id
-            id: '0'
-            type: '0'
-            registration: '0'
-      row:
-        type: entity_reference
+            name: name
+            field_physical_address_family_name: field_physical_address_family_name
+            field_physical_address_given_name: field_physical_address_given_name
+      access:
+        type: role
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: '-'
-          hide_empty: false
+          role:
+            hunters: hunters
+      defaults:
+        access: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-      tags: {  }
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 1
-    display_options:
-      display_extenders: {  }
-      path: admin/registrants
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
+        - user.roles
       tags: {  }

@@ -750,6 +750,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -793,6 +794,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -875,6 +879,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -915,6 +920,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -955,6 +961,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1045,6 +1052,9 @@ display:
               authenticated: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1081,6 +1091,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1143,7 +1154,7 @@ display:
       arguments: {  }
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1235,6 +1246,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1271,6 +1283,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -2937,7 +2950,7 @@ display:
       display_description: ''
       title: 'Unconfirmed Allocations'
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -3001,6 +3014,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3044,6 +3058,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3126,6 +3143,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3166,6 +3184,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3206,6 +3225,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3296,6 +3316,9 @@ display:
               authenticated: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3332,6 +3355,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3368,6 +3392,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3388,7 +3413,7 @@ display:
       title: 'All Allocations'
       sorts: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -3450,6 +3475,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3493,6 +3519,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3575,6 +3604,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3615,6 +3645,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3655,6 +3686,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3745,6 +3777,9 @@ display:
               authenticated: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3781,6 +3816,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3817,6 +3853,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3835,7 +3872,7 @@ display:
         groups:
           1: AND
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -3945,6 +3982,9 @@ display:
               anonymous: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -3981,6 +4021,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -4017,6 +4058,7 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -4056,6 +4098,9 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -4981,7 +5026,7 @@ display:
             label: ''
           plugin_id: standard
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

@@ -962,6 +962,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1005,6 +1006,9 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1087,6 +1091,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1127,6 +1132,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1167,6 +1173,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1257,6 +1264,9 @@ display:
               authenticated: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1367,6 +1377,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1411,6 +1422,9 @@ display:
               hunters: '0'
               testusers: '0'
               manage: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1497,6 +1511,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1537,6 +1552,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1577,6 +1593,7 @@ display:
               administrator: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -1624,6 +1641,9 @@ display:
               authenticated: '0'
               hunters: '0'
               testusers: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
