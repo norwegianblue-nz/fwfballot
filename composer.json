@@ -25,7 +25,6 @@
         "drupal/coffee": "~1.0",
         "drupal/commerce": "~2.0",
         "drupal/commerce_stripe": "~1.0",
-        "drupal/console": "~1.0",
         "drupal/contact_block": "^1.4",
         "drupal/core": "~8.4",
         "drupal/field_group": "3.x-dev",
@@ -48,7 +47,7 @@
         "drupal/views_send": "^1.1",
         "drupal/workflows_field": "~1.0",
         "drush/drush": "~9.0",
-        "webflo/drupal-finder": "^0.3.0",
+        "webflo/drupal-finder": "~1",
         "webmozart/path-util": "^2.3"
     },
     "require-dev": {
@@ -97,6 +96,7 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
-        }
+        },
+        "patches-file": "/var/www/vhosts/ballot.fwf.net.nz/drupal-8.x/patches/composer.json"
     }
 }
