@@ -38,6 +38,8 @@ web/config/sync/courier.settings.yml
 web/config/sync/smtp.settings.yml
 
 
+/web/config/backup/
+
 #Backup of 'broken version'
 /web84
 oldcomposer.lck

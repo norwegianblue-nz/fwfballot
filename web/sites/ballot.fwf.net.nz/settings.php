@@ -47,6 +47,7 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'config/sync';
+$config_directories['backup'] = 'config/backup';
 
 /**
  * Load local development override configuration, if available.
